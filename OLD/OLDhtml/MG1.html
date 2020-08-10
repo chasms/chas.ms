@@ -1,0 +1,263 @@
+<html>
+
+<head>
+	
+	<title>MARDIGRAS</title>
+	
+	<link href="css/bootstrap.faded.min.css" rel="stylesheet">
+	<link href="css/bootstrap-responsive.min.css" rel="stylesheet">
+	
+	<link rel="stylesheet" type="text/css" href="css/chasms.css">
+	<link href="css/social-buttons.css" rel="stylesheet">
+	
+	<script src="js/jquery-1.11.2.min.js"></script>
+	<script type="text/javascript" src="js/getElementsByClassName.js"></script>
+	
+	<script>
+		$(document).ready(function() {
+			$(".header").click(function(){
+				var h= $(this).height();
+				if(h==60){
+					var goal = 530;
+				} else {
+					var goal = 60;
+				}
+			$(this).animate({
+       			height: goal
+       		}, 300, function(){	
+       			});
+       		});
+       	})
+	</script>
+	
+	<script language="Javascript1.2">
+		function toggle(layerName){
+			/* figure out how to id the tag you want */
+			if (document.layers) {
+				var page = eval('document.'+layerName);
+				} else if (document.getElementById) {
+					var page= eval("document.getElementById(layerName).style");
+					} else if (document.all) {
+						var page = eval('document.all.'+layerName+'.style');
+						}
+						/* affect the style of that tag */
+						if (page.opacity=='1'){
+							page.opacity='0';
+							} else {
+								page.opacity='1';
+								}
+		}
+	</script>
+	
+	<script language="Javascript1.2">
+		function display_block(className){
+			/* figure out how to id the tag you want */
+		var e = getElementsByClassName(className);
+		for ( var i=0, len=e.length; i<len; ++i ){
+			if(e[i].style.display == 'block')
+			e[i].style.display = 'block';
+			else
+			e[i].style.display = 'block';
+			}
+		}
+	</script>
+	
+	<script language="Javascript1.2">
+		function display_height(className){
+			/* figure out how to id the tag you want */
+		var e = getElementsByClassName(className);
+		for ( var i=0, len=e.length; i<len; ++i ){
+			if(e[i].style.height == 'auto')
+			e[i].style.height = 'auto';
+			else
+			e[i].style.height = 'auto';
+		}
+	}
+</script>
+	
+	<script language="Javascript1.2">
+		function display_opacity(className){
+			/* figure out how to id the tag you want */
+		var e = getElementsByClassName(className);
+		for ( var i=0, len=e.length; i<len; ++i ){
+			if(e[i].style.opacity == '1')
+			e[i].style.opacity = '1';
+			else
+			e[i].style.opacity = '1';
+		}
+	}
+	</script>
+	
+	<script language="Javascript1.2">
+		function shrink(layerName){
+			/* figure out how to id the tag you want */
+			if (document.layers) {
+			var page = eval('document.'+layerName);
+			} else if (document.getElementById) {
+				var page= eval("document.getElementById(layerName).style");
+				} else if (document.all) {
+					var page = eval('document.all.'+layerName+'.style');
+					}
+					/* affect the style of that tag */
+					if (page.width=='200px'){
+						page.width='200px';
+						} else {
+							page.width='200px';
+							}
+		}
+	</script>
+	
+	<!--<script>
+		$('a').on('click', function(){
+			var target = $(this).attr('rel');
+			$("#"+target).show().siblings("div").hide();
+   		});
+   	</script>-->
+
+</head>
+
+<body>
+	
+	<div id="browsercolumn">
+	
+	</div>
+	
+	<div id="browsercolumn-O">
+		
+		<div id="logo">
+				
+				<a href="#" id="logo-png" onmousedown="display_block('appears')" onmouseup="shrink('browsercolumn')" onmouseover="toggle('about')" onmouseout="toggle('about')"><img src="img/kundalini-white.png" alt="chasms"></img></a>
+		
+		</div>
+		
+		<ul id="browser">
+			
+			<li id="chasms_head"><a href="http://chas.ms">chasms</a></li>
+			<li><a href="object.html" class="menu">object</a></li>
+			<li><a href="print.html" class="menu">print</a></li>
+			<li><a href="photo.html" class="menu current">photo</a></li>
+			<li><a href="O.html" class="menu">writings</a></li>
+			<li><a href="info.html" class="menu">info</a></li>
+			<li id="last_li"><a href="http://chiasmichasms.tumblr.com/" target="_blank" class="menu">blog</a></li>
+		
+		</ul>
+
+		<div class="icon-set">
+			<a href="mailto:chasms@chas.ms" class="icon sb small no-shadow border circle email">Email</a>
+			<a href="http://lnkd.in/YdtunB" target="_blank" class="icon sb small no-shadow border circle linkedin">LinkedIn</a>
+			<a href="https://twitter.com/cha_sms" target="_blank" class="icon sb small no-shadow border circle twitter">Twitter</a>
+			<a href="https://www.facebook.com/chiasmicchasms" target="_blank" class="icon sb small no-shadow border circle facebook">Facebook</a>
+		</div>
+
+<!--		<div id="about" class="appears">
+				<p>is a pseudonym for artist, designer, producer, writer, and philosopher Charles Albert Samuels. Charles is currently earning his BFA in Art & Design with a concentration in Industrial Design from the University of Michigan.</p>
+		</div--> 
+	
+	</div>
+	
+<!--<ul class="heading-list" id="mainheading">
+		<li><a href=""></a></li>
+		<li><a href=""></a></li>
+		<li><a href=""></a></li>
+		<li><a href=""></a></li>
+		<li><a href=""></a></li>
+	</ul> -->	
+	
+	<div class="content-area" id="mg">
+		
+		<div class="photothumbs">
+			
+			<div class="project-banner" id="MGbanner"><p>Mardi Gras</p></div>
+			<a class="link" href="#" rel="MG1"><img src="/img/MGsm1.png"></a>
+			<a class="link" href="#" rel="MG2"><img src="/img/MGsm2.png"></a>
+			<a class="link" href="#" rel="MG3"><img src="/img/MGsm3.png"></a>
+			<a class="link" href="#" rel="MG4"><img src="/img/MGsm4.png"></a>
+			<a class="link" href="#" rel="MG5"><img src="/img/MGsm5.png"></a>
+			<a class="link" href="#" rel="MG6"><img src="/img/MGsm6.png"></a>
+			<a class="link" href="#" rel="MG7"><img src="/img/MGsm7.png"></a>
+			<a class="link" href="#" rel="MG8"><img src="/img/MGsm8.png"></a>
+			<a class="link" href="#" rel="MG9"><img src="/img/MGsm9.png"></a>
+			<a class="link" href="#" rel="MG10"><img src="/img/MGsm10.png"></a>
+			<a class="link" href="#" rel="MG11"><img src="/img/MGsm11.png"></a>
+			<a class="link" href="#" rel="MG12"><img src="/img/MGsm12.png"></a>
+			<a class="link" href="#" rel="MG13"><img src="/img/MGsm13.png"></a>
+			<a class="link" href="#" rel="MG14"><img src="/img/MGsm14.png"></a>
+			<a class="link" href="#" rel="MG15"><img src="/img/MGsm15.png"></a>
+			<a class="link" href="#" rel="MG16"><img src="/img/MGsm16.png"></a>
+			<a class="link" href="#" rel="MG17"><img src="/img/MGsm17.png"></a>
+			<a class="link" href="#" rel="MG18"><img src="/img/MGsm18.png"></a>
+			<a class="link" href="#" rel="MG19"><img src="/img/MGsm19.png"></a>
+			<a class="link" href="#" rel="MG20"><img src="/img/MGsm20.png"></a>
+			<a class="link" href="#" rel="MG21"><img src="/img/MGsm21.png"></a>
+			<a class="link" href="#" rel="MG22"><img src="/img/MGsm22.png"></a>
+			<a class="link" href="#" rel="MG23"><img src="/img/MGsm23.png"></a>
+			<a class="link" href="#" rel="MG24"><img src="/img/MGsm24.png"></a>
+			<a class="link" href="#" rel="MG25"><img src="/img/MGsm25.png"></a>
+			<a class="link" href="#" rel="MG26"><img src="/img/MGsm26.png"></a>
+			<a class="link" href="#" rel="MG27"><img src="/img/MGsm27.png"></a>
+			<a class="link" href="#" rel="MG28"><img src="/img/MGsm28.png"></a>
+			<a class="link" href="#" rel="MG29"><img src="/img/MGsm29.png"></a>
+			<a class="link" href="#" rel="MG30"><img src="/img/MGsm30.png"></a>
+			<a class="link" href="#" rel="MG31"><img src="/img/MGsm31.png"></a>
+			<a class="link" href="#" rel="MG32"><img src="/img/MGsm32.png"></a>
+			<a class="link" href="#" rel="MG33"><img src="/img/MGsm33.png"></a>
+			<a class="link" href="#" rel="MG34"><img src="/img/MGsm34.png"></a>
+			<div id="spacer"></div>
+		
+		</div>
+		
+		<div class="photos">
+			
+			<div class="first-photo" id="MG0"></div>
+			<div class="following-photos" id="MG1"></div>
+			<div class="following-photos" id="MG2"></div>
+			<div class="following-photos" id="MG3"></div>
+			<div class="following-photos" id="MG4"></div>
+			<div class="following-photos" id="MG5"></div>
+			<div class="following-photos" id="MG6"></div>
+			<div class="following-photos" id="MG7"></div>
+			<div class="following-photos" id="MG8"></div>
+			<div class="following-photos" id="MG9"></div>
+			<div class="following-photos" id="MG10"></div>
+			<div class="following-photos" id="MG11"></div>
+			<div class="following-photos" id="MG12"></div>
+			<div class="following-photos" id="MG13"></div>
+			<div class="following-photos" id="MG14"></div>
+			<div class="following-photos" id="MG15"></div>
+			<div class="following-photos" id="MG16"></div>
+			<div class="following-photos" id="MG17"></div>
+			<div class="following-photos" id="MG18"></div>
+			<div class="following-photos" id="MG19"></div>
+			<div class="following-photos" id="MG20"></div>
+			<div class="following-photos" id="MG21"></div>
+			<div class="following-photos" id="MG22"></div>
+			<div class="following-photos" id="MG23"></div>
+			<div class="following-photos" id="MG24"></div>
+			<div class="following-photos" id="MG25"></div>
+			<div class="following-photos" id="MG26"></div>
+			<div class="following-photos" id="MG27"></div>
+			<div class="following-photos" id="MG28"></div>
+			<div class="following-photos" id="MG29"></div>
+			<div class="following-photos" id="MG30"></div>
+			<div class="following-photos" id="MG31"></div>
+			<div class="following-photos" id="MG32"></div>
+			<div class="following-photos" id="MG33"></div>
+			<div class="following-photos" id="MG34"></div>
+			
+		</div>
+		
+		<script>
+			$( document ).ready(function() {
+				$(".link").click(function(e) {
+					e.preventDefault();
+					$('.photos div').fadeOut("slow");
+					$('#' + $(this).attr('rel')).fadeIn("slow");
+				});
+			});
+		</script>
+	
+	</div>
+
+</body>
+
+</html>

@@ -1,0 +1,170 @@
+<html>
+
+<head>
+	
+	<title>chasms</title>
+	
+	<link href="css/bootstrap.faded.min.css" rel="stylesheet">
+	<link href="css/bootstrap-responsive.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/chasmsprogress.css">
+	
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script type="text/javascript" src="js/getElementsByClassName.js"></script>
+	
+	<script>
+		$(document).ready(function() {
+			$(".header").click(function(){
+				var h= $(this).height();
+				if(h==60){
+					var goal = 530;
+				} else {
+					var goal = 60;
+				}
+			$(this).animate({
+       			height: goal
+       		}, 300, function(){	
+       			});
+       		});
+       	})
+	</script>
+	
+	<script language="Javascript1.2">
+		function toggle(layerName){
+			/* figure out how to id the tag you want */
+			if (document.layers) {
+				var page = eval('document.'+layerName);
+				} else if (document.getElementById) {
+					var page= eval("document.getElementById(layerName).style");
+					} else if (document.all) {
+						var page = eval('document.all.'+layerName+'.style');
+						}
+						/* affect the style of that tag */
+						if (page.opacity=='1'){
+							page.opacity='0';
+							} else {
+								page.opacity='1';
+								}
+		}
+	</script>
+	
+	<script language="Javascript1.2">
+		function display_block(className){
+			/* figure out how to id the tag you want */
+		var e = getElementsByClassName(className);
+		for ( var i=0, len=e.length; i<len; ++i ){
+			if(e[i].style.display == 'block')
+			e[i].style.display = 'block';
+			else
+			e[i].style.display = 'block';
+			}
+		}
+	</script>
+	
+	<script language="Javascript1.2">
+		function display_height(className){
+			/* figure out how to id the tag you want */
+		var e = getElementsByClassName(className);
+		for ( var i=0, len=e.length; i<len; ++i ){
+			if(e[i].style.height == 'auto')
+			e[i].style.height = 'auto';
+			else
+			e[i].style.height = 'auto';
+		}
+	}
+</script>
+	
+	<script language="Javascript1.2">
+		function display_opacity(className){
+			/* figure out how to id the tag you want */
+		var e = getElementsByClassName(className);
+		for ( var i=0, len=e.length; i<len; ++i ){
+			if(e[i].style.opacity == '1')
+			e[i].style.opacity = '1';
+			else
+			e[i].style.opacity = '1';
+		}
+	}
+	</script>
+	
+	<script language="Javascript1.2">
+		function shrink(layerName){
+			/* figure out how to id the tag you want */
+			if (document.layers) {
+			var page = eval('document.'+layerName);
+			} else if (document.getElementById) {
+				var page= eval("document.getElementById(layerName).style");
+				} else if (document.all) {
+					var page = eval('document.all.'+layerName+'.style');
+					}
+					/* affect the style of that tag */
+					if (page.width=='200px'){
+						page.width='200px';
+						} else {
+							page.width='200px';
+							}
+		}
+	</script>
+
+</head>
+
+<body>
+	
+	<div id="browsermain">
+		
+		<div id="logo">
+				<a href="#" id="logo-png" onmousedown="display_block('appears')" onmouseup="shrink('browsermain')" onmouseover="toggle('about')" onmouseout="toggle('about')"><img src="img/kundalini-white.png" alt="chasms"></img></a>
+		</div>
+		
+		<ul id="browser" class="appears">
+			<li id="chasms_head" onmouseover="display_opacity('reveal')"><a href="http://chas.ms">chasms</a></li>
+			<li><a href="object.html" class="reveal">object</a></li>
+			<li><a href="print.html" class="reveal">print</a></li>
+			<li><a href="photo.html" class="reveal">photo</a></li>
+			<li><a href="book.html" class="reveal">book</a></li>
+			<li id="last_li" class="reveal"><a href="http://chiasmichasms.tumblr.com/" target="_blank" class="dropdown-list">blog</a></li>
+		</ul>
+
+<!--		<div id="about" class="appears">
+				<p>is a pseudonym for artist, designer, producer, writer, and philosopher Charles Albert Samuels. Charles is currently earning his BFA in Art & Design with a concentration in Industrial Design from the University of Michigan.</p>
+		</div--> 
+	
+	</div>
+	
+	<ul class="heading-list" id="mainheading">
+		<li><a href=""></a></li>
+		<li><a href=""></a></li>
+		<li><a href=""></a></li>
+		<li><a href=""></a></li>
+		<li><a href=""></a></li>
+	</ul>	
+	
+	<div class="content-area" id="main">
+		
+		<div id="gallery" class="reveal">
+			
+		<div id=""
+			<div class="gallerycontainer">
+				<a href="object.html">
+					<img src="/gallery/img/object/tables/22.jpg">
+					<div class="hovertext">
+						<p>object</p>
+					</div>
+				</a>
+			</div>
+			
+			<div class="gallerycontainer">
+				<a href="print.html">
+					<img class="galleryimg" src="/gallery/img/2D/print/woodblock/ascensionparagon/AscensionParagonBlack.jpg">
+					<div class="hovertext">
+						<p>print</p>
+					</div>
+				</a>
+			</div>
+		
+		</div>
+	
+	</div>
+
+</body>
+
+</html>

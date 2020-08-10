@@ -1,0 +1,80 @@
+<html>
+
+<head>
+	<title>chasms</title>
+	<link href="css/bootstrap.faded.min.css" rel="stylesheet">
+	<link href="css/bootstrap-responsive.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/chasmsOLD.css">
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script>
+		$(document).ready(function() {
+			$(".header").click(function(){
+				var h= $(this).height();
+				if(h==60){
+					var goal = 530;
+				} else {
+					var goal = 60;
+				}
+			$(this).animate({
+       			height: goal
+       		}, 300, function(){	
+       			});
+       		});
+       	})
+	</script>
+	<script language="Javascript1.2">
+function toggle(layerName){
+/* figure out how to id the tag you want */
+  if (document.layers) {
+    var page = eval('document.'+layerName);
+  } else if (document.getElementById) {
+    var page= eval("document.getElementById(layerName).style");
+  } else if (document.all) {
+    var page = eval('document.all.'+layerName+'.style');
+  }
+/* affect the style of that tag */
+	if (page.opacity=='1'){
+		page.opacity='0';
+	} else {
+		page.opacity='1';
+	}
+}
+</script>
+</head>
+
+<body>
+	<div class="container">
+		<div class="jumbotron">
+			<div id="logo">
+				<a href="#" onmouseover="toggle('about','about-click')" onmouseout="toggle('about','about-click')"><object id="logo-svg" data="svg/kundalini-white.svg" type="image/svg+xml"></object></a>
+			</div>
+			<div id="about">
+				<h1>chasms</h1>
+				<p>is a pseudonym for artist, designer, producer, writer, and philosopher Charles Albert Samuels. Charles is currently earning his BFA in Art & Design with a concentration in Industrial Design from the University of Michigan.</p>
+			</div>
+			<hr class="soften-light">
+	</div>
+	<div class="header" id="design">
+		<a href="gallery/design.html" target="design">design</a>
+		<iframe class="frame" name="design" src=""frameborder="0"marginheight="0px"></iframe>
+	</div>
+	<div class="header" id="photography">
+		<a href="gallery/photography.html" target="photography">photography</a>
+		<iframe class="frame" name="photography" src=""frameborder="0"marginheight="0px"></iframe>
+	</div>
+	<div class="header" id="drawing">
+		<a href="gallery/drawing.html" target="drawing">drawing</a>
+		<iframe class="frame" name="drawing" src=""frameborder="0"marginheight="0px"></iframe>
+	</div>
+	<div class="header" id="music">
+		<a href="gallery/design.html" target="music">music</a>
+		<iframe class="frame" name="music" src=""frameborder="0"marginheight="0px"></iframe>
+	</div>
+	<script type="text/javascript" async="" src="http://www.google-analytics.com/ga.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/js.min.js"></script>
+</body>
+
+</html>

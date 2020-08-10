@@ -1,0 +1,30 @@
+body {
+	background-color:#050005;
+	color:white;
+	margin:0;
+	padding:0;
+}
+#rectangle1 {
+	width:10%;
+	height:80%;
+	background-color:#50005C;
+	position: absolute;
+	top: 0%;
+	right: 5%;
+}
+#rectangle2 {
+	width:96%;
+	height:5%;
+	background-color:#B66D1E;
+	position: absolute;
+	top: 6%;
+	right: 2%;
+}
+#rectangle3 {
+	width:75%;
+	height:70%;
+	background-color:#6F0031;
+	position: absolute;
+	bottom: 10%;
+	right: 20%;
+}

@@ -1,0 +1,157 @@
+body {
+	color: black;
+	margin:0;
+	padding:0;
+	text-decoration: none;
+}
+#browsercolumn {
+	position:fixed;
+	padding-top: 50px;
+	left: 0%;
+	width: 200px;
+	height: 100%;
+	background-color: black;
+	box-shadow: 0px 1px 10px #000;
+	border-right: 1px solid #bbb;
+	z-index:99;
+}
+#browsercolumn a {
+	-webkit-transition: opacity .5s ease-in-out;
+	-moz-transition: opacity .5s ease-in-out;
+	-o-transition: opacity .5s ease-in-out;
+	-ms-transition: opacity .5s ease-in-out;
+	text-decoration: none;
+	color: white;
+	overflow: visible;
+}
+#browsercolumn a:hover {
+	opacity: .7;
+	overflow: visible;
+}
+#chasms {
+	color: white;
+	font: 18pt helvetica;
+	font-weight: bold;
+	font-style:oblique;
+	text-align: left;
+	width:180px;
+	height: 180px;
+}
+#logo {
+	height: 250px;
+	width: 250px;
+}
+#browser {
+	text-align: left;
+	list-style: none;
+	font-size:12px;
+	font-family: Helvetica,sans-serif;
+	font-style: oblique;
+	margin-left: 0;
+	overflow: visible;
+}
+#browser li {
+	margin-bottom: 25px;
+	margin-left:0;
+	overflow: visible;
+}
+.content-area {
+	padding-top:42px;
+	position:absolute;
+	top:0px; left:201px; right:0px; bottom:0px;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+#main1 {
+	background: url(../images/dieterbluewallshelves.jpg) no-repeat center right;
+	z-index: 01;
+}
+#video1 {
+	background: url(../images/dieterrecorder.jpg) no-repeat center center;
+	z-index: 01;
+}
+#vimeo iframe {
+	opacity: .3;
+	-webkit-transition: opacity 2s ease-in-out;
+	-moz-transition: opacity 2s ease-in-out;
+	-o-transition: opacity 2s ease-in-out;
+	-ms-transition: opacity 2s ease-in-out;
+}
+#vimeo:hover iframe{
+	opacity: 1;
+}
+#main2 {
+	background: url(../images/dietersketch.jpg) no-repeat center right;
+	z-index: 02;
+	opacity: 0;
+	-webkit-transition: opacity 2s ease-in-out;
+	-moz-transition: opacity 2s ease-in-out;
+	-o-transition: opacity 2s ease-in-out;
+	-ms-transition: opacity 2s ease-in-out;
+}
+#main2:hover {
+	opacity: 1;
+}
+#gallery {
+	height: 98%;
+	width: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+	margin-top: 1%;
+	z-index: 1;
+}
+#gallery img {
+	height: 98%;
+	margin-right: 2px;
+}
+#commandments {
+	font-family: 'LinotypeUniversW01-Bold 723697', Arial, sans-serif;
+	color: ; #888
+	text-shadow: 1px 1px #FAFAFA;
+	background-color: #E8E9E8;
+	height: 100%;
+	overflow-x: hidden;
+}
+#commandments section {
+	border-top: 1px solid #a0a0a0;
+	margin-bottom: 30px;
+	padding-top: 40px;
+	padding-left: 5%;
+	background-color: #E8E9E8;
+}
+#commandments h1 {
+	padding-left: 5%;
+	margin-bottom: 30px;
+	margin-top: 25px;
+	color: #f9f9f9;
+	text-shadow: 1px 1px #d0d0d0;
+}
+#tentitle {
+	position: fixed !important;
+	margin-left: 470px;
+	font-weight: bold;
+}
+#commandments h2 {
+	padding: none;
+	margin: none;
+	color: #f9f9f9;
+	text-shadow: 1px 1px #d0d0d0;
+	max-width: 200px;
+	text-align: left;
+}
+#commandments p {
+	padding: none;
+	margin-top: 20px;
+	color: #c0c0c0;
+	text-align: right;
+	text-shadow: .75px 1px #fff;
+}
+section {
+	display: block;
+	float: left;
+	margin: 25px 0;
+	margin: 2.5rem 0;
+	width: 100%; 
+}

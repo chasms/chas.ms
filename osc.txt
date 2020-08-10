@@ -1,0 +1,16 @@
+var AudioContext = window.AudioContext || window.webkitAudioContext
+var audioCtx = new AudioContext()
+
+let gainNode = audioCtx.createGain()
+gainNode.gain.value = 0.5
+
+let osc = audioCtx.createOscillator()
+osc.frequency.value = 50
+osc.type = 'sine' 
+osc.detune.value = 0 
+
+osc.connect(gainNode)
+
+osc.start()
+
+gainNode.connect(audioCtx.destination)

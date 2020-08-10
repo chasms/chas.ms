@@ -1,0 +1,478 @@
+::-webkit-scrollbar {
+	display: none;
+}
+body {
+	background-color:black;
+	color: black;
+	margin:0;
+	padding:25px;
+	text-decoration: none;
+	overflow: hidden;
+	min-width: 450px;
+}
+a {
+	text-decoration: none;
+}
+.content{
+	background: url(../images/motown-records.jpg) no-repeat center top;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	position:inherit;
+	overflow:hidden;
+	width: auto;
+	height: 100%;
+	padding-left: 5%;
+	border: 1px solid grey;
+	min-width: 400px;
+}
+#Beg-content {
+	background: url(../images/Temptations.jpg) no-repeat center top;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+#Lets-content {
+	background: url(../images/Marvin.jpg) no-repeat center top;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+#Love-content {
+	background: url(../images/Contours2.jpg) no-repeat center top;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+#Money-content {
+	background: url(../images/Strong.jpg) no-repeat center top;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+#Postman-content {
+	background: url(../images/Marvelettes.jpg) no-repeat center top;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+#Shop-content {
+	background: url(../images/Miracles.jpg) no-repeat center top;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+#Superstition-content {
+	background: url(../images/Wonder2.jpg) no-repeat center top;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+#Want-content {
+	background: url(../images/Jackson.jpg) no-repeat center top;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+#header {
+	background: url(../images/transparents/whitepoint3.png) repeat center center;
+	top: 25px;
+	right: 25px;
+	left: 25px;
+	height: 90px;
+	position: fixed;
+	padding-top:10px;
+	border-bottom: 1px solid grey;
+	min-width: 450px;
+	box-shadow: 0px 1px 10px 0px black;
+}
+.head {
+	background: url(../images/transparents/whitepoint2.png) repeat center center !important;
+	border: 1px inset #eee;
+}
+.trans {
+	opacity: .7;
+	-webkit-transition: opacity .5s ease-in-out;
+	-moz-transition: opacity .5s ease-in-out;
+	-o-transition: opacity .5s ease-in-out;
+	-ms-transition: opacity .5s ease-in-out;
+}
+.trans:hover {
+	opacity: 1;
+}
+.transtwo {
+	-webkit-filter: invert(100%) grayscale(100%);
+	-webkit-transition: -webkit-filter .75s ease-in-out;
+	-moz-transition: -webkit-filter .75s ease-in-out;
+	-o-transition: -webkit-filter .75s ease-in-out;
+	-ms-transition: -webkit-filter .75s ease-in-out;
+}
+.transtwo:hover {
+	-webkit-filter: invert(0%) grayscale(0%);
+}
+#header-scroll{
+	position: absolute;
+	height: 75px;
+	right:1.5%;
+	left: 20%;
+	top:10%;
+	overflow-x: scroll;
+	overflow-y:hidden;
+	white-space:nowrap;
+	z-index: 90;
+	border-radius: 50px;
+}
+#header-scroll img{
+	margin-left: 50px;
+	height: 65px;
+	padding: 5px;
+	z-index: 91;
+}
+#icons {
+	position: absolute;
+	width: 75px;
+	height: 75px;
+	left: 11%;
+	top:10%;
+	border-radius: 50%;
+}
+#icons img {
+	height: 65px;
+	padding: 5px;
+	
+}
+#logo {
+	position: absolute;
+	height: 80px;
+	width: 80px;
+	left: 2.5%;
+	top:9%;
+}
+#logo img {
+	position: inherit;
+	height:100%;
+	width:auto;
+}
+p {
+	font-size: xx-large;
+}
+#singles {
+	position: absolute;
+	width: 100%;
+	height: 90%;
+	margin-top: 15%;
+	margin-left:2%;
+	min-width: 450px;
+}
+#singles img{
+	height: 25%;
+	width: auto;
+	-webkit-transition: height .5s, width .5s ease-in-out;
+	-moz-transition: height .5s, width .5s ease-in-out;
+	-o-transition: height .5s, width .5s ease-in-out;
+	-ms-transition: height .5s, width .5s ease-in-out;
+}
+#singles img:hover{
+	height:30%;
+	width: auto;
+}
+.animate {
+	-webkit-animation: infinite-spinning 5s infinite linear;
+}
+.animate:hover {
+	-webkit-animation-play-state: paused;
+}
+@-webkit-keyframes infinite-spinning {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+#A {
+	position:absolute;
+	top: 10%;
+	left: 0%;
+}
+#B {
+	position:absolute;
+	top: 10%;
+	left: 20%;
+}
+#C {
+	position:absolute;
+	top: 10%;
+	left: 40%;
+}
+#D {
+	position:absolute;
+	top: 10%;
+	left: 60%;
+}
+#E {
+	position:absolute;
+	top: 50%;
+	left: 10%;
+}
+#F {
+	position:absolute;
+	top: 50%;
+	left: 30%;
+}
+#G {
+	position:absolute;
+	top: 50%;
+	left: 50%;
+}
+#H {
+	position:absolute;
+	top: 50%;
+	left: 70%;
+}
+.audio {
+	display:block;
+}
+.text {
+	padding-top: 10px;
+	position:absolute;
+	background: blue;
+	overflow: scroll;
+	left: 25px;
+	width: 45%;
+	top: 125px;
+	bottom: 23px;
+	z-index:1;
+	background: url(../images/transparents/whitepoint4.png) repeat center center !important;
+	box-shadow: inset 1px 1px 15px -2px black;
+	border: 1px inset grey;
+	font-family: Georgia;
+	opacity: .8;
+	-webkit-transition: opacity .5s ease-in-out;
+	-moz-transition: opacity .5s ease-in-out;
+	-o-transition: opacity .5s ease-in-out;
+	-ms-transition: opacity .5s ease-in-out;
+}
+.text:hover {
+	opacity: 1;
+}
+.text p{
+	padding: 50px;
+	font-size: 24px;
+	line-height: 1.5;
+	text-align:justify;
+	font-style: oblique;
+	font-weight: bold;
+	text-shadow: 1px 1px 0px #eee;
+}
+.text h1{
+	padding: 0px;
+	font-size: 72px;
+	text-align: center;
+	font-weight: bold;
+	font-style: oblique;
+	color: #111;
+	text-shadow: 2px 2px 1px #eee;
+	display:none;
+}
+.text hr {
+	height: 2px;
+	border: 15px inset #888;
+	width: 80%;
+	display:none;
+}
+/*.info {
+	position: absolute;
+	background: none;
+	left: 50px;
+	bottom: 50px;
+	width:45%;
+	top:150px;
+	z-index:1;
+}*/
+#Beg-cover {
+	background: url(../images/covers/Beg.jpg) no-repeat center center;
+	-webkit-background-size: contain;
+	-moz-background-size: contain;
+	-o-background-size: contain;
+	background-size: contain;
+}
+#Lets-cover {
+	background: url(../images/covers/Lets.jpg) no-repeat center center;
+	-webkit-background-size: contain;
+	-moz-background-size: contain;
+	-o-background-size: contain;
+	background-size: contain;
+}
+#Love-cover {
+	background: url(../images/covers/Love.jpg) no-repeat center center;
+	-webkit-background-size: contain;
+	-moz-background-size: contain;
+	-o-background-size: contain;
+	background-size: contain;
+}
+#Money-cover {
+	background: url(../images/covers/Money.jpg) no-repeat center center;
+	-webkit-background-size: contain;
+	-moz-background-size: contain;
+	-o-background-size: contain;
+	background-size: contain;
+}
+#Postman-cover {
+	background: url(../images/covers/Postman.jpg) no-repeat center center;
+	-webkit-background-size: contain;
+	-moz-background-size: contain;
+	-o-background-size: contain;
+	background-size: contain;
+}
+#Shop-cover {
+	background: url(../images/covers/Shop.jpg) no-repeat center center;
+	-webkit-background-size: contain;
+	-moz-background-size: contain;
+	-o-background-size: contain;
+	background-size: contain;
+}
+#Superstition-cover {
+	background: url(../images/covers/Superstition.jpg) no-repeat center center;
+	-webkit-background-size: contain;
+	-moz-background-size: contain;
+	-o-background-size: contain;
+	background-size: contain;
+	
+}
+#Want-cover {
+	background: url(../images/covers/Want.jpg) no-repeat center center;
+	-webkit-background-size: contain;
+	-moz-background-size: contain;
+	-o-background-size: contain;
+	background-size: contain;
+}
+.covers-anchor {
+	-webkit-background-size: contain;
+	-moz-background-size: contain;
+	-o-background-size: contain;
+	background-size: contain;
+	position:relative;
+	display: block;
+	height: 100%;
+	width: 100%;
+	top: 15%;
+	margin: auto;
+	max-width: 300px;
+	max-height: 300px;
+	opacity: 1;
+	border-radius: 10px;
+	border: 1px inset grey;
+	box-shadow: inset 1px 1px 15px 5px black;
+	-webkit-transition: opacity .5s ease-in-out;
+	-moz-transition: opacity .5s ease-in-out;
+	-o-transition: opacity .5s ease-in-out;
+	-ms-transition: opacity .5s ease-in-out;
+}
+/*.covers-anchor:hover {
+	opacity: 1;
+}*/
+.year {
+	/*background: url(../images/transparents/whitepoint5.png) repeat center center !important;
+	border-radius: 10px;
+	border: 1px solid grey;
+	box-shadow: inset 1px 1px 15px 5px black;
+	line-height: 110px;*/
+	width: 300px;
+	text-align: center;
+	text-shadow: 2px 2px 0px #eee;
+	font-size: 72px;
+	font-family: Georgia;
+	font-style: oblique;
+	opacity: .8;
+	-webkit-transition: opacity .5s ease-in-out;
+	-moz-transition: opacity .5s ease-in-out;
+	-o-transition: opacity .5s ease-in-out;
+	-ms-transition: opacity .5s ease-in-out;
+	display: none;
+}
+.year:hover {
+	opacity: 1;
+}
+@media only screen and (max-width : 1000px) {
+	.text {
+		width: 43%;
+	}
+	.info {
+		width: 43%;
+	}
+	#header-scroll {
+		left: 30%;
+	}
+	#icons {
+		left:15%;
+	}
+}
+@media only screen and (max-width : 900px) {
+	#header-scroll img {
+		margin-left: 5px;
+	}
+	#singles {
+		margin-left: -2%;
+	}
+	#E {
+		left: 0%;
+	}
+	#F {
+		left: 20%;
+	}
+	#G {
+		left: 40%;
+	}
+	#H {
+		left: 60%;
+	}
+	.text {
+		width: 42%;
+	}
+	.info {
+		width: 42%;
+	}
+}
+@media only screen and (max-width : 800px) {
+	#header-scroll {
+		left: 36%;
+	}
+	#icons {
+		left:18%;
+	}
+}
+@media only screen and (max-width : 600px) {
+	#header-scroll {
+		left: 44%;
+	}
+	#icons {
+		left:22%;
+	}
+	#singles {
+		margin-left: -5%;
+	}
+	.text {
+		width: 40%;
+	}
+	.info {
+		width: 40%;
+	}
+}
+@media only screen and (max-width : 500px) {
+	.text {
+		width: 35%;
+	}
+	.info {
+		width: 35%;
+	}
+}

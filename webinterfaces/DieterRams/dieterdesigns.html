@@ -1,0 +1,62 @@
+<html>
+
+<head>
+	<title>DIETER</title>
+	<link rel="stylesheet" type="text/css" href="dietermain.css">
+	<script language="javascript">
+		i = 0
+		var speed = 10
+		function scroll() {
+			i = i + speed
+			var div = document.getElementById("gallery")
+			div.scrollLeft = i
+			if (i > div.scrollWidth - 160)
+				{i = 0}
+			t1=setTimeout("scroll()",100)
+		}
+	</script>
+</head>
+
+<body onload="scroll()">
+	
+	<div id="browsercolumn">
+		<ul id="browser">
+			<li id="dieter_rams"><a href="dietermain.html">dieter rams</a></li>
+			<li><a href="dietercommandments.html">ten commandments</a></li>
+			<li><a href="dieterdesigns.html">work</a></li>
+			<li><a href="dietervideo.html">cold war modern</a></li>
+			<li><a href="http://www.braun.com/us/world-of-braun/braun-design.html" target="_blank">braun design</a></li>
+			<li><a href="http://en.wikipedia.org/wiki/Dieter_Rams" target="_blank">wikipedia</a></li>
+		</ul>
+	</div>
+		
+	<ul class="heading-list" id="designsheading">
+		<li><a href="../index.html">home</a></li>
+		<li><a href="#">rectangle compositions</a></li>
+		<li><a href="../angels/angels.html">the angel of history</a></li>
+		<li><a href="../Project1/text.html">the type speaks!</a></li>
+		<li><a href="dietermain.html">dieter rams</a></li>
+	</ul>	
+	
+	<div class="content-area" id="designs">
+		<div id="gallery" onmouseover="clearTimeout(t1)" onmouseout="scroll()">
+			<img src="../images/D1.jpg">
+			<img src="../images/D2.jpg">
+			<img src="../images/D3.jpg">
+			<img src="../images/D4.jpeg">
+			<img src="../images/D5.jpg">
+			<img src="../images/D6.jpg">
+			<img src="../images/D7.jpg">
+			<img src="../images/D8.jpg">
+			<img src="../images/D9.jpg">
+			<img src="../images/D10.jpeg">
+			<img src="../images/D11.jpeg">
+			<img src="../images/D12.jpg">
+			<img src="../images/D13.jpg">
+			<img src="../images/D14.jpeg">
+		</div>	
+	</div>
+
+</body>
+
+</html>

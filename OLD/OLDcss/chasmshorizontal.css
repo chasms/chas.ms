@@ -1,0 +1,860 @@
+::-webkit-scrollbar {
+	display: none;
+}
+body {
+	background-color: black;
+	margin:0;
+	padding:0;
+	text-decoration: none;
+}
+h1 {
+	color:azure;
+}
+h2 {
+	color:azure;
+}
+h3 {
+	color:azure;
+}
+h4 {
+	color:azure;
+}
+h5 {
+	color:azure;
+}
+a {
+	text-decoration: none;
+	color: azure;
+}
+a:hover {
+	color:azure;
+	text-decoration: none;
+}
+.appears {
+	display: none;
+}
+.reveal {
+	opacity: 0;
+	-webkit-transition: opacity 1s ease-in-out;
+    -moz-transition: opacity 1s ease-in-out;
+    -o-transition: opacity 1s ease-in-out;
+    -ms-transition: opacity 1s ease-in-out;
+}
+/*.dropdown-item {
+	position:relative;
+	height:0px;
+	overflow:hidden !important;
+}
+.dropdown-list {
+	display:block;
+	opacity: 1;
+}
+/*.dropdown-item:hover .dropdown-list {
+	-webkit-transition: opacity .5s ease-in-out;
+    -moz-transition: opacity .5s ease-in-out;
+    -o-transition: opacity .5s ease-in-out;
+    -ms-transition: opacity .5s ease-in-out;
+	opacity: 1;
+}*/
+
+.trans_show {
+	display: none;
+}
+.shrink {
+	width:100%;
+}
+
+/*	Heading
+==================================================
+
+.heading-list {
+	display:none;
+	margin: 0;
+	margin-left:201px;
+	position: fixed;
+	top: 0px;
+	left:0px;
+	right:0px;
+	text-align:center;
+	list-style: none;
+	font: 10px helvetica;
+	font-style: oblique;
+	font-weight: light;
+	background-color: white;
+	box-shadow: 0px 1px 10px #000;
+	border-bottom: 1px solid #grey;
+	opacity: .3;
+	padding: 12px;
+	-webkit-transition: opacity .5s ease-in-out;
+	-moz-transition: opacity .5s ease-in-out;
+	-o-transition: opacity .5s ease-in-out;
+	-ms-transition: opacity .5s ease-in-out;
+	z-index:98;
+	min-width:700px;
+}
+#mainheading {
+	background-color: #E6F6FF;
+	border-bottom: 1px solid #D3E2EB;
+}
+#printheading {
+	background-color: #ccc;
+	border-bottom: 1px solid #aaa;
+}
+#objectheading {
+	background-color: white;
+	border-bottom: 1px solid grey;
+}
+ul.heading-list:hover {
+	opacity: .9;
+}
+.heading-list li {
+	display: inline-block;
+	margin-right: 5%;
+}
+.heading-list a {
+	color: #999;
+	text-decoration:none;
+	font: 10pt helvetica;
+	font-style: oblique;
+	text-shadow: 1.5px 1px #fff;
+	-webkit-transition: color .5s ease-in-out;
+	-moz-transition: color .5s ease-in-out;
+	-o-transition: color .5s ease-in-out;
+	-ms-transition: color .5s ease-in-out;
+}
+.heading-list a:hover {
+	opacity: 1;
+	color: #999;
+}
+#designsheading a:hover {
+	opacity: 1;
+	color: #222;
+}
+
+/*	Browser
+==================================================*/
+
+#browsercolumn {
+	position:absolute;
+	left: 0%;
+	width: 200px;
+	height: 100%;
+	background-color: rgba(0,0,0,0.6);
+	z-index:99;
+	overflow: visible;
+}
+#browsercolumn-O {
+	position:absolute;
+	left: 0%;
+	width: 200px;
+	height: 100%;
+	background-color: rgba(0,0,0,.6);
+	z-index:99;
+	overflow: visible;
+}
+#browsermain{
+	position:absolute;
+	left: 0%;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.6);
+	z-index:99;
+	-webkit-transition: width .75s ease-in-out;
+	-moz-transition: width .75s ease-in-out;
+	-o-transition: width .75s ease-in-out;
+	-ms-transition: width .75s ease-in-out;
+	overflow: visible;
+}
+#logo {
+	max-height: 300px;
+	left:50%;
+	margin:100px 0px 10px 0px;
+	overflow: hidden;
+	padding: 25px;
+	text-align: center;
+}
+#logo-png {
+    z-index: 98;
+    opacity: .5;
+	-webkit-transition: opacity .5s ease-in-out;
+    -moz-transition: opacity .5s ease-in-out;
+    -o-transition: opacity .5s ease-in-out;
+    -ms-transition: opacity .5s ease-in-out;
+
+}
+#logo-png:hover {
+	opacity: .9;
+}
+/*#about {
+	opacity:0;
+	text-align: center;
+	width: 100%;
+	height: 30px;
+	font-size:12px;
+	font-family: Helvetica,sans-serif;
+	font-weight:10;
+	font-style: oblique;
+	 -webkit-transition: opacity .5s ease-in-out;
+    -moz-transition: opacity .5s ease-in-out;
+    -o-transition: opacity .5s ease-in-out;
+    -ms-transition: opacity .5s ease-in-out;
+}
+#about p {
+	margin-top: 25px;
+	color: #666;
+	font-weight: light;
+}*/
+#chasms_head {
+	color: azure;
+	opacity: .8;
+	font: 18pt helvetica;
+	font-weight: bold;
+	font-style:oblique;
+	text-align: left;
+	-webkit-transition: opacity .5s ease-in-out;
+    -moz-transition: opacity .5s ease-in-out;
+    -o-transition: opacity .5s ease-in-out;
+    -ms-transition: opacity .5s ease-in-out;
+}
+#chasms_head:hover {
+	opacity: 1;
+}
+#browser {
+	list-style: none;
+	font-size:12px;
+	font-family: Helvetica,sans-serif;
+	font-weight:10;
+	font-style: oblique;
+	margin-left: 0;
+	margin-top:0;
+	margin-bottom: 0;
+	padding: 25px;
+}
+#browser li {
+	text-align: center;
+	margin-bottom: 25px;
+	margin-right:0px;
+	overflow: visible;
+	opacity: .6;
+	-webkit-transition: opacity .5s ease-in-out;
+    -moz-transition: opacity .5s ease-in-out;
+    -o-transition: opacity .5s ease-in-out;
+    -ms-transition: opacity .5s ease-in-out;
+}
+#browser li:hover {
+	opacity:1;
+}
+/*#browserlist {
+	list-style: none;
+}
+#browserlist li {
+	text-align: center;
+	margin-bottom: 25px;
+	overflow: visible;
+}*/
+.current {
+	color: purple !important;
+}
+.icon {
+	opacity: .4;
+	-webkit-transition: opacity .5s ease-in-out;
+    -moz-transition: opacity .5s ease-in-out;
+    -o-transition: opacity .5s ease-in-out;
+    -ms-transition: opacity .5s ease-in-out;
+}
+.icon:hover {
+	opacity: .8;
+}
+.icon-set {
+	text-align: center;
+	bottom: 0px;
+	width: 100%;
+}
+
+
+/*	Content
+==================================================*/
+
+.content-area {
+	position:absolute;
+	top:0px; left:0px; right:0px; bottom:0px;
+	background-color:  black;
+	overflow:scroll;
+}
+.project-display {
+	width: 100%;
+}
+#main {
+	background: url('/gallery/img/photo/extendedreflections/red.jpg') no-repeat bottom center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	z-index: 01;
+}
+#object {
+	background: url('/gallery/img/photo/extendedreflections/orange.jpg') no-repeat bottom center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	z-index: 01
+}
+#print {
+	background: url('/img/Groupers.jpg') no-repeat center center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	z-index: 01
+}
+#o {
+	background: url('/gallery/img/photo/extendedreflections/orange.jpg') no-repeat bottom center;
+	padding-top: 0px !important;
+	padding-bottom: 0px !important;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	z-index: 01;
+}
+#sk {
+	background: url('/img/SK1.png') no-repeat center center;
+	padding-top: 0px !important;
+	padding-bottom: 0px !important;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	z-index: 01;
+}
+#mg {
+	background: url('/img/MG20.png') no-repeat center center;
+	padding-top: 0px !important;
+	padding-bottom: 0px !important;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	z-index: 01;
+}
+
+/*	Gallery
+==================================================*/
+
+#gallery {
+	width:auto;
+	height: 70%;
+	padding-left: 200px;
+	white-space: nowrap;
+	overflow: auto;
+	background-color: rgba(0,0,0,.6);
+	padding-top: 20px;
+	padding-bottom: 20px;
+	margin-top: 100px;
+}
+#reader {
+	margin-left: 350px;
+	margin-right: 0px;
+	height: 100%;
+	padding-left: 50px;
+	white-space: nowrap;
+	overflow: auto;
+	background-color: rgba(0,0,0,.6);
+}
+.photothumbs {
+	display: block !important;
+	margin-left: 275px;
+	margin-right: 50px;
+	padding-right: 10px;
+	padding-left: 10px;
+	max-width: 300px;
+	height: 100%;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	background-color: rgba(0,0,0,.6);
+}
+.link {
+	display: block;
+	-webkit-transition: opacity .5s ease-in-out;
+    -moz-transition: opacity .5s ease-in-out;
+    -o-transition: opacity .5s ease-in-out;
+    -ms-transition: opacity .5s ease-in-out;
+}
+.link:hover {
+	opacity: .7;
+}
+#spacer {
+	display: block !important;
+	height: 63px;
+	width: 300px;
+}
+.project-banner {
+	position: absolute;
+	bottom: 0;
+	max-width: 300px;
+	width: 100%;
+	height: 53px;
+	margin-right: 60px;
+	z-index: 99;
+	background-color: rgba(0,0,0,.9);
+}
+.project-banner p {
+	color:Azure;
+	font-family: Helvetica, sans-serif;
+	font: 18pt helvetica;
+	font-weight: bold;
+	font-style:italic;
+	text-align: left;
+	margin-left: 10px;
+	margin-top: 5px;
+	z-index: 99;
+	opacity: .7;
+}
+.photos {
+	left:600px;
+	bottom:25px;
+	top: 25px;
+	right: 50px;
+	left: 600px;
+	background-color: rgba(0,0,0,.6);
+}
+.photos div {
+	display: none;
+	position:absolute;
+	margin-left: 25px;
+	right:50px;
+	left: 600px;
+	bottom:25px;
+	top: 25px;
+}
+#sk0 {
+	/*display: block !important;*/
+	background: url('/img/SK0.png') no-repeat center center;
+	-webkit-background-size: contain;
+	-moz-background-size: contain;
+	-o-background-size: contain;
+	background-size: contain;
+}
+#sk1 {
+	background: url('/img/SK1.png') no-repeat center center;
+	-webkit-background-size: contain;
+	-moz-background-size: contain;
+	-o-background-size: contain;
+	background-size: contain;
+}
+#sk2 {
+	background: url('/img/SK2.png') no-repeat center center;
+	-webkit-background-size: contain;
+	-moz-background-size: contain;
+	-o-background-size: contain;
+	background-size: contain;
+}
+#sk3 {
+	background: url('/img/SK3.png') no-repeat center center;
+	-webkit-background-size: contain;
+	-moz-background-size: contain;
+	-o-background-size: contain;
+	background-size: contain;
+}
+#sk4 {
+	background: url('/img/SK4.png') no-repeat center center;
+	-webkit-background-size: contain;
+	-moz-background-size: contain;
+	-o-background-size: contain;
+	background-size: contain;
+}
+#sk5 {
+	background: url('/img/SK5.png') no-repeat center center;
+	-webkit-background-size: contain;
+	-moz-background-size: contain;
+	-o-background-size: contain;
+	background-size: contain;
+}
+#sk6 {
+	background: url('/img/SK6.png') no-repeat center center;
+	-webkit-background-size: contain;
+	-moz-background-size: contain;
+	-o-background-size: contain;
+	background-size: contain;
+}
+#sk7 {
+	background: url('/img/SK7.png') no-repeat center center;
+	-webkit-background-size: contain;
+	-moz-background-size: contain;
+	-o-background-size: contain;
+	background-size: contain;
+}
+#sk8 {
+	background: url('/img/SK8.png') no-repeat center center;
+	-webkit-background-size: contain;
+	-moz-background-size: contain;
+	-o-background-size: contain;
+	background-size: contain;
+}
+#sk9 {
+	background: url('/img/SK9.png') no-repeat center center;
+	-webkit-background-size: contain;
+	-moz-background-size: contain;
+	-o-background-size: contain;
+	background-size: contain;
+}
+#sk10 {
+	background: url('/img/SK10.png') no-repeat center center;
+	-webkit-background-size: contain;
+	-moz-background-size: contain;
+	-o-background-size: contain;
+	background-size: contain;
+}
+#sk11 {
+	background: url('/img/SK11.png') no-repeat center center;
+	-webkit-background-size: contain;
+	-moz-background-size: contain;
+	-o-background-size: contain;
+	background-size: contain;
+}
+#sk12 {
+	background: url('/img/SK12.png') no-repeat center center;
+	-webkit-background-size: contain;
+	-moz-background-size: contain;
+	-o-background-size: contain;
+	background-size: contain;
+}
+#sk13 {
+	background: url('/img/SK13.png') no-repeat center center;
+	-webkit-background-size: contain;
+	-moz-background-size: contain;
+	-o-background-size: contain;
+	background-size: contain;
+}
+#MG1 {
+	background: url('/img/MG1.png') no-repeat center center;
+	-webkit-background-size: contain;
+	-moz-background-size: contain;
+	-o-background-size: contain;
+	background-size: contain;
+}
+#MG2 {
+	background: url('/img/MG2.png') no-repeat center center;
+	-webkit-background-size: contain;
+	-moz-background-size: contain;
+	-o-background-size: contain;
+	background-size: contain;
+}
+#MG3 {
+	background: url('/img/MG3.png') no-repeat center center;
+	-webkit-background-size: contain;
+	-moz-background-size: contain;
+	-o-background-size: contain;
+	background-size: contain;
+}
+#MG4 {
+	background: url('/img/MG4.png') no-repeat center center;
+	-webkit-background-size: contain;
+	-moz-background-size: contain;
+	-o-background-size: contain;
+	background-size: contain;
+}
+#MG5 {
+	background: url('/img/MG5.png') no-repeat center center;
+	-webkit-background-size: contain;
+	-moz-background-size: contain;
+	-o-background-size: contain;
+	background-size: contain;
+}
+#MG6 {
+	background: url('/img/MG6.png') no-repeat center center;
+	-webkit-background-size: contain;
+	-moz-background-size: contain;
+	-o-background-size: contain;
+	background-size: contain;
+}
+#MG7 {
+	background: url('/img/MG7.png') no-repeat center center;
+	-webkit-background-size: contain;
+	-moz-background-size: contain;
+	-o-background-size: contain;
+	background-size: contain;
+}
+#MG8 {
+	background: url('/img/MG8.png') no-repeat center center;
+	-webkit-background-size: contain;
+	-moz-background-size: contain;
+	-o-background-size: contain;
+	background-size: contain;
+}
+#MG9 {
+	background: url('/img/MG9.png') no-repeat center center;
+	-webkit-background-size: contain;
+	-moz-background-size: contain;
+	-o-background-size: contain;
+	background-size: contain;
+}
+#MG10 {
+	background: url('/img/MG10.png') no-repeat center center;
+	-webkit-background-size: contain;
+	-moz-background-size: contain;
+	-o-background-size: contain;
+	background-size: contain;
+}
+#MG11 {
+	background: url('/img/MG11.png') no-repeat center center;
+	-webkit-background-size: contain;
+	-moz-background-size: contain;
+	-o-background-size: contain;
+	background-size: contain;
+}
+#MG12 {
+	background: url('/img/MG12.png') no-repeat center center;
+	-webkit-background-size: contain;
+	-moz-background-size: contain;
+	-o-background-size: contain;
+	background-size: contain;
+}
+#MG13 {
+	background: url('/img/MG13.png') no-repeat center center;
+	-webkit-background-size: contain;
+	-moz-background-size: contain;
+	-o-background-size: contain;
+	background-size: contain;
+}
+#MG14 {
+	background: url('/img/MG14.png') no-repeat center center;
+	-webkit-background-size: contain;
+	-moz-background-size: contain;
+	-o-background-size: contain;
+	background-size: contain;
+}
+#MG15 {
+	background: url('/img/MG15.png') no-repeat center center;
+	-webkit-background-size: contain;
+	-moz-background-size: contain;
+	-o-background-size: contain;
+	background-size: contain;
+}
+#MG16 {
+	background: url('/img/MG16.png') no-repeat center center;
+	-webkit-background-size: contain;
+	-moz-background-size: contain;
+	-o-background-size: contain;
+	background-size: contain;
+}
+#MG17 {
+	background: url('/img/MG17.png') no-repeat center center;
+	-webkit-background-size: contain;
+	-moz-background-size: contain;
+	-o-background-size: contain;
+	background-size: contain;
+}
+#MG18 {
+	background: url('/img/MG18.png') no-repeat center center;
+	-webkit-background-size: contain;
+	-moz-background-size: contain;
+	-o-background-size: contain;
+	background-size: contain;
+}
+#MG19 {
+	background: url('/img/MG19.png') no-repeat center center;
+	-webkit-background-size: contain;
+	-moz-background-size: contain;
+	-o-background-size: contain;
+	background-size: contain;
+}
+#MG20 {
+	background: url('/img/MG20.png') no-repeat center center;
+	-webkit-background-size: contain;
+	-moz-background-size: contain;
+	-o-background-size: contain;
+	background-size: contain;
+}
+#MG21 {
+	background: url('/img/MG21.png') no-repeat center center;
+	-webkit-background-size: contain;
+	-moz-background-size: contain;
+	-o-background-size: contain;
+	background-size: contain;
+}
+#MG22 {
+	background: url('/img/MG22.png') no-repeat center center;
+	-webkit-background-size: contain;
+	-moz-background-size: contain;
+	-o-background-size: contain;
+	background-size: contain;
+}
+#mg23 {
+	background: url('/img/MG23.png') no-repeat center center;
+	-webkit-background-size: contain;
+	-moz-background-size: contain;
+	-o-background-size: contain;
+	background-size: contain;
+}
+#MG24 {
+	background: url('/img/MG24.png') no-repeat center center;
+	-webkit-background-size: contain;
+	-moz-background-size: contain;
+	-o-background-size: contain;
+	background-size: contain;
+}
+#MG25 {
+	background: url('/img/MG25.png') no-repeat center center;
+	-webkit-background-size: contain;
+	-moz-background-size: contain;
+	-o-background-size: contain;
+	background-size: contain;
+}
+#MG26 {
+	background: url('/img/MG26.png') no-repeat center center;
+	-webkit-background-size: contain;
+	-moz-background-size: contain;
+	-o-background-size: contain;
+	background-size: contain;
+}
+#MG27 {
+	background: url('/img/MG27.png') no-repeat center center;
+	-webkit-background-size: contain;
+	-moz-background-size: contain;
+	-o-background-size: contain;
+	background-size: contain;
+}
+#MG28 {
+	background: url('/img/MG28.png') no-repeat center center;
+	-webkit-background-size: contain;
+	-moz-background-size: contain;
+	-o-background-size: contain;
+	background-size: contain;
+}
+#MG29 {
+	background: url('/img/MG29.png') no-repeat center center;
+	-webkit-background-size: contain;
+	-moz-background-size: contain;
+	-o-background-size: contain;
+	background-size: contain;
+}
+#MG30 {
+	background: url('/img/MG30.png') no-repeat center center;
+	-webkit-background-size: contain;
+	-moz-background-size: contain;
+	-o-background-size: contain;
+	background-size: contain;
+}
+#MG31 {
+	background: url('/img/MG31.png') no-repeat center center;
+	-webkit-background-size: contain;
+	-moz-background-size: contain;
+	-o-background-size: contain;
+	background-size: contain;
+}
+#MG32 {
+	background: url('/img/MG32.png') no-repeat center center;
+	-webkit-background-size: contain;
+	-moz-background-size: contain;
+	-o-background-size: contain;
+	background-size: contain;
+}
+#mg33 {
+	background: url('/img/MG33.png') no-repeat center center;
+	-webkit-background-size: contain;
+	-moz-background-size: contain;
+	-o-background-size: contain;
+	background-size: contain;
+}
+#mg34 {
+	background: url('/img/MG34.png') no-repeat center center;
+	-webkit-background-size: contain;
+	-moz-background-size: contain;
+	-o-background-size: contain;
+	background-size: contain;
+}
+.embed-container{
+	width: 100%;
+	height:100%;
+	background-color: red;	
+}
+#gallery img {
+	overflow:hidden;
+	height: 100%;
+	margin-right: 15px;
+}
+/*#gallerycontainter {
+	overflow:auto;
+	height: 100%;
+	margin: auto 0px auto 10px;
+}*/
+
+
+
+/*	Assets
+==================================================*/
+.assets {
+	left: 200px;
+	top:0px;
+	bottom:0px;
+	padding-left: 200px;
+	padding-top: 100px;
+	padding-bottom: 20px;
+	margin-top: 0px;
+}
+.window {
+	height: 250px;
+	width: 350px;
+	display: inline-block;
+	/*display: inline;
+	zoom: 1;
+	_height: 250px;*/
+	margin-left: 50px;
+	margin-bottom: 50px;
+	/*border-top-left-radius: 125px/25px;
+	border-top-right-radius: 125px/25px;
+	border: 1px solid black;
+	-webkit-background-clip: padding-box; 
+	-moz-background-clip:    padding; 
+	background-clip:         padding-box;*/
+	opacity: 1;
+	overflow: hidden;
+	box-shadow: 0px 1px 10px 1px black;
+}
+.subtitle {
+	background-color: rgba(255,255,255,0.4);
+	text-align: left;
+	display: block;
+	height:50px;
+	position: relative;
+	bottom:0px;
+	padding: 0px;
+	-webkit-transition: bottom .5s ease-in-out;
+	-moz-transition: bottom .5s ease-in-out;
+	-o-transition: bottom .5s ease-in-out;
+	-ms-transition: bottom .5s ease-in-out;
+}
+.bk {
+	background-color: rgba(0,0,0,1) !important;
+	}
+	
+.subtitle p{
+	opacity: 0;
+	padding: 10px;
+	color: black;
+	font-size:18px;
+	font-family: DinPro;
+	font-weight:Lighter;
+	font-style: oblique;
+	-webkit-transition: opacity .75s ease-in-out;
+    -moz-transition: opacity .75s ease-in-out;
+    -o-transition: opacity .75s ease-in-out;
+    -ms-transition: opacity .75s ease-in-out;
+}
+.bk p{
+	color: azure !important;
+}
+.subtitle img{
+	width: 350px;
+}
+.window:hover .subtitle {
+	bottom: 50px;
+}
+.window:hover .subtitle p {
+	opacity: 1;
+}
+.invert {
+	-webkit-filter: invert(1);
+}
