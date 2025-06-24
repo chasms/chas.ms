@@ -1,5 +1,6 @@
 import Image from "next/image";
 import styles from "./page.module.css";
+import { css } from "../../styled-system/css";
 
 export default function Home() {
   return (
@@ -17,7 +18,8 @@ export default function Home() {
           <li>
             Get started by editing <code>src/app/page.tsx</code>.
           </li>
-          <li>Save and see your changes instantly.</li>
+
+          <li className={css({ fontSize: "72px", fontWeight: 'bold' })}>Save and see your changes instantly.</li>
         </ol>
 
         <div className={styles.ctas}>
