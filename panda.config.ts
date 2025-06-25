@@ -6,7 +6,7 @@ export default defineConfig({
 
   // Where to look for your css declarations
   // include: ["./src/**/*.{js,jsx,ts,tsx}", "./pages/**/*.{js,jsx,ts,tsx}"],
-  include: ["./src/components/**/*.{ts,tsx,js,jsx}", "./src/app/**/*.{ts,tsx,js,jsx}"],
+  include: ["./app/**/*.{ts,tsx,js,jsx}", "./pages/**/*.{ts,tsx,js,jsx}", "./components/**/*.{ts,tsx,js,jsx}",],
 
   // Files to exclude
   exclude: [],
@@ -18,4 +18,7 @@ export default defineConfig({
 
   // The output directory for your css system
   outdir: "styled-system",
+
+  syntax: 'template-literal', // required
+  jsxFramework: 'react' // optional
 });

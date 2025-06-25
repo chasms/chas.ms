@@ -1,6 +1,10 @@
 import Image from "next/image";
 import styles from "./page.module.css";
-import { css } from "../styled-system/css";
+import { styled } from "../styled-system/jsx";
+
+const StyledListItem = styled.li`
+  font-size: 72px;
+`
 
 export default function Home() {
   return (
@@ -19,7 +23,7 @@ export default function Home() {
             Get started by editing <code>src/app/page.tsx</code>.
           </li>
 
-          <li className={css({ fontSize: "72px", fontWeight: 'bold' })}>Save and see your changes instantly.</li>
+          <StyledListItem>Save and see your changes instantly.</StyledListItem>
         </ol>
 
         <div className={styles.ctas}>
