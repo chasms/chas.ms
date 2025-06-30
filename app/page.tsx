@@ -1,11 +1,21 @@
+import Image from "next/image";
 import { HomeWrapper, LogoOverlay, LogoWrapper } from "./page.css";
+import KundaliniWhiteLogo from "../public/img/kundalini-white.png";
+import JavascriptTranspilersGalleryImage from "../public/img/JS0.png";
+import SkylandGalleryImage from "../public/img/SK0.png";
+import SkylandGalleryBannerImage from "../public/img/SKCsm.png";
+import PeelersGalleryImage from "../public/img/PP0.png";
+import ShakersGalleryImage from "../public/img/SP0.png";
+import FurnitureGalleryImage from "../public/img/F0.png";
+import MardiGrasGalleryImage from "../public/img/MG0.png";
+import GalleryItem from "../components/GalleryItem";
 
 export default function Home() {
   return (
     <HomeWrapper>
       <LogoOverlay>
         <LogoWrapper>
-          <img src="img/kundalini-white.png" alt="chasms"></img>
+          <Image src={KundaliniWhiteLogo} alt="chasms"></Image>
         </LogoWrapper>
       </LogoOverlay>
 
@@ -71,10 +81,10 @@ export default function Home() {
 
         <div className="assets reveal">
           <a className="window" href="SP.html">
-            <img
+            <Image
               alt="Salt & Pepper Shakers"
               className="work"
-              src="/img/SP0.png"
+              src={ShakersGalleryImage}
             />
             <div className="subtitle bk">
               <p>
@@ -83,22 +93,40 @@ export default function Home() {
             </div>
           </a>
 
+          <GalleryItem
+            href="SP.html"
+            image={ShakersGalleryImage}
+            imageAltText="Salt & Pepper Shakers"
+          >
+            <p>
+              <strong>semantic</strong> shakers
+            </p>
+          </GalleryItem>
+
           <a className="window" href="JS.html">
-            <img alt="" className="work" src="/img/JS0.png" />
+            <Image
+              alt=""
+              className="work"
+              src={JavascriptTranspilersGalleryImage}
+            />
             <div className="subtitle bk">
               <p>Presentation on Javascript Transpilers</p>
             </div>
           </a>
 
           <a className="window" href="SK.html">
-            <img alt="" className="work" src="/img/SK0.png" />
+            <Image alt="" className="work" src={SkylandGalleryImage} />
             <div className="subtitle bk">
-              <img alt="" className="banner" src="/img/SKCsm.png" />
+              <Image
+                alt=""
+                className="banner"
+                src={SkylandGalleryBannerImage}
+              />
             </div>
           </a>
 
           <a className="window" href="PP.html">
-            <img alt="" className="work" src="/img/PP0.png" />
+            <Image alt="" className="work" src={PeelersGalleryImage} />
             <div className="subtitle bk">
               <p>
                 <strong>ergonomic</strong> peelers
@@ -107,14 +135,14 @@ export default function Home() {
           </a>
 
           <a className="window" href="F.html">
-            <img alt="" className="work" src="/img/F0.png" />
+            <Image alt="" className="work" src={FurnitureGalleryImage} />
             <div className="subtitle bk">
               <p>furniture</p>
             </div>
           </a>
 
           <a className="window" href="MG.html">
-            <img alt="" className="work" src="/img/MG0.png" />
+            <Image alt="" className="work" src={MardiGrasGalleryImage} />
             <div className="subtitle bk">
               <p>new orleans</p>
             </div>

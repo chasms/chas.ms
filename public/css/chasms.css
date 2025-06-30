@@ -31,7 +31,7 @@ font-family: "San Francisco";
 font-weight: 600;
 src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-semibold-webfont.woff");
 }
-/** Bold */ 
+/** Bold */
 @font-face {
 font-family: "San Francisco";
 font-weight: 700;
@@ -104,7 +104,7 @@ a:hover {
 #logo {
 	height: 100%;
 	width: 100%;
-	text-align: center;	
+	text-align: center;
 	position: absolute;
 	z-index: 999;
 	padding-top: 150px;
@@ -125,7 +125,6 @@ a:hover {
 	opacity: .8;
 }
 #logo-png img {
-	
 }
 
 
@@ -431,8 +430,8 @@ nav ul li {
 	/*border-top-left-radius: 125px/25px;
 	border-top-right-radius: 125px/25px;
 	border: 1px solid black;
-	-webkit-background-clip: padding-box; 
-	-moz-background-clip:    padding; 
+	-webkit-background-clip: padding-box;
+	-moz-background-clip:    padding;
 	background-clip:         padding-box;*/
 	opacity: 1;
 	overflow: hidden;
