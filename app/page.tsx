@@ -8,10 +8,11 @@ import ShakersThumbnail from "./assets/img/ShakersThumbnail.png";
 import SkylandBanner from "./assets/img/SkylandBanner.png";
 import SkylandThumbnail from "./assets/img/SkylandThumbnail.png";
 import GalleryItem from "./components/GalleryItem";
+import Nav from "./components/Nav";
 
-export const HomeWrapper = styled.div``;
+const HomeWrapper = styled.div``;
 
-export const LogoOverlay = styled.div`
+const LogoOverlay = styled.div`
   height: 100%;
   width: 100%;
   text-align: center;
@@ -20,15 +21,23 @@ export const LogoOverlay = styled.div`
   padding-top: 150px;
   top: 0%;
   transition: top 1.5s ease-in-out;
+  display: none;
 `;
 
-export const LogoWrapper = styled.div`
+const LogoWrapper = styled.div`
   opacity: 0.3;
   transition: opacity 1.5s ease-in-out;
 
   &:hover {
     opacity: 0.8;
   }
+`;
+
+const ContentArea = styled.div`
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  overflow: scroll;
 `;
 
 export default function HomePage() {
@@ -40,67 +49,9 @@ export default function HomePage() {
         </LogoWrapper>
       </LogoOverlay>
 
-      <nav className="reveal">
-        <ul id="chasms_head">
-          <li id="chasm">
-            <p>
-              CH<strong>ARLES </strong>A<strong>LBERT </strong>S
-              <strong>A</strong>M<strong>UEL</strong>S
-            </p>
-          </li>
-        </ul>
+      <Nav />
 
-        <ul className="navigation">
-          <li>
-            <a
-              className="nav-link"
-              href="https://www.medium.com/@chasms"
-              target="_blank"
-              rel="noreferrer"
-            >
-              BLOG
-            </a>
-          </li>
-          <li>
-            <a
-              className="nav-link"
-              href="https://www.github.com/chasms"
-              target="_blank"
-              rel="noreferrer"
-            >
-              GITHUB
-            </a>
-          </li>
-          <li>
-            <a className="nav-link" href="info.html">
-              ABOUT
-            </a>
-          </li>
-        </ul>
-
-        <ul className="icons">
-          <li className="icon">
-            <a
-              href="mailto:chasms@chas.ms"
-              className="sb small no-shadow border circle email"
-            >
-              Email
-            </a>
-          </li>
-          <li className="icon">
-            <a
-              href="https://linkedin.com/in/chasms"
-              target="_blank"
-              className="sb small no-shadow border circle linkedin"
-              rel="noreferrer"
-            >
-              LinkedIn
-            </a>
-          </li>
-        </ul>
-      </nav>
-
-      <div className="content-area">
+      <ContentArea>
         <div className="background" id="main"></div>
 
         <div className="assets reveal">
@@ -164,7 +115,7 @@ export default function HomePage() {
             </div>
           </a>
         </div>
-      </div>
+      </ContentArea>
     </HomeWrapper>
   );
 }
