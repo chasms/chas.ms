@@ -1,5 +1,4 @@
-import Image, { StaticImageData } from "next/image";
-import { styled } from "../styled-system/jsx";
+import { styled } from "../../styled-system/jsx";
 
 const Wrapper = styled.a`
   height: 250px;
@@ -24,7 +23,7 @@ const GalleryItemBanner = styled.div`
 
 interface GalleryItemProps {
   href: string;
-  image: StaticImageData;
+  image: string;
   imageAltText: string;
   children: React.ReactNode;
 }
@@ -37,7 +36,7 @@ export default function GalleryItem({
 }: GalleryItemProps) {
   return (
     <Wrapper href={href}>
-      <Image alt={imageAltText} src={image} height={250} width={350} />
+      <img alt={imageAltText} src={image} height={250} width={350} />
       <GalleryItemBanner>{children}</GalleryItemBanner>
     </Wrapper>
   );
