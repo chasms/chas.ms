@@ -6,9 +6,16 @@ import Title from "./TItle";
 
 const linkStyles = {
   color: "azure",
+  transition: "color 0.25s ease-in-out",
   _hover: {
     color: "red",
   },
+};
+
+const listItemStyles = {
+  listStyleType: "none",
+  display: "inline-block",
+  padding: "15px 0px 20px 0px",
 };
 
 const navWrapperStyles = css({
@@ -21,12 +28,22 @@ const navWrapperStyles = css({
   display: "flex",
 });
 
-const navList = css({ margin: 0, padding: 0, display: "inline" });
+const navList = css({
+  margin: 0,
+  padding: 0,
+  display: "inline",
+  textDecoration: "none",
+  backgroundColor: "transparent",
+  color: "azure",
+  fontFamily: "San Francisco, sans-serif",
+  fontSize: "10px",
+  fontWeight: 700,
+  position: "absolute",
+  left: "300px",
+});
 
 const navListItem = css({
-  listStyleType: "none",
-  display: "inline-block",
-  padding: "15px 0px 20px 0px",
+  ...listItemStyles,
 });
 
 const navLink = css({
@@ -35,9 +52,16 @@ const navLink = css({
   paddingLeft: "30px",
 });
 
-const iconsList = css({ position: "absolute", right: "50px" });
+const iconsList = css({
+  position: "absolute",
+  right: "50px",
+  display: "flex",
+  width: "50px",
+  justifyContent: "space-between",
+});
 
 const icon = css({
+  ...listItemStyles,
   opacity: "0.2",
   transition: "opacity 0.5s ease-in-out",
 
