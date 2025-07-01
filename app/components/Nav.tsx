@@ -1,6 +1,55 @@
+import { Link } from "react-router";
+import { styled } from "../../styled-system/jsx";
+
+const NavWrapper = styled.nav`
+  position: fixed;
+  width: 100%;
+  height: 50px;
+  letter-spacing: 1.2px;
+  z-index: 900;
+  background: rgba(0, 0, 0, 0.7);
+`;
+
+const NavList = styled.ul`
+  margin: 0;
+  padding: 0;
+  display: inline;
+`;
+
+const NavListItem = styled.li`
+  list-style-type: none;
+  display: inline-block;
+  padding: 15px 0px 20px 0px;
+`;
+
+const NavLink = styled(Link)`
+  padding-right: 30px !important;
+  padding-left: 30px !important;
+`;
+
+const IconsList = styled.ul`
+  position: absolute;
+  right: 50px;
+`;
+
+const Icon = styled.li`
+  opacity: 0.2;
+  transition: opacity 0.5s ease-in-out;
+`;
+
+const IconLink = styled(Link)`
+  text-decoration: none;
+  color: azure;
+  transition: color 0.5s ease-in-out;
+
+  &:hover {
+    color: red;
+  }
+`;
+
 export default function Nav() {
   return (
-    <nav className="reveal">
+    <NavWrapper>
       <ul id="chasms_head">
         <li id="chasm">
           <p>
@@ -10,44 +59,42 @@ export default function Nav() {
         </li>
       </ul>
 
-      <ul className="navigation">
-        <li>
-          <a
-            className="nav-link"
-            href="https://www.medium.com/@chasms"
+      <NavList>
+        <NavListItem>
+          <NavLink
+            to="https://www.medium.com/@chasms"
             target="_blank"
             rel="noreferrer"
           >
             BLOG
-          </a>
-        </li>
-        <li>
-          <a
-            className="nav-link"
-            href="https://www.github.com/chasms"
+          </NavLink>
+        </NavListItem>
+        <NavListItem>
+          <NavLink
+            to="https://www.github.com/chasms"
             target="_blank"
             rel="noreferrer"
           >
             GITHUB
-          </a>
-        </li>
-        <li>
+          </NavLink>
+        </NavListItem>
+        <NavListItem>
           <a className="nav-link" href="info.html">
             ABOUT
           </a>
-        </li>
-      </ul>
+        </NavListItem>
+      </NavList>
 
-      <ul className="icons">
-        <li className="icon">
+      <IconsList>
+        <Icon>
           <a
             href="mailto:chasms@chas.ms"
             className="sb small no-shadow border circle email"
           >
             Email
           </a>
-        </li>
-        <li className="icon">
+        </Icon>
+        <Icon>
           <a
             href="https://linkedin.com/in/chasms"
             target="_blank"
@@ -56,8 +103,8 @@ export default function Nav() {
           >
             LinkedIn
           </a>
-        </li>
-      </ul>
-    </nav>
+        </Icon>
+      </IconsList>
+    </NavWrapper>
   );
 }

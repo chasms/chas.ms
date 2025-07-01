@@ -55,19 +55,6 @@ export default function HomePage() {
         <div className="background" id="main"></div>
 
         <div className="assets reveal">
-          <a className="window" href="SP.html">
-            <img
-              alt="Salt & Pepper Shakers"
-              className="work"
-              src={ShakersThumbnail}
-            />
-            <div className="subtitle bk">
-              <p>
-                <strong>semantic</strong> shakers
-              </p>
-            </div>
-          </a>
-
           <GalleryItem
             href="SP.html"
             image={ShakersThumbnail}
@@ -78,42 +65,39 @@ export default function HomePage() {
             </p>
           </GalleryItem>
 
-          <a className="window" href="JS.html">
-            <img alt="" className="work" src={JavascriptTranspilersThumbnail} />
-            <div className="subtitle bk">
-              <p>Presentation on Javascript Transpilers</p>
-            </div>
-          </a>
+          <GalleryItem
+            href="JS.html"
+            image={JavascriptTranspilersThumbnail}
+            imageAltText=""
+          >
+            <p>Presentation on Javascript Transpilers</p>
+          </GalleryItem>
 
-          <a className="window" href="SK.html">
-            <img alt="" className="work" src={SkylandThumbnail} />
-            <div className="subtitle bk">
-              <img alt="" className="banner" src={SkylandBanner} />
-            </div>
-          </a>
+          <GalleryItem href="SK.html" image={SkylandThumbnail} imageAltText="">
+            <img alt="s" className="banner" src={SkylandBanner} />
+          </GalleryItem>
 
-          <a className="window" href="PP.html">
-            <img alt="" className="work" src={PeelerThumbnail} />
-            <div className="subtitle bk">
-              <p>
-                <strong>ergonomic</strong> peelers
-              </p>
-            </div>
-          </a>
+          <GalleryItem href="PP.html" imageAltText="" image={PeelerThumbnail}>
+            <p>
+              <strong>ergonomic</strong> peelers
+            </p>
+          </GalleryItem>
 
-          <a className="window" href="F.html">
-            <img alt="" className="work" src={FurnitureGalleryImage} />
-            <div className="subtitle bk">
-              <p>furniture</p>
-            </div>
-          </a>
+          <GalleryItem
+            href="F.html"
+            image={FurnitureGalleryImage}
+            imageAltText=""
+          >
+            <p>furniture</p>
+          </GalleryItem>
 
-          <a className="window" href="MG.html">
-            <img alt="" className="work" src={MardiGrasThumbnail} />
-            <div className="subtitle bk">
-              <p>new orleans</p>
-            </div>
-          </a>
+          <GalleryItem
+            href="MG.html"
+            image={MardiGrasThumbnail}
+            imageAltText=""
+          >
+            <p>new orleans</p>
+          </GalleryItem>
         </div>
       </ContentArea>
     </HomeWrapper>
