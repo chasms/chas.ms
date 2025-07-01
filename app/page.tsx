@@ -1,15 +1,37 @@
-import { HomeWrapper, LogoOverlay, LogoWrapper } from "./page.css";
-import KundaliniWhiteLogo from "../public/img/kundalini-white.png";
+import FurnitureGalleryImage from "../public/img/F0.png";
 import JavascriptTranspilersGalleryImage from "../public/img/JS0.png";
+import KundaliniWhiteLogo from "../public/img/kundalini-white.png";
+import MardiGrasGalleryImage from "../public/img/MG0.png";
+import PeelersGalleryImage from "../public/img/PP0.png";
 import SkylandGalleryImage from "../public/img/SK0.png";
 import SkylandGalleryBannerImage from "../public/img/SKCsm.png";
-import PeelersGalleryImage from "../public/img/PP0.png";
 import ShakersGalleryImage from "../public/img/SP0.png";
-import FurnitureGalleryImage from "../public/img/F0.png";
-import MardiGrasGalleryImage from "../public/img/MG0.png";
+import { styled } from "../styled-system/jsx";
 import GalleryItem from "./components/GalleryItem";
 
-export default function Home() {
+export const HomeWrapper = styled.div``;
+
+export const LogoOverlay = styled.div`
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  z-index: 999;
+  padding-top: 150px;
+  top: 0%;
+  transition: top 1.5s ease-in-out;
+`;
+
+export const LogoWrapper = styled.div`
+  opacity: 0.3;
+  transition: opacity 1.5s ease-in-out;
+
+  &:hover {
+    opacity: 0.8;
+  }
+`;
+
+export default function HomePage() {
   return (
     <HomeWrapper>
       <LogoOverlay>
@@ -34,6 +56,7 @@ export default function Home() {
               className="nav-link"
               href="https://www.medium.com/@chasms"
               target="_blank"
+              rel="noreferrer"
             >
               BLOG
             </a>
@@ -43,6 +66,7 @@ export default function Home() {
               className="nav-link"
               href="https://www.github.com/chasms"
               target="_blank"
+              rel="noreferrer"
             >
               GITHUB
             </a>
@@ -68,6 +92,7 @@ export default function Home() {
               href="https://linkedin.com/in/chasms"
               target="_blank"
               className="sb small no-shadow border circle linkedin"
+              rel="noreferrer"
             >
               LinkedIn
             </a>
@@ -80,7 +105,7 @@ export default function Home() {
 
         <div className="assets reveal">
           <a className="window" href="SP.html">
-            <Image
+            <img
               alt="Salt & Pepper Shakers"
               className="work"
               src={ShakersGalleryImage}
@@ -103,7 +128,7 @@ export default function Home() {
           </GalleryItem>
 
           <a className="window" href="JS.html">
-            <Image
+            <img
               alt=""
               className="work"
               src={JavascriptTranspilersGalleryImage}
@@ -114,18 +139,14 @@ export default function Home() {
           </a>
 
           <a className="window" href="SK.html">
-            <Image alt="" className="work" src={SkylandGalleryImage} />
+            <img alt="" className="work" src={SkylandGalleryImage} />
             <div className="subtitle bk">
-              <Image
-                alt=""
-                className="banner"
-                src={SkylandGalleryBannerImage}
-              />
+              <img alt="" className="banner" src={SkylandGalleryBannerImage} />
             </div>
           </a>
 
           <a className="window" href="PP.html">
-            <Image alt="" className="work" src={PeelersGalleryImage} />
+            <img alt="" className="work" src={PeelersGalleryImage} />
             <div className="subtitle bk">
               <p>
                 <strong>ergonomic</strong> peelers
@@ -134,14 +155,14 @@ export default function Home() {
           </a>
 
           <a className="window" href="F.html">
-            <Image alt="" className="work" src={FurnitureGalleryImage} />
+            <img alt="" className="work" src={FurnitureGalleryImage} />
             <div className="subtitle bk">
               <p>furniture</p>
             </div>
           </a>
 
           <a className="window" href="MG.html">
-            <Image alt="" className="work" src={MardiGrasGalleryImage} />
+            <img alt="" className="work" src={MardiGrasGalleryImage} />
             <div className="subtitle bk">
               <p>new orleans</p>
             </div>
