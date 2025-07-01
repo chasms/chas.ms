@@ -1,55 +1,81 @@
 import { Link } from "react-router";
-import { styled } from "../../styled-system/jsx";
+import { css } from "../../styled-system/css";
+import emailIcon from "../assets/icons/email.png";
+import linkedInIcon from "../assets/icons/linkedIn.png";
 
-const NavWrapper = styled.nav`
-  position: fixed;
-  width: 100%;
-  height: 50px;
-  letter-spacing: 1.2px;
-  z-index: 900;
-  background: rgba(0, 0, 0, 0.7);
-`;
+const linkStyles = {
+  color: "azure",
+  _hover: {
+    color: "red",
+  },
+};
 
-const NavList = styled.ul`
-  margin: 0;
-  padding: 0;
-  display: inline;
-`;
+const navWrapperStyles = css({
+  position: "fixed",
+  width: "100%",
+  height: "50px",
+  letterSpacing: "1.2px",
+  zIndex: "900",
+  background: "rgba(0, 0, 0, 0.7)",
+});
 
-const NavListItem = styled.li`
-  list-style-type: none;
-  display: inline-block;
-  padding: 15px 0px 20px 0px;
-`;
+const navList = css({ margin: 0, padding: 0, display: "inline" });
 
-const NavLink = styled(Link)`
-  padding-right: 30px !important;
-  padding-left: 30px !important;
-`;
+const navListItem = css({
+  listStyleType: "none",
+  display: "inline-block",
+  padding: "15px 0px 20px 0px",
+});
 
-const IconsList = styled.ul`
-  position: absolute;
-  right: 50px;
-`;
+const navLink = css({
+  ...linkStyles,
+  paddingRight: "30px",
+  paddingLeft: "30px",
+});
 
-const Icon = styled.li`
-  opacity: 0.2;
-  transition: opacity 0.5s ease-in-out;
-`;
+const iconsList = css({ position: "absolute", right: "50px" });
 
-const IconLink = styled(Link)`
-  text-decoration: none;
-  color: azure;
-  transition: color 0.5s ease-in-out;
+const icon = css({
+  opacity: "0.2",
+  transition: "opacity 0.5s ease-in-out",
 
-  &:hover {
-    color: red;
-  }
-`;
+  _hover: {
+    opacity: "0.8",
+  },
+});
+
+const iconLink = css({
+  ...linkStyles,
+  textDecoration: "none",
+  transition: "color 0.5s ease-in-out",
+  width: "20px",
+  height: "20px",
+  backgroundRepeat: "no-repeat",
+  backgroundPosition: "center center",
+  backgroundSize: "contain",
+  textIndent: "-900em",
+  color: "#333",
+  lineHeight: "100%",
+  whiteSpace: "nowrap",
+  display: "inline-block",
+  position: "relative",
+  verticalAlign: "middle",
+  margin: "0 2px 5px 0",
+  fontSize: "90%",
+  backgroundColor: "#ececec",
+  border: "solid 1px white",
+  boxShadow: "none",
+  borderRadius: "10em",
+  padding: 0,
+
+  _hover: {
+    backgroundColor: "#f3f3f3",
+  },
+});
 
 export default function Nav() {
   return (
-    <NavWrapper>
+    <nav className={navWrapperStyles}>
       <ul id="chasms_head">
         <li id="chasm">
           <p>
@@ -59,52 +85,56 @@ export default function Nav() {
         </li>
       </ul>
 
-      <NavList>
-        <NavListItem>
-          <NavLink
+      <ul className={navList}>
+        <li className={navListItem}>
+          <Link
+            className={navLink}
             to="https://www.medium.com/@chasms"
             target="_blank"
             rel="noreferrer"
           >
             BLOG
-          </NavLink>
-        </NavListItem>
-        <NavListItem>
-          <NavLink
+          </Link>
+        </li>
+        <li className={navListItem}>
+          <Link
+            className={navLink}
             to="https://www.github.com/chasms"
             target="_blank"
             rel="noreferrer"
           >
             GITHUB
-          </NavLink>
-        </NavListItem>
-        <NavListItem>
-          <a className="nav-link" href="info.html">
+          </Link>
+        </li>
+        <li className={navListItem}>
+          <Link className={navLink} to="info.html">
             ABOUT
-          </a>
-        </NavListItem>
-      </NavList>
+          </Link>
+        </li>
+      </ul>
 
-      <IconsList>
-        <Icon>
-          <a
-            href="mailto:chasms@chas.ms"
-            className="sb small no-shadow border circle email"
+      <ul className={iconsList}>
+        <li className={icon}>
+          <Link
+            className={iconLink}
+            to="mailto:chasms@chas.ms"
+            style={{ backgroundImage: `url("${emailIcon}")` }}
           >
             Email
-          </a>
-        </Icon>
-        <Icon>
-          <a
-            href="https://linkedin.com/in/chasms"
+          </Link>
+        </li>
+        <li className={icon}>
+          <Link
+            className={iconLink}
+            to="https://linkedin.com/in/chasms"
             target="_blank"
-            className="sb small no-shadow border circle linkedin"
             rel="noreferrer"
+            style={{ backgroundImage: `url("${linkedInIcon}")` }}
           >
             LinkedIn
-          </a>
-        </Icon>
-      </IconsList>
-    </NavWrapper>
+          </Link>
+        </li>
+      </ul>
+    </nav>
   );
 }

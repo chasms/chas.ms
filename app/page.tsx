@@ -1,4 +1,5 @@
-import { styled } from "../styled-system/jsx";
+import { css } from "../styled-system/css";
+import FurnitureGalleryImage from "./assets/images/FurnitureThumbnail.png";
 import JavascriptTranspilersThumbnail from "./assets/images/JavascriptTranspilersThumbnail.png";
 import KundaliniWhiteLogo from "./assets/images/kundalini-white.png";
 import MardiGrasThumbnail from "./assets/images/MardiGrasThumbnail.png";
@@ -6,52 +7,49 @@ import PeelerThumbnail from "./assets/images/PeelerThumbnail.png";
 import ShakersThumbnail from "./assets/images/ShakersThumbnail.png";
 import SkylandBanner from "./assets/images/SkylandBanner.png";
 import SkylandThumbnail from "./assets/images/SkylandThumbnail.png";
-import FurnitureGalleryImage from "./assets/img/FurnitureThumbnail.png";
 import GalleryItem from "./components/GalleryItem";
 import Nav from "./components/Nav";
 
-const HomeWrapper = styled.div``;
+const logoOverlay = css({
+  height: "100%",
+  width: "100%",
+  textAlign: "center",
+  position: "absolute",
+  zIndex: 999,
+  paddingTop: "150px",
+  top: "0%",
+  transition: "top 1.5s ease-in-out",
+  display: "none",
+});
 
-const LogoOverlay = styled.div`
-  height: 100%;
-  width: 100%;
-  text-align: center;
-  position: absolute;
-  z-index: 999;
-  padding-top: 150px;
-  top: 0%;
-  transition: top 1.5s ease-in-out;
-  display: none;
-`;
+const logoWrapper = css({
+  opacity: "0.3",
+  transition: "opacity 1.5s ease-in-out",
 
-const LogoWrapper = styled.div`
-  opacity: 0.3;
-  transition: opacity 1.5s ease-in-out;
+  _hover: {
+    opacity: "0.8",
+  },
+});
 
-  &:hover {
-    opacity: 0.8;
-  }
-`;
-
-const ContentArea = styled.div`
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  overflow: scroll;
-`;
+const contentArea = css({
+  position: "absolute",
+  height: "100%",
+  width: "100%",
+  overflow: "scroll",
+});
 
 export default function HomePage() {
   return (
-    <HomeWrapper>
-      <LogoOverlay>
-        <LogoWrapper>
+    <div>
+      <div className={logoOverlay}>
+        <div className={logoWrapper}>
           <img src={KundaliniWhiteLogo} alt="chasms"></img>
-        </LogoWrapper>
-      </LogoOverlay>
+        </div>
+      </div>
 
       <Nav />
 
-      <ContentArea>
+      <div className={contentArea}>
         <div className="background" id="main"></div>
 
         <div className="assets reveal">
@@ -99,7 +97,7 @@ export default function HomePage() {
             <p>new orleans</p>
           </GalleryItem>
         </div>
-      </ContentArea>
-    </HomeWrapper>
+      </div>
+    </div>
   );
 }
