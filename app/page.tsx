@@ -1,12 +1,12 @@
-import FurnitureGalleryImage from "../public/img/F0.png";
-import JavascriptTranspilersGalleryImage from "../public/img/JS0.png";
-import KundaliniWhiteLogo from "../public/img/kundalini-white.png";
-import MardiGrasGalleryImage from "../public/img/MG0.png";
-import PeelersGalleryImage from "../public/img/PP0.png";
-import SkylandGalleryImage from "../public/img/SK0.png";
-import SkylandGalleryBannerImage from "../public/img/SKCsm.png";
-import ShakersGalleryImage from "../public/img/SP0.png";
 import { styled } from "../styled-system/jsx";
+import FurnitureGalleryImage from "./assets/img/F0.png";
+import JavascriptTranspilersGalleryImage from "./assets/img/JS0.png";
+import KundaliniWhiteLogo from "./assets/img/kundalini-white.png";
+import MardiGrasGalleryImage from "./assets/img/MG0.png";
+import PeelersGalleryImage from "./assets/img/PP0.png";
+import SkylandGalleryImage from "./assets/img/SK0.png";
+import SkylandGalleryBannerImage from "./assets/img/SKCsm.png";
+import ShakersGalleryImage from "./assets/img/SP0.png";
 import GalleryItem from "./components/GalleryItem";
 
 export const HomeWrapper = styled.div``;
