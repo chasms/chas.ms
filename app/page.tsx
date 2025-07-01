@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { HomeWrapper, LogoOverlay, LogoWrapper } from "./page.css";
 import KundaliniWhiteLogo from "../public/img/kundalini-white.png";
 import JavascriptTranspilersGalleryImage from "../public/img/JS0.png";
@@ -8,14 +7,14 @@ import PeelersGalleryImage from "../public/img/PP0.png";
 import ShakersGalleryImage from "../public/img/SP0.png";
 import FurnitureGalleryImage from "../public/img/F0.png";
 import MardiGrasGalleryImage from "../public/img/MG0.png";
-import GalleryItem from "../components/GalleryItem";
+import GalleryItem from "./components/GalleryItem";
 
 export default function Home() {
   return (
     <HomeWrapper>
       <LogoOverlay>
         <LogoWrapper>
-          <Image src={KundaliniWhiteLogo} alt="chasms"></Image>
+          <img src={KundaliniWhiteLogo} alt="chasms"></img>
         </LogoWrapper>
       </LogoOverlay>
 
