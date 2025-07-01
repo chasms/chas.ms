@@ -1,12 +1,12 @@
 import { styled } from "../styled-system/jsx";
+import JavascriptTranspilersThumbnail from "./assets/images/JavascriptTranspilersThumbnail.png";
+import KundaliniWhiteLogo from "./assets/images/kundalini-white.png";
+import MardiGrasThumbnail from "./assets/images/MardiGrasThumbnail.png";
+import PeelerThumbnail from "./assets/images/PeelerThumbnail.png";
+import ShakersThumbnail from "./assets/images/ShakersThumbnail.png";
+import SkylandBanner from "./assets/images/SkylandBanner.png";
+import SkylandThumbnail from "./assets/images/SkylandThumbnail.png";
 import FurnitureGalleryImage from "./assets/img/FurnitureThumbnail.png";
-import JavascriptTranspilersThumbnail from "./assets/img/JavascriptTranspilersThumbnail.png";
-import KundaliniWhiteLogo from "./assets/img/kundalini-white.png";
-import MardiGrasThumbnail from "./assets/img/MardiGrasThumbnail.png";
-import PeelerThumbnail from "./assets/img/PeelerThumbnail.png";
-import ShakersThumbnail from "./assets/img/ShakersThumbnail.png";
-import SkylandBanner from "./assets/img/SkylandBanner.png";
-import SkylandThumbnail from "./assets/img/SkylandThumbnail.png";
 import GalleryItem from "./components/GalleryItem";
 import Nav from "./components/Nav";
 
