@@ -7,6 +7,10 @@ const titleWrapper = css({
   marginLeft: "100px",
   transition: "all 1s ease-in-out",
   color: "red",
+  height: "100%",
+  display: "flex",
+  textAlign: "center",
+  justifyContent: "center",
 
   _hover: {
     color: "azure",
@@ -28,12 +32,10 @@ const showWhenHovered = css({
 export default function Title() {
   return (
     <div className={cx("group", titleWrapper)}>
-      <p>
-        CH<p className={showWhenHovered}>ARLES </p>A
-        <p className={showWhenHovered}>LBERT </p>S
-        <p className={showWhenHovered}>A</p>M
-        <p className={showWhenHovered}>UEL</p>S
-      </p>
+      CH<p className={showWhenHovered}>ARLES </p>A
+      <p className={showWhenHovered}>LBERT </p>S
+      <p className={showWhenHovered}>A</p>M
+      <p className={showWhenHovered}>UEL</p>S
     </div>
   );
 }

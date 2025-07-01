@@ -4,6 +4,7 @@ import JavascriptTranspilersThumbnail from "./assets/images/JavascriptTranspiler
 import KundaliniWhiteLogo from "./assets/images/kundalini-white.png";
 import MardiGrasThumbnail from "./assets/images/MardiGrasThumbnail.png";
 import PeelerThumbnail from "./assets/images/PeelerThumbnail.png";
+import ReflectionsRed from "./assets/images/ReflectionsRed.png";
 import ShakersThumbnail from "./assets/images/ShakersThumbnail.png";
 import SkylandBanner from "./assets/images/SkylandBanner.png";
 import SkylandThumbnail from "./assets/images/SkylandThumbnail.png";
@@ -38,9 +39,25 @@ const contentArea = css({
   overflow: "scroll",
 });
 
+const background = css({
+  position: "fixed",
+  top: 0,
+  left: 0,
+  right: 0,
+  bottom: 0,
+  zIndex: "-100",
+});
+
+const gallery = css({
+  width: "100%",
+  paddingTop: "50px",
+  paddingBottom: "20px",
+  marginTop: "50px",
+});
+
 export default function HomePage() {
   return (
-    <div>
+    <>
       <div className={logoOverlay}>
         <div className={logoWrapper}>
           <img src={KundaliniWhiteLogo} alt="chasms"></img>
@@ -50,9 +67,16 @@ export default function HomePage() {
       <Nav />
 
       <div className={contentArea}>
-        <div className="background" id="main"></div>
+        <div
+          className={background}
+          style={{
+            background: `url("${ReflectionsRed}") no-repeat bottom center`,
+            backgroundSize: "cover",
+            opacity: "0.4",
+          }}
+        ></div>
 
-        <div className="assets reveal">
+        <div className={gallery}>
           <GalleryItem
             href="SP.html"
             image={ShakersThumbnail}
@@ -98,6 +122,6 @@ export default function HomePage() {
           </GalleryItem>
         </div>
       </div>
-    </div>
+    </>
   );
 }

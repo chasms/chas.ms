@@ -18,6 +18,7 @@ const navWrapperStyles = css({
   letterSpacing: "1.2px",
   zIndex: "900",
   background: "rgba(0, 0, 0, 0.7)",
+  display: "flex",
 });
 
 const navList = css({ margin: 0, padding: 0, display: "inline" });

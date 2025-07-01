@@ -1,4 +1,4 @@
-import { css } from "../../styled-system/css";
+import { css, cx } from "../../styled-system/css";
 
 const wrapper = css({
   height: "250px",
@@ -13,12 +13,17 @@ const wrapper = css({
 const galleryItemBanner = css({
   backgroundColor: "rgba(0, 0, 0, 1)",
   textAlign: "left",
-  display: "block",
+  display: "flex",
   height: "50px",
   position: "relative",
   bottom: "0px",
   padding: "0px",
   transition: "bottom 0.5s ease-in-out",
+  color: "azure",
+
+  _groupHover: {
+    bottom: "50px",
+  },
 });
 
 interface GalleryItemProps {
@@ -35,7 +40,7 @@ export default function GalleryItem({
   children,
 }: GalleryItemProps) {
   return (
-    <a className={wrapper} href={href}>
+    <a className={cx("group", wrapper)} href={href}>
       <img alt={imageAltText} src={image} height={250} width={350} />
       <div className={galleryItemBanner}>{children}</div>
     </a>
