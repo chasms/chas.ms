@@ -22,6 +22,7 @@ const pandaPluginRecommended = {
   },
 };
 
+/** @type {import("eslint").Linter.Config} */
 export default defineConfig([
   {
     files: ["**/*.{js,mjs,cjs,ts,mts,cts,jsx,tsx}"],
@@ -35,6 +36,15 @@ export default defineConfig([
   tseslint.configs.recommended,
   pluginReact.configs.flat.recommended,
   defaultConfig,
+  {
+    ignores: [".react-router/*"],
+  },
+  {
+    rules: {
+      "import/consistent-type-specifier-style": "off",
+      "react/react-in-jsx-scope": "off",
+    },
+  },
   eslintPluginPrettierRecommended,
   pandaPluginRecommended,
 ]);
