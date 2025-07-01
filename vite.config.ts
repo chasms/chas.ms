@@ -7,7 +7,7 @@ import tsconfigPaths from "vite-tsconfig-paths";
 export default defineConfig({
   css: {
     postcss: {
-      plugins: [pandacss, autoprefixer],
+      plugins: [pandacss as typeof autoprefixer, autoprefixer],
     },
   },
   plugins: [reactRouter(), tsconfigPaths()],
