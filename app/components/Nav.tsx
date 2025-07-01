@@ -2,6 +2,7 @@ import { Link } from "react-router";
 import { css } from "../../styled-system/css";
 import emailIcon from "../assets/icons/email.png";
 import linkedInIcon from "../assets/icons/linkedIn.png";
+import Title from "./TItle";
 
 const linkStyles = {
   color: "azure",
@@ -76,14 +77,7 @@ const iconLink = css({
 export default function Nav() {
   return (
     <nav className={navWrapperStyles}>
-      <ul id="chasms_head">
-        <li id="chasm">
-          <p>
-            CH<strong>ARLES </strong>A<strong>LBERT </strong>S<strong>A</strong>
-            M<strong>UEL</strong>S
-          </p>
-        </li>
-      </ul>
+      <Title />
 
       <ul className={navList}>
         <li className={navListItem}>
