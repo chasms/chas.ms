@@ -123,6 +123,10 @@ const backButtonIcon = css({
   height: "8px",
   transform: "rotate(135deg)",
   transition: "border-color .5s ease-in-out",
+
+  _hover: {
+    borderColor: "azure",
+  },
 });
 
 export default function Nav() {
