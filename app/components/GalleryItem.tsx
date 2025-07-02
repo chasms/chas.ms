@@ -1,8 +1,11 @@
 import { css, cx } from "../../styled-system/css";
 
+const height = 250;
+const width = 350;
+
 const wrapper = css({
-  height: "250px",
-  width: "350px",
+  height: `${height}px`,
+  width: `${width}px`,
   display: "inline-block",
   marginLeft: "50px",
   marginBottom: "50px",
@@ -11,7 +14,7 @@ const wrapper = css({
 });
 
 const galleryItemBanner = css({
-  backgroundColor: "rgba(0, 0, 0, 1)",
+  backgroundColor: "rgba(0, 0, 0, 0.8)",
   textAlign: "left",
   display: "flex",
   height: "50px",
@@ -20,6 +23,7 @@ const galleryItemBanner = css({
   padding: "0px",
   transition: "bottom 0.5s ease-in-out",
   color: "azure",
+  backdropFilter: "blur(10px)",
 
   _groupHover: {
     bottom: "50px",
@@ -41,7 +45,7 @@ export default function GalleryItem({
 }: GalleryItemProps) {
   return (
     <a className={cx("group", wrapper)} href={href}>
-      <img alt={imageAltText} src={image} height={250} width={350} />
+      <img alt={imageAltText} src={image} height={height} width={width} />
       <div className={galleryItemBanner}>{children}</div>
     </a>
   );
