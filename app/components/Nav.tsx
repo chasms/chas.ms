@@ -99,9 +99,39 @@ const iconLink = css({
   },
 });
 
+const backButton = css({
+  display: "block",
+  position: "absolute",
+  top: "19px",
+  left: "25px",
+  fontSize: 0,
+  lineHeight: 0,
+  width: "20px",
+  height: "20px",
+  padding: 0,
+  cursor: "pointer",
+  color: "transparent",
+  border: "none",
+  outline: "none",
+  background: "transparent",
+});
+
+const backButtonIcon = css({
+  borderRight: "3px solid red",
+  borderBottom: "3px solid red",
+  width: "8px",
+  height: "8px",
+  transform: "rotate(135deg)",
+  transition: "border-color .5s ease-in-out",
+});
+
 export default function Nav() {
   return (
     <nav className={navWrapperStyles}>
+      <Link className={backButton} to="/?init=done">
+        <div className={backButtonIcon} />
+      </Link>
+
       <Title />
 
       <ul className={navList}>

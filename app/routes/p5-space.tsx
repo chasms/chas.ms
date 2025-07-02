@@ -8,6 +8,8 @@ export function meta({}: Route.MetaArgs) {
 export default function p5Space() {
   return (
     <>
+      <Nav />
+
       <script src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.js"></script>
       <script src="https://cdn.jsdelivr.net/gh/freshfork/p5.EasyCam@1.2.1/p5.easycam.min.js"></script>
 
@@ -17,7 +19,6 @@ export default function p5Space() {
       <script src="https://unpkg.com/p5.touchgui@0.5.2/lib/p5.touchgui.js"></script>
 
       <script src="p5-space.js"></script>
-      <Nav />
     </>
   );
 }
