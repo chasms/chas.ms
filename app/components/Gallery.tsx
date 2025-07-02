@@ -50,7 +50,7 @@ export default function Gallery() {
         imageAltText=""
       >
         <p className={galleryBannerText}>
-          Presentation on Javascript Transpilers
+          <strong>Presentation on Transpilers</strong>, 2017
         </p>
       </GalleryItem>
 
@@ -65,11 +65,15 @@ export default function Gallery() {
       </GalleryItem>
 
       <GalleryItem href="F.html" image={FurnitureGalleryImage} imageAltText="">
-        <p className={galleryBannerText}>furniture</p>
+        <p className={galleryBannerText}>
+          <strong>furniture</strong>
+        </p>
       </GalleryItem>
 
       <GalleryItem href="MG.html" image={MardiGrasThumbnail} imageAltText="">
-        <p className={galleryBannerText}>new orleans</p>
+        <p className={galleryBannerText}>
+          <strong>mardi gras</strong>, new orleans
+        </p>
       </GalleryItem>
     </div>
   );

@@ -10,6 +10,7 @@ const wrapper = css({
   marginLeft: "50px",
   marginBottom: "50px",
   overflow: "hidden",
+  userSelect: "none",
   boxShadow: "0px 1px 10px 1px black",
 });
 
@@ -23,6 +24,7 @@ const galleryItemBanner = css({
   padding: "0px",
   transition: "bottom 0.5s ease-in-out",
   color: "azure",
+  userSelect: "none",
   backdropFilter: "blur(10px)",
 
   _groupHover: {

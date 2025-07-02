@@ -42,11 +42,10 @@ const background = css({
   zIndex: "-100",
 });
 
-
 export function meta({}: Route.MetaArgs) {
   return [
     { title: "chasms" },
-    { name: "description", content: "Welcome to React Router!" },
+    { name: "description", content: "Charles Albert Samuels" },
   ];
 }
 

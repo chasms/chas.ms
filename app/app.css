@@ -8,6 +8,10 @@ body {
 	width: 100vw;
 }
 
+b, strong {
+    font-weight: bold;
+}
+
 ::-webkit-scrollbar {
 	display: none;
 }
