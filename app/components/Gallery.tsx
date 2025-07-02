@@ -35,6 +35,16 @@ export default function Gallery() {
   return (
     <div className={gallery}>
       <GalleryItem
+        href="/p5-space"
+        image={ShakersThumbnail}
+        imageAltText="P5 Space Project"
+      >
+        <p className={galleryBannerText}>
+          p5 <strong>Space</strong>
+        </p>
+      </GalleryItem>
+
+      <GalleryItem
         href="SP.html"
         image={ShakersThumbnail}
         imageAltText="Salt & Pepper Shakers"

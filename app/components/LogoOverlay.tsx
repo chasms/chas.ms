@@ -1,12 +1,14 @@
-import { useSearchParams } from "react-router";
-import { css } from "../../styled-system/css";
+import { Link, useSearchParams } from "react-router";
+import { css, cx } from "../../styled-system/css";
 import KundaliniWhiteLogo from "../assets/images/kundalini-white.png";
 import { params } from "../routes";
 
 const logoOverlay = css({
   height: "100%",
   width: "100%",
+  display: "flex",
   textAlign: "center",
+  justifyContent: "center",
   position: "absolute",
   zIndex: 999,
   paddingTop: "150px",
@@ -17,10 +19,15 @@ const logoOverlay = css({
 const logoWrapper = css({
   opacity: "0.3",
   transition: "opacity 1.5s ease-in-out",
+  height: "fit-content",
 
   _hover: {
     opacity: "0.8",
   },
+});
+
+const aboveTheFold = css({
+  top: "-120%",
 });
 
 export default function LogoOverlay() {
@@ -30,10 +37,17 @@ export default function LogoOverlay() {
   const openingSequenceComplete = openingSequenceParam === params.done;
 
   return (
-    <div className={logoOverlay}>
-      <div className={logoWrapper}>
+    <div
+      className={
+        openingSequenceComplete ? cx(aboveTheFold, logoOverlay) : logoOverlay
+      }
+    >
+      <Link
+        to={`/?${params.openingSequence}=${params.done}`}
+        className={logoWrapper}
+      >
         <img src={KundaliniWhiteLogo} alt="chasms"></img>
-      </div>
+      </Link>
     </div>
   );
 }

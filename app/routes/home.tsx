@@ -1,7 +1,10 @@
-import { css } from "../../styled-system/css";
+import { useSearchParams } from "react-router";
+import { css, cx } from "../../styled-system/css";
 import ReflectionsRed from "../assets/images/ReflectionsRed.png";
 import Gallery from "../components/Gallery";
+import LogoOverlay from "../components/LogoOverlay";
 import Nav from "../components/Nav";
+import { params } from "../routes";
 import type { Route } from "./+types/home";
 
 const contentArea = css({
@@ -20,6 +23,15 @@ const background = css({
   zIndex: "-100",
 });
 
+const revealWrapper = css({
+  opacity: 1,
+  transition: "opacity 2s ease-in-out",
+});
+
+const hidden = css({
+  opacity: "0 !important",
+});
+
 export function meta({}: Route.MetaArgs) {
   return [
     { title: "chasms" },
@@ -28,21 +40,35 @@ export function meta({}: Route.MetaArgs) {
 }
 
 export default function Home() {
+  const [searchParams, setSearchParams] = useSearchParams();
+
+  const openingSequenceParam = searchParams.get(params.openingSequence);
+  const openingSequenceComplete = openingSequenceParam === params.done;
+
+  console.log("openingSequenceComplete", openingSequenceComplete, "\n");
   return (
     <>
-      <Nav />
+      <LogoOverlay />
 
-      <div className={contentArea}>
-        <div
-          className={background}
-          style={{
-            background: `url("${ReflectionsRed}") no-repeat bottom center`,
-            backgroundSize: "cover",
-            opacity: "0.4",
-          }}
-        ></div>
+      <div
+        className={background}
+        style={{
+          background: `url("${ReflectionsRed}") no-repeat bottom center`,
+          backgroundSize: "cover",
+          opacity: "0.4",
+        }}
+      ></div>
 
-        <Gallery />
+      <div
+        className={
+          openingSequenceComplete ? revealWrapper : cx(revealWrapper, hidden)
+        }
+      >
+        <Nav />
+
+        <div className={contentArea}>
+          <Gallery />
+        </div>
       </div>
     </>
   );
