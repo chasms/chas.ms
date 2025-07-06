@@ -137,7 +137,7 @@ export default function Nav({ backButtonTo }: NavProps) {
   return (
     <nav className={navWrapperStyles}>
       {backButtonTo && (
-        <Link className={cx("group:", backButton)} to={backButtonTo}>
+        <Link className={cx("group", backButton)} to={backButtonTo}>
           <div className={backButtonIcon} />
         </Link>
       )}
