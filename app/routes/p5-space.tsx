@@ -1,9 +1,8 @@
 import { css } from "../../styled-system/css";
 import Nav from "../components/Nav";
 import { toHomeWithOpeningSequenceComplete } from "../routes";
-import type { Route } from "./+types/p5-space";
 
-export function meta({}: Route.MetaArgs) {
+export function meta() {
   return [{ title: "p5 Space" }, { name: "description", content: "p5 Space" }];
 }
 

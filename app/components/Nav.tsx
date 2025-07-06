@@ -165,11 +165,11 @@ export default function Nav({ backButtonTo }: NavProps) {
             GITHUB
           </Link>
         </li>
-        <li className={navListItem}>
+        {/* <li className={navListItem}>
           <Link className={navLink} to="info.html">
             ABOUT
           </Link>
-        </li>
+        </li> */}
       </ul>
 
       <ul className={iconsList}>

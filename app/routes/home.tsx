@@ -5,7 +5,6 @@ import Gallery from "../components/Gallery";
 import LogoOverlay from "../components/LogoOverlay";
 import Nav from "../components/Nav";
 import { params } from "../routes";
-import type { Route } from "./+types/home";
 
 const contentArea = css({
   position: "absolute",
@@ -32,7 +31,7 @@ const hidden = css({
   opacity: "0 !important",
 });
 
-export function meta({}: Route.MetaArgs) {
+export function meta() {
   return [
     { title: "chasms" },
     { name: "description", content: "Charles Albert Samuels" },

@@ -1,215 +1,220 @@
 <html>
 
 <head>
-	
+
 	<title>chasms</title>
-	
+
 	<link href="css/bootstrap.faded.min.css" rel="stylesheet">
 	<link href="css/bootstrap-responsive.min.css" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/chasms.css">
-	<link rel="shortcut icon" type="image/png" href="/img/kundalini-black1.png"/>
+	<link rel="shortcut icon" type="image/png" href="/img/kundalini-black1.png" />
 	<link href="css/social-buttons.css" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.5.9/slick.css"/>
-	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.5.9/slick-theme.css"/>
-	
+	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.5.9/slick.css" />
+	<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.5.9/slick-theme.css" />
+
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 	<script type="text/javascript" src="js/getElementsByClassName.js"></script>
 	<script type="text/javascript" src="js/display_opacity.js"></script>
-	
+
 	<!animate width on click>
-	<script type="text/javascript">
-		$(document).ready(function() {
-			$(".header").click(function(){
-				var h= $(this).height();
-				if(h==60){
-					var goal = 530;
-				} else {
-					var goal = 60;
-				}
-			$(this).animate({
-       			height: goal
-       		}, 300, function(){	
-       			});
-       		});
-       	})
-	</script>
-	
-	<!toggle display, for about info>
-	<script language="Javascript1.2">
-		function toggle(layerName){
-			/* figure out how to id the tag you want */
-			if (document.layers) {
-				var page = eval('document.'+layerName);
-				} else if (document.getElementById) {
-					var page= eval("document.getElementById(layerName).style");
+		<script type="text/javascript">
+			$(document).ready(function () {
+				$(".header").click(function () {
+					var h = $(this).height();
+					if (h == 60) {
+						var goal = 530;
+					} else {
+						var goal = 60;
+					}
+					$(this).animate({
+						height: goal
+					}, 300, function () {
+					});
+				});
+			})
+		</script>
+
+		<!toggle display, for about info>
+			<script language="Javascript1.2">
+				function toggle(layerName) {
+					/* figure out how to id the tag you want */
+					if (document.layers) {
+						var page = eval('document.' + layerName);
+					} else if (document.getElementById) {
+						var page = eval("document.getElementById(layerName).style");
 					} else if (document.all) {
-						var page = eval('document.all.'+layerName+'.style');
-						}
-						/* affect the style of that tag */
-						if (page.opacity=='1'){
-							page.opacity='0';
-							} else {
-								page.opacity='1';
-								}
-		}
-	</script>
-	
-	<!change display to block>
-	<script language="Javascript1.2">
-		function display_block(className){
-			/* figure out how to id the tag you want */
-		var e = getElementsByClassName(className);
-		for ( var i=0, len=e.length; i<len; ++i ){
-			if(e[i].style.display == 'block')
-			e[i].style.display = 'block';
-			else
-			e[i].style.display = 'block';
-			}
-		}
-	</script>
-	
-	<!set height to auto>
-	<script language="Javascript1.2">
-		function display_height(className){
-			/* figure out how to id the tag you want */
-		var e = getElementsByClassName(className);
-		for ( var i=0, len=e.length; i<len; ++i ){
-			if(e[i].style.height == 'auto')
-			e[i].style.height = 'auto';
-			else
-			e[i].style.height = 'auto';
-		}
-	}
-</script>
-	
-	<!shrink script for broswer column>
-	<script language="Javascript1.2">
-		function shrink(layerName){
-			/* figure out how to id the tag you want */
-			if (document.layers) {
-			var page = eval('document.'+layerName);
-			} else if (document.getElementById) {
-				var page= eval("document.getElementById(layerName).style");
-				} else if (document.all) {
-					var page = eval('document.all.'+layerName+'.style');
+						var page = eval('document.all.' + layerName + '.style');
 					}
 					/* affect the style of that tag */
-					if (page.width=='200px'){
-						page.width='200px';
-						} else {
-							page.width='200px';
+					if (page.opacity == '1') {
+						page.opacity = '0';
+					} else {
+						page.opacity = '1';
+					}
+				}
+			</script>
+
+			<!change display to block>
+				<script language="Javascript1.2">
+					function display_block(className) {
+						/* figure out how to id the tag you want */
+						var e = getElementsByClassName(className);
+						for (var i = 0, len = e.length; i < len; ++i) {
+							if (e[i].style.display == 'block')
+								e[i].style.display = 'block';
+							else
+								e[i].style.display = 'block';
+						}
+					}
+				</script>
+
+				<!set height to auto>
+					<script language="Javascript1.2">
+						function display_height(className) {
+							/* figure out how to id the tag you want */
+							var e = getElementsByClassName(className);
+							for (var i = 0, len = e.length; i < len; ++i) {
+								if (e[i].style.height == 'auto')
+									e[i].style.height = 'auto';
+								else
+									e[i].style.height = 'auto';
 							}
-		}
-	</script>
-	
-	<!append anchor to .galleryimg>
-	<script type="text/javascript" charset="utf8">
-		$(document).ready(function(){
-			var images = document.getElementsByClassName('galleryimg');
-			for (var i = 0; i < images.length; i++) {
-				var image = images[i];
-				var parentElement = image.parentElement;
-				var a = document.createElement('a');
-				a.href = image.getAttribute('href');
-				a.appendChild(image);
-				parentElement.appendChild(a);
-			}
-		});
-	</script>
-	
-	<!append anchor to .img-link>
-	<script type="text/javascript" charset="utf8">
-		$(document).ready(function(){
-			var images = document.getElementsByClassName('img-link');
-			for (var i = 0; i < images.length; i++) {
-				var image = images[i];
-				var parentElement = image.parentElement;
-				var a = document.createElement('a');
-				a.href = image.getAttribute('href');
-				a.appendChild(image);
-				parentElement.appendChild(a);
-			}
-		});
-	</script>
-	
-	<!append anchor to .imglink>
-	<script type="text/javascript" charset="utf8">
-		$(document).ready(function(){
-			var images = document.getElementsByClassName('imglink');
-			for (var i = 0; i < images.length; i++) {
-				var image = images[i];
-				var parentElement = image.parentElement;
-				var a = document.createElement('a');
-				a.href = image.getAttribute('href');
-				a.appendChild(image);
-				parentElement.appendChild(a);
-			}
-		});
-	</script>
+						}
+					</script>
+
+					<!shrink script for broswer column>
+						<script language="Javascript1.2">
+							function shrink(layerName) {
+								/* figure out how to id the tag you want */
+								if (document.layers) {
+									var page = eval('document.' + layerName);
+								} else if (document.getElementById) {
+									var page = eval("document.getElementById(layerName).style");
+								} else if (document.all) {
+									var page = eval('document.all.' + layerName + '.style');
+								}
+								/* affect the style of that tag */
+								if (page.width == '200px') {
+									page.width = '200px';
+								} else {
+									page.width = '200px';
+								}
+							}
+						</script>
+
+						<!append anchor to .galleryimg>
+							<script type="text/javascript" charset="utf8">
+								$(document).ready(function () {
+									var images = document.getElementsByClassName('galleryimg');
+									for (var i = 0; i < images.length; i++) {
+										var image = images[i];
+										var parentElement = image.parentElement;
+										var a = document.createElement('a');
+										a.href = image.getAttribute('href');
+										a.appendChild(image);
+										parentElement.appendChild(a);
+									}
+								});
+							</script>
+
+							<!append anchor to .img-link>
+								<script type="text/javascript" charset="utf8">
+									$(document).ready(function () {
+										var images = document.getElementsByClassName('img-link');
+										for (var i = 0; i < images.length; i++) {
+											var image = images[i];
+											var parentElement = image.parentElement;
+											var a = document.createElement('a');
+											a.href = image.getAttribute('href');
+											a.appendChild(image);
+											parentElement.appendChild(a);
+										}
+									});
+								</script>
+
+								<!append anchor to .imglink>
+									<script type="text/javascript" charset="utf8">
+										$(document).ready(function () {
+											var images = document.getElementsByClassName('imglink');
+											for (var i = 0; i < images.length; i++) {
+												var image = images[i];
+												var parentElement = image.parentElement;
+												var a = document.createElement('a');
+												a.href = image.getAttribute('href');
+												a.appendChild(image);
+												parentElement.appendChild(a);
+											}
+										});
+									</script>
 
 </head>
 
 <body>
-	
+
 	<div id="browsermain">
-		
+
 		<div id="logo">
-				<a href="#" id="logo-png" onmousedown="display_block('appears')" onmouseup="shrink('browsermain')" onmouseover="toggle('about')" onmouseout="toggle('about')"><img src="img/kundalini-white.png" alt="chasms"></img></a>
+			<a href="#" id="logo-png" onmousedown="display_block('appears')" onmouseup="shrink('browsermain')"
+				onmouseover="toggle('about')" onmouseout="toggle('about')"><img src="img/kundalini-white.png"
+					alt="chasms"></img></a>
 		</div>
-		
+
 		<ul id="browser" class="appears">
 			<li id="chasms_head" onmouseover="display_opacity('reveal')"><a href="#">chasms</a></li>
 			<li><a class="reveal" href="object.html">object</a></li>
 			<li><a class="reveal" href="print.html">print</a></li>
 			<li><a class="reveal" href="photo.html">photo</a></li>
 			<li><a class="reveal" href="writings.html">writings</a></li>
-			<li><a class="reveal" href="info.html">info</a></li>
+			<!-- <li><a class="reveal" href="info.html">info</a></li> -->
 			<li id="last_li"><a class="reveal" href="http://chiasmichasms.tumblr.com/" target="_blank">blog</a></li>
 		</ul>
-		
+
 		<div class="icon-set reveal">
 			<a href="mailto:chasms@chas.ms" class="icon sb small no-shadow border circle email">Email</a>
-			<a href="http://lnkd.in/YdtunB" target="_blank" class="icon sb small no-shadow border circle linkedin">LinkedIn</a>
-			<a href="https://twitter.com/cha_sms" target="_blank" class="icon sb small no-shadow border circle twitter">Twitter</a>
-			<a href="https://www.facebook.com/chiasmicchasms" target="_blank" class="icon sb small no-shadow border circle facebook">Facebook</a>
+			<a href="http://lnkd.in/YdtunB" target="_blank"
+				class="icon sb small no-shadow border circle linkedin">LinkedIn</a>
+			<a href="https://twitter.com/cha_sms" target="_blank"
+				class="icon sb small no-shadow border circle twitter">Twitter</a>
+			<a href="https://www.facebook.com/chiasmicchasms" target="_blank"
+				class="icon sb small no-shadow border circle facebook">Facebook</a>
 		</div>
-	
-	</div>	
-	
-	<div class="content-area" id="main">
-		
-		<div id="gallery" class="reveal">
-				
-				<div class="slick">
-					
-					<img src="/img/O.png" href="O.html">
-				
-					<img src="/gallery/img/2D/print/woodblock/ascensionparagon/AscensionParagonBlack.jpg" href="print.html">
-				
-					<img src="/gallery/img/object/tables/22.jpg" href="object.html">
-				
-					<img src="/gallery/img/photo/indo/36.jpg" href="photo.html">
-				
-				</div>
-				
-		
-		</div>
-	
+
 	</div>
-	
+
+	<div class="content-area" id="main">
+
+		<div id="gallery" class="reveal">
+
+			<div class="slick">
+
+				<img src="/img/O.png" href="O.html">
+
+				<img src="/gallery/img/2D/print/woodblock/ascensionparagon/AscensionParagonBlack.jpg" href="print.html">
+
+				<img src="/gallery/img/object/tables/22.jpg" href="object.html">
+
+				<img src="/gallery/img/photo/indo/36.jpg" href="photo.html">
+
+			</div>
+
+
+		</div>
+
+	</div>
+
 	<script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.5.9/slick.min.js"></script>
-	
+
 	<script type="text/javascript">
-    $(document).ready(function(){
-      $('.slick').slick({
-		 arrows: false,
-		 autoplay: true,
-		 autoplaySpeed: 3000,
-		 slidesToShow: 3,
-		 variableWidth: true,
-      });
-    });
-  </script>
+		$(document).ready(function () {
+			$('.slick').slick({
+				arrows: false,
+				autoplay: true,
+				autoplaySpeed: 3000,
+				slidesToShow: 3,
+				variableWidth: true,
+			});
+		});
+	</script>
 
 </body>
 
