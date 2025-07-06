@@ -1,7 +1,7 @@
 import { Link } from "react-router";
 import { css } from "../../styled-system/css";
 import emailIcon from "../assets/icons/email.png";
-import linkedInIcon from "../assets/icons/linkedIn.png";
+import linkedInIcon from "../assets/icons/linkedin.png";
 import Title from "./TItle";
 
 const linkStyles = {
