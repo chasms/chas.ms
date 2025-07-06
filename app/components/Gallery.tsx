@@ -2,6 +2,7 @@ import { css } from "../../styled-system/css";
 import FurnitureGalleryImage from "../assets/images/FurnitureThumbnail.png";
 import JavascriptTranspilersThumbnail from "../assets/images/JavascriptTranspilersThumbnail.png";
 import MardiGrasThumbnail from "../assets/images/MardiGrasThumbnail.png";
+import P5SpaceGif from "../assets/images/p5-space-halfspeed.gif";
 import PeelerThumbnail from "../assets/images/PeelerThumbnail.png";
 import ShakersThumbnail from "../assets/images/ShakersThumbnail.png";
 import SkylandBanner from "../assets/images/SkylandBanner.png";
@@ -36,7 +37,7 @@ export default function Gallery() {
     <div className={gallery}>
       <GalleryItem
         href="/p5-space"
-        image={ShakersThumbnail}
+        image={P5SpaceGif}
         imageAltText="P5 Space Project"
       >
         <p className={galleryBannerText}>

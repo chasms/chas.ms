@@ -1,6 +1,7 @@
 @layer reset, base, tokens, recipes, utilities;
 
 body {
+  overscroll-behavior-y: none;
 	background-color: black;
 	margin:0;
 	padding:0;
