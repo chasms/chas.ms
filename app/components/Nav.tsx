@@ -2,7 +2,6 @@ import { Link } from "react-router";
 import { css } from "../../styled-system/css";
 import emailIcon from "../assets/icons/email.png";
 import linkedInIcon from "../assets/icons/linkedIn.png";
-import { params } from "../routes";
 import Title from "./TItle";
 
 const linkStyles = {
@@ -130,15 +129,18 @@ const backButtonIcon = css({
   },
 });
 
-export default function Nav() {
+interface NavProps {
+  backButtonTo?: string;
+}
+
+export default function Nav({ backButtonTo }: NavProps) {
   return (
     <nav className={navWrapperStyles}>
-      <Link
-        className={backButton}
-        to={`/?${params.openingSequence}=${params.done}`}
-      >
-        <div className={backButtonIcon} />
-      </Link>
+      {backButtonTo && (
+        <Link className={backButton} to={backButtonTo}>
+          <div className={backButtonIcon} />
+        </Link>
+      )}
 
       <Title />
 

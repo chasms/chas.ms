@@ -1,5 +1,6 @@
 import { css } from "../../styled-system/css";
 import Nav from "../components/Nav";
+import { toHomeWithOpeningSequenceComplete } from "../routes";
 import type { Route } from "./+types/p5-space";
 
 export function meta({}: Route.MetaArgs) {
@@ -14,7 +15,7 @@ const iframe = css({
 export default function p5Space() {
   return (
     <>
-      <Nav />
+      <Nav backButtonTo={toHomeWithOpeningSequenceComplete} />
 
       <iframe className={iframe} src="./p5-space/p5-space.html" />
     </>

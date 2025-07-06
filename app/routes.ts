@@ -9,3 +9,5 @@ export enum params {
   openingSequence = "opening-sequence",
   done = "done",
 }
+
+export const toHomeWithOpeningSequenceComplete = `/?${params.openingSequence}=${params.done}`;
