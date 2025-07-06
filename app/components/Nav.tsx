@@ -1,5 +1,5 @@
 import { Link } from "react-router";
-import { css } from "../../styled-system/css";
+import { css, cx } from "../../styled-system/css";
 import emailIcon from "../assets/icons/email.png";
 import linkedInIcon from "../assets/icons/linkedin.png";
 import Title from "./TItle";
@@ -124,7 +124,7 @@ const backButtonIcon = css({
   transform: "rotate(135deg)",
   transition: "border-color .5s ease-in-out",
 
-  _hover: {
+  _groupHover: {
     borderColor: "azure",
   },
 });
@@ -137,7 +137,7 @@ export default function Nav({ backButtonTo }: NavProps) {
   return (
     <nav className={navWrapperStyles}>
       {backButtonTo && (
-        <Link className={backButton} to={backButtonTo}>
+        <Link className={cx("group:", backButton)} to={backButtonTo}>
           <div className={backButtonIcon} />
         </Link>
       )}
