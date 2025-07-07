@@ -2,7 +2,7 @@ import { css, cx } from "../../styled-system/css";
 
 const titleWrapper = css({
   textDecoration: "none",
-  marginLeft: "100px",
+  marginLeft: "75px",
   height: "100%",
   display: "flex",
   textAlign: "center",
@@ -28,7 +28,7 @@ const showWhenHovered = css({
   fontSize: "0%",
   width: "0px",
   display: "inline-flex",
-  transition: "font-size 0.5s linear, width 0.5s ease-in-out",
+  transition: "font-size 0.5s linear, width 0.5s ease-in-out 0.5s",
 
   _groupHover: {
     width: "auto",

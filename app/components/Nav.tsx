@@ -2,6 +2,7 @@ import { Link } from "react-router";
 import { css, cx } from "../../styled-system/css";
 import emailIcon from "../assets/icons/email.png";
 import linkedInIcon from "../assets/icons/linkedin.png";
+import avatar from "../assets/images/kundalini-avatar500x500.jpg";
 import Title from "./TItle";
 
 const linkStyles = {
@@ -102,8 +103,8 @@ const iconLink = css({
 const backButton = css({
   display: "block",
   position: "absolute",
-  top: "19px",
-  left: "25px",
+  top: "22px",
+  left: "75px",
   fontSize: 0,
   lineHeight: 0,
   width: "20px",
@@ -117,16 +118,24 @@ const backButton = css({
 });
 
 const backButtonIcon = css({
-  borderRight: "3px solid red",
-  borderBottom: "3px solid red",
+  borderRight: "2px solid red",
+  borderBottom: "2px solid red",
   width: "8px",
   height: "8px",
   transform: "rotate(135deg)",
-  transition: "border-color .5s ease-in-out",
+  transition: "border-color .3s ease-in-out",
 
   _groupHover: {
     borderColor: "azure",
   },
+});
+
+const avatarStyles = css({
+  borderRadius: 999,
+  height: "30px",
+  width: "30px",
+  marginTop: "10px",
+  marginLeft: "10px",
 });
 
 interface NavProps {
@@ -136,6 +145,8 @@ interface NavProps {
 export default function Nav({ backButtonTo }: NavProps) {
   return (
     <nav className={navWrapperStyles}>
+      <img className={avatarStyles} src={avatar} />
+
       {backButtonTo && (
         <Link className={cx("group", backButton)} to={backButtonTo}>
           <div className={backButtonIcon} />

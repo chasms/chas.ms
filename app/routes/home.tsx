@@ -44,7 +44,6 @@ export default function Home() {
   const openingSequenceParam = searchParams.get(params.openingSequence);
   const openingSequenceComplete = openingSequenceParam === params.done;
 
-  console.log("openingSequenceComplete", openingSequenceComplete, "\n");
   return (
     <>
       <LogoOverlay />
