@@ -1,3 +1,4 @@
+import { Link } from "react-router";
 import { css, cx } from "../../styled-system/css";
 
 const height = 250;
@@ -37,6 +38,7 @@ interface GalleryItemProps {
   image: string;
   imageAltText: string;
   children: React.ReactNode;
+  newTab?: boolean;
 }
 
 export default function GalleryItem({
@@ -44,11 +46,16 @@ export default function GalleryItem({
   image,
   imageAltText,
   children,
+  newTab,
 }: GalleryItemProps) {
   return (
-    <a className={cx("group", wrapper)} href={href}>
+    <Link
+      className={cx("group", wrapper)}
+      to={href}
+      target={newTab ? "_blank" : ""}
+    >
       <img alt={imageAltText} src={image} height={height} width={width} />
       <div className={galleryItemBanner}>{children}</div>
-    </a>
+    </Link>
   );
 }

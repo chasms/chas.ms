@@ -1,5 +1,6 @@
 import { css } from "../../styled-system/css";
 import FurnitureGalleryImage from "../assets/images/FurnitureThumbnail.png";
+import GMGif from "../assets/images/gm-halfspeed.gif";
 import JavascriptTranspilersThumbnail from "../assets/images/JavascriptTranspilersThumbnail.png";
 import MardiGrasThumbnail from "../assets/images/MardiGrasThumbnail.png";
 import P5SpaceGif from "../assets/images/p5-space-halfspeed.gif";
@@ -35,6 +36,17 @@ const galleryBannerText = css({
 export default function Gallery() {
   return (
     <div className={gallery}>
+      <GalleryItem
+        href="https://web.archive.org/web/20221129225342/https://www.giantmachines.com/"
+        newTab
+        image={GMGif}
+        imageAltText="Giant Machines"
+      >
+        <p className={galleryBannerText}>
+          <strong>Giant Machines</strong> Acquired by Deloitte
+        </p>
+      </GalleryItem>
+
       <GalleryItem
         href="/p5-space"
         image={P5SpaceGif}
