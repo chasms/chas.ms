@@ -16,7 +16,7 @@ export default function p5Space() {
     <>
       <Nav backButtonTo={toHomeWithOpeningSequenceComplete} />
 
-      <iframe className={iframe} src="./p5-space/p5-space.html" />
+      <iframe className={iframe} src="https://p5-space.chas.ms" />
     </>
   );
 }
