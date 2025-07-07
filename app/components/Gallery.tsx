@@ -65,7 +65,8 @@ export default function Gallery() {
       </GalleryItem>
 
       <GalleryItem
-        href="SP.html"
+        href="https://chas.ms/sp"
+        reloadDocument
         image={ShakersThumbnail}
         imageAltText="Salt & Pepper Shakers"
       >
@@ -75,7 +76,8 @@ export default function Gallery() {
       </GalleryItem>
 
       <GalleryItem
-        href="JS.html"
+        href="https://chas.ms/js"
+        reloadDocument
         image={JavascriptTranspilersThumbnail}
         imageAltText=""
       >
@@ -84,23 +86,43 @@ export default function Gallery() {
         </p>
       </GalleryItem>
 
-      <GalleryItem href="SK.html" image={SkylandThumbnail} imageAltText="">
+      <GalleryItem
+        href="https://chas.ms/sk"
+        reloadDocument
+        image={SkylandThumbnail}
+        imageAltText=""
+      >
         <img alt="s" className="banner" src={SkylandBanner} />
       </GalleryItem>
 
-      <GalleryItem href="PP.html" imageAltText="" image={PeelerThumbnail}>
+      <GalleryItem
+        href="https://chas.ms/pp"
+        reloadDocument
+        imageAltText=""
+        image={PeelerThumbnail}
+      >
         <p className={galleryBannerText}>
           <strong>ergonomic</strong> peelers
         </p>
       </GalleryItem>
 
-      <GalleryItem href="F.html" image={FurnitureGalleryImage} imageAltText="">
+      <GalleryItem
+        href="https://chas.ms/f"
+        reloadDocument
+        image={FurnitureGalleryImage}
+        imageAltText=""
+      >
         <p className={galleryBannerText}>
           <strong>furniture</strong>
         </p>
       </GalleryItem>
 
-      <GalleryItem href="MG.html" image={MardiGrasThumbnail} imageAltText="">
+      <GalleryItem
+        href="https://chas.ms/mg"
+        reloadDocument
+        image={MardiGrasThumbnail}
+        imageAltText=""
+      >
         <p className={galleryBannerText}>
           <strong>mardi gras</strong>, new orleans
         </p>

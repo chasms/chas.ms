@@ -39,6 +39,7 @@ interface GalleryItemProps {
   imageAltText: string;
   children: React.ReactNode;
   newTab?: boolean;
+  reloadDocument?: boolean;
 }
 
 export default function GalleryItem({
@@ -47,12 +48,14 @@ export default function GalleryItem({
   imageAltText,
   children,
   newTab,
+  reloadDocument,
 }: GalleryItemProps) {
   return (
     <Link
       className={cx("group", wrapper)}
       to={href}
       target={newTab ? "_blank" : ""}
+      reloadDocument={reloadDocument}
     >
       <img alt={imageAltText} src={image} height={height} width={width} />
       <div className={galleryItemBanner}>{children}</div>
