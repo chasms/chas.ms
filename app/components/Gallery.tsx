@@ -1,4 +1,5 @@
 import { css } from "../../styled-system/css";
+import FinJSGif from "../assets/images/finjs-halfspeed.gif";
 import FurnitureGalleryImage from "../assets/images/FurnitureThumbnail.png";
 import GMGif from "../assets/images/gm-halfspeed.gif";
 import JavascriptTranspilersThumbnail from "../assets/images/JavascriptTranspilersThumbnail.png";
@@ -54,6 +55,12 @@ export default function Gallery() {
       >
         <p className={galleryBannerText}>
           p5 <strong>Space</strong>
+        </p>
+      </GalleryItem>
+
+      <GalleryItem href="/fin-js" image={FinJSGif} imageAltText="FinJS">
+        <p className={galleryBannerText}>
+          <strong>Desktop App Interoperability,</strong> FinJS 2019
         </p>
       </GalleryItem>
 
