@@ -3,6 +3,7 @@ import pandacss from "@pandacss/dev/postcss";
 import { reactRouter } from "@react-router/dev/vite";
 import autoprefixer from "autoprefixer";
 import { defineConfig } from "vite";
+import devtoolsJson from "vite-plugin-devtools-json";
 import tsconfigPaths from "vite-tsconfig-paths";
 
 export default defineConfig({
@@ -11,5 +12,5 @@ export default defineConfig({
       plugins: [pandacss as typeof autoprefixer, autoprefixer],
     },
   },
-  plugins: [reactRouter(), tsconfigPaths(), netlifyPlugin()],
+  plugins: [reactRouter(), tsconfigPaths(), netlifyPlugin(), devtoolsJson()],
 });
