@@ -38,8 +38,9 @@ interface WebsitePage {
 
 const WebsitePages: Record<WebsiteKeys, WebsitePage> = {
   [WebsiteKeys.giantmachines]: {
-    title: "",
-    description: "",
+    title: "Giant Machines",
+    description:
+      "Giant Machines, a boutique engineering consulting firm that was acquired by Deloitte in 2024",
     siteSrc:
       "https://web.archive.org/web/20221129225342/https://www.giantmachines.com/",
     content: <GiantMachinesContent />,
