@@ -1,46 +1,51 @@
+import { css } from "../../styled-system/css";
+
+const wrapper = css({
+  fontFamily: "San Francisco, sans-serif",
+});
+
+const heading = css({
+  fontSize: "24px",
+  marginBottom: "16px",
+});
+
+const body = css({
+  fontStyle: "italic",
+  marginBottom: "16px",
+});
+
+const link = css({
+  fontStyle: "italic",
+  marginBottom: "16px",
+  color: "red",
+  transition: "all 0.25s ease-in-out",
+  _hover: {
+    textShadow: "1px 1px 1px azure",
+  },
+});
+
 const GiantMachinesContent = () => (
-  <>
-    <h1>Giant Machines</h1>
-    <p>
+  <div className={wrapper}>
+    <h1 className={heading}>Giant Machines</h1>
+    <p className={body}>
       Giant Machines was a small boutique engineering consulting group that grew
       from under 14 when I joined to 2017 to over 100 strong, winning #1 best
       place to work, small company nyc multiple years in a row and becoming a
       desirable acquisition target for multiple buyers, ultimately exiting to
-      Deloitte via acquisition
-      <p>
-        - Led cross-functional teams to build strategic product verticals for
-        clients across various industries, including energy & utilities,
-        fintech, healthcare & life sciences, and transportation
-      </p>
-      <p>
-        - Managed portfolios of client projects, engaging clients and distilling
-        business goals to drive execution teams, at points managing 30+ direct
-        reports across a portfolio
-      </p>
-      <p>
-        - Interviewed engineers with a focus on building a diverse and inclusive
-        culture that reflects the city live in, and trained engineers to enable
-        rapid onboarding into client-facing roles and a culture of continuous
-        learning
-      </p>
-      <p>
-        - Conceived and led a mentorship program to enable distributed support
-        systems within the engineering team as we scaled; mentored 5 other
-        engineering leaders formally, and many others informally
-      </p>
-      <p>
-        - Created and facilitated a Team Leadership Forum community of practice
-        to align leadership best practices and create space for new leaders to
-        feel supported stepping into new responsibilities
-      </p>
-      <p>
-        - Led the Knowledge Sharing committee for developing learning
-        initiatives, presentations and workshops, and also co-led the DevOps
-        Working Group for developing internal DevOps strategies and thought
-        leadership
-      </p>
+      Deloitte via acquisition in 2024.
     </p>
-  </>
+    <p className={body}>
+      {"Page retrieved from the "}
+      <a
+        href="https://web.archive.org/web/20221129225342/https://www.giantmachines.com/"
+        target="_blank"
+        rel="noreferrer"
+        className={link}
+      >
+        Wayback Machine
+      </a>
+    </p>
+  </div>
 );
 
 export default GiantMachinesContent;

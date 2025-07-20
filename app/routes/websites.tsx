@@ -12,7 +12,7 @@ const wrapper = css({
 });
 
 const contentWrapper = css({
-  width: "100%",
+  width: "30%",
   height: "100%",
   color: "azure",
   padding: "50px",
