@@ -9,15 +9,11 @@ export function meta() {
   ];
 }
 
-const wrapper = css({
-  width: "100%",
-  height: "80%",
-});
-
 const iframe = css({
   width: "100%",
   height: "100%",
-  paddingTop: "50px",
+  padding: "50px",
+  paddingTop: "100px",
 });
 
 export default function finJS() {
