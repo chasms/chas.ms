@@ -9,6 +9,7 @@ import PeelerThumbnail from "../assets/images/PeelerThumbnail.png";
 import ShakersThumbnail from "../assets/images/ShakersThumbnail.png";
 import SkylandBanner from "../assets/images/SkylandBanner.png";
 import SkylandThumbnail from "../assets/images/SkylandThumbnail.png";
+import { WebsiteKeys } from "../routes/websites";
 import GalleryItem from "./GalleryItem";
 
 const gallery = css({
@@ -38,8 +39,7 @@ export default function Gallery() {
   return (
     <div className={gallery}>
       <GalleryItem
-        href="https://web.archive.org/web/20221129225342/https://www.giantmachines.com/"
-        newTab
+        href={`/website/${WebsiteKeys.giantmachines}`}
         image={GMGif}
         imageAltText="Giant Machines"
       >

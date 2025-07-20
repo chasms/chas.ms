@@ -4,6 +4,7 @@ export default [
   index("routes/home.tsx"),
   route("p5-space", "routes/p5-space.tsx"),
   route("fin-js", "routes/fin-js.tsx"),
+  route("website/:id", "routes/websites.tsx"),
 ] satisfies RouteConfig;
 
 export enum params {
