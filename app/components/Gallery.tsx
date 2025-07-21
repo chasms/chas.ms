@@ -4,6 +4,7 @@ import FurnitureGalleryImage from "../assets/images/FurnitureThumbnail.png";
 import GMGif from "../assets/images/gm-halfspeed.gif";
 import JavascriptTranspilersThumbnail from "../assets/images/JavascriptTranspilersThumbnail.png";
 import MardiGrasThumbnail from "../assets/images/MardiGrasThumbnail.png";
+import NotaThumbnail from "../assets/images/nota.png";
 import P5SpaceGif from "../assets/images/p5-space-halfspeed.gif";
 import PeelerThumbnail from "../assets/images/PeelerThumbnail.png";
 import ShakersThumbnail from "../assets/images/ShakersThumbnail.png";
@@ -38,6 +39,12 @@ const galleryBannerText = css({
 export default function Gallery() {
   return (
     <div className={gallery}>
+      <GalleryItem href="/nota" image={NotaThumbnail} imageAltText="Nota">
+        <p className={galleryBannerText}>
+          <strong>Nota</strong>, An M&T Bank Product
+        </p>
+      </GalleryItem>
+
       <GalleryItem
         href={`/website/${WebsiteKeys.giantmachines}`}
         image={GMGif}
