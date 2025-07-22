@@ -19,6 +19,11 @@ const gallery = css({
   paddingTop: "50px",
   paddingBottom: "20px",
   marginTop: "50px",
+  display: "flex",
+  flexWrap: "wrap",
+  justifyContent: "center",
+  alignItems: "center",
+  userSelect: "none",
 });
 
 const galleryBannerText = css({
