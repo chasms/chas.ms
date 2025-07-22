@@ -61,7 +61,7 @@ export default function Gallery() {
       </GalleryItem>
 
       <GalleryItem
-        href={`/${RouteSlugs["fin-js"]}`}
+        href={`/${RouteSlugs.website}/${WebsiteKeys["fin-js"]}`}
         image={FinJSGif}
         imageAltText="FinJS"
       >

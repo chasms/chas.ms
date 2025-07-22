@@ -1,4 +1,5 @@
 import { css } from "../../styled-system/css";
+import FinJSContent from "../components/FinJSContent";
 import GiantMachinesContent from "../components/GiantMachinesContent";
 import Nav from "../components/Nav";
 import NotaContent from "../components/NotaContent";
@@ -30,6 +31,7 @@ const iframe = css({
 export enum WebsiteKeys {
   giantmachines = "giantmachines",
   nota = "nota",
+  "fin-js" = "fin-js",
 }
 
 interface WebsitePage {
@@ -55,6 +57,12 @@ const WebsitePages: Record<WebsiteKeys, WebsitePage> = {
     embedSrc:
       "https://hsmandt.s3.amazonaws.com/mandt/courses/nota-iolta-management/introduction-to-nota/video_introduction-to-nota.mp4",
     content: <NotaContent />,
+  },
+  [WebsiteKeys["fin-js"]]: {
+    title: "FinJS",
+    description: "FinJS Talk, 2019",
+    embedSrc: "https://www.youtube.com/embed/P1-SmUtwrlY?controls=0",
+    content: <FinJSContent />,
   },
 };
 
