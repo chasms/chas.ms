@@ -12,13 +12,12 @@ import SkylandBanner from "../assets/images/SkylandBanner.png";
 import SkylandThumbnail from "../assets/images/SkylandThumbnail.png";
 import { RouteSlugs } from "../routes";
 import { WebsiteKeys } from "../routes/websites";
-import GalleryItem from "./GalleryItem";
+import GalleryItem, { galleryItemHorizontalSpacing } from "./GalleryItem";
 
 const gallery = css({
   width: "100%",
-  paddingTop: "50px",
-  paddingBottom: "20px",
   marginTop: "50px",
+  padding: `15px ${galleryItemHorizontalSpacing}`,
   display: "flex",
   flexWrap: "wrap",
   justifyContent: "center",

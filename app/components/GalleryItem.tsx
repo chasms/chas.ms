@@ -3,12 +3,13 @@ import { css, cx } from "../../styled-system/css";
 
 const height = 250;
 const width = 350;
+export const galleryItemHorizontalSpacing = "2%";
 
 const wrapper = css({
   height: `${height}px`,
   width: `${width}px`,
   display: "inline-block",
-  margin: "0 2.5% 5%",
+  margin: `20px ${galleryItemHorizontalSpacing}`,
   overflow: "hidden",
   userSelect: "none",
   boxShadow: "0px 1px 10px 1px black",
