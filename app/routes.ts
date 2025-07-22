@@ -1,10 +1,16 @@
 import { type RouteConfig, index, route } from "@react-router/dev/routes";
 
+export enum RouteSlugs {
+  "p5-space" = "p5-space",
+  "fin-js" = "fin-js",
+  "website" = "website",
+}
+
 export default [
   index("routes/home.tsx"),
-  route("p5-space", "routes/p5-space.tsx"),
-  route("fin-js", "routes/fin-js.tsx"),
-  route("website/:id", "routes/websites.tsx"),
+  route(RouteSlugs["p5-space"], "routes/p5-space.tsx"),
+  route(RouteSlugs["fin-js"], "routes/fin-js.tsx"),
+  route(`${RouteSlugs.website}/:id`, "routes/websites.tsx"),
 ] satisfies RouteConfig;
 
 export enum params {

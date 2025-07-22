@@ -4,11 +4,13 @@ import FurnitureGalleryImage from "../assets/images/FurnitureThumbnail.png";
 import GMGif from "../assets/images/gm-halfspeed.gif";
 import JavascriptTranspilersThumbnail from "../assets/images/JavascriptTranspilersThumbnail.png";
 import MardiGrasThumbnail from "../assets/images/MardiGrasThumbnail.png";
+import NotaThumbnail from "../assets/images/nota.png";
 import P5SpaceGif from "../assets/images/p5-space-halfspeed.gif";
 import PeelerThumbnail from "../assets/images/PeelerThumbnail.png";
 import ShakersThumbnail from "../assets/images/ShakersThumbnail.png";
 import SkylandBanner from "../assets/images/SkylandBanner.png";
 import SkylandThumbnail from "../assets/images/SkylandThumbnail.png";
+import { RouteSlugs } from "../routes";
 import { WebsiteKeys } from "../routes/websites";
 import GalleryItem from "./GalleryItem";
 
@@ -39,7 +41,7 @@ export default function Gallery() {
   return (
     <div className={gallery}>
       <GalleryItem
-        href={`/website/${WebsiteKeys.giantmachines}`}
+        href={`/${RouteSlugs.website}/${WebsiteKeys.giantmachines}`}
         image={GMGif}
         imageAltText="Giant Machines"
       >
@@ -49,7 +51,7 @@ export default function Gallery() {
       </GalleryItem>
 
       <GalleryItem
-        href="/p5-space"
+        href={`/${RouteSlugs["p5-space"]}`}
         image={P5SpaceGif}
         imageAltText="P5 Space Project"
       >
@@ -58,9 +60,23 @@ export default function Gallery() {
         </p>
       </GalleryItem>
 
-      <GalleryItem href="/fin-js" image={FinJSGif} imageAltText="FinJS">
+      <GalleryItem
+        href={`/${RouteSlugs["fin-js"]}`}
+        image={FinJSGif}
+        imageAltText="FinJS"
+      >
         <p className={galleryBannerText}>
           <strong>Desktop App Interoperability,</strong> FinJS 2019
+        </p>
+      </GalleryItem>
+
+      <GalleryItem
+        href={`/${RouteSlugs.website}/${WebsiteKeys.nota}`}
+        image={NotaThumbnail}
+        imageAltText="Nota"
+      >
+        <p className={galleryBannerText}>
+          <strong>Nota</strong>, An M&T Bank Product
         </p>
       </GalleryItem>
 
