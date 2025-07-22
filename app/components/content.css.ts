@@ -18,7 +18,7 @@ export const contentHeading = css({
 
 export const contentBody = css({
   fontStyle: "italic",
-  fontSize: "14px",
+  fontSize: "16px",
   marginBottom: "16px",
 });
 

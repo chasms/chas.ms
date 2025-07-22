@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router";
 import { css, cva, cx } from "../../styled-system/css";
 import githubIcon from "../assets/icons/github.png";
+import { contentBody, contentHeading } from "../components/content.css";
 import Nav from "../components/Nav";
 import { toHomeWithOpeningSequenceComplete } from "../routes";
 
@@ -37,18 +38,17 @@ const floatingButtonStyles = {
 const transitionsWhenOpening =
   "height 0.5s ease-in-out, width 0.5s ease-in-out, border-radius 0.1s ease-in-out, backdrop-filter 0.1s ease-in-out";
 const transitionWhenClosing = `${buttonHoverTransitions}, border-radius 0.1s ease-in-out 0.5s`;
-const sharedWidthValue = "calc(100% - 200px)";
+const sharedWidthValue = "calc(100% - 150px)";
 const info = cva({
   base: {
     position: "absolute",
     bottom: "25px",
     left: "25px",
-    ...floatingButtonStyles,
   },
   variants: {
     state: {
       open: {
-        height: "25%",
+        height: "15%",
         width: sharedWidthValue,
         borderRadius: "16px",
         backdropFilter: "invert(80%)",
@@ -56,16 +56,27 @@ const info = cva({
         transition: transitionsWhenOpening,
 
         _hover: {
-          height: "25%",
+          height: "15%",
           width: sharedWidthValue,
           transition: transitionsWhenOpening,
           transform: "scale(1)",
         },
       },
       closed: {
+        height: "60px",
+        width: "60px",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        borderRadius: "50%",
+        backdropFilter: "invert(30%)",
+        cursor: "pointer",
         transition: transitionWhenClosing,
 
         _hover: {
+          backdropFilter: "invert(80%)",
+          height: "80px",
+          width: "80px",
           transition: transitionWhenClosing,
         },
       },
@@ -117,8 +128,6 @@ const infoContent = cva({
   variants: {
     state: {
       shown: {
-        overflow: "scroll",
-        left: 0,
         color: "rgba(0, 0, 0, 0.8)",
         transition: "left 0s ease-in-out 0.2s, color 0.5s ease-in-out 0.5s",
       },
@@ -131,14 +140,55 @@ const infoContent = cva({
   },
 });
 
+const infoCloseButtonGroupClassName = "infoCloseButton";
 const infoCloseButton = css({
   position: "absolute",
   top: "25px",
   right: "25px",
-  height: "30px",
-  width: "30px",
-  backgroundColor: "green",
+  height: "32px",
+  width: "32px",
   cursor: "pointer",
+});
+
+const infoCloseIcon = css({
+  _before: {
+    position: "absolute",
+    top: "8px",
+    right: "0",
+    content: '""',
+    borderRight: "4px solid black",
+    borderBottom: "4px solid black",
+    width: "16px",
+    height: "16px",
+    transform: "rotate(135deg)",
+    transition: "border-color .3s ease-in-out",
+
+    [`.${infoCloseButtonGroupClassName}:is(:hover, [data-hover]) &`]: {
+      borderColor: "red",
+    },
+  },
+  _after: {
+    position: "absolute",
+    top: "8px",
+    left: "0",
+    content: '""',
+    borderRight: "4px solid black",
+    borderBottom: "4px solid black",
+    width: "16px",
+    height: "16px",
+    transform: "rotate(315deg)",
+    transition: "border-color .3s ease-in-out",
+
+    ".infoCloseButton:is(:hover, [data-hover]) &": {
+      borderColor: "red",
+    },
+  },
+});
+
+const infoContentScrollWrapper = css({
+  overflowY: "auto",
+  height: "100%",
+  width: "100%",
 });
 
 const githubButton = css({
@@ -176,15 +226,25 @@ export default function P5Space() {
           className={infoContent({ state: isInfoOpen ? "shown" : "hidden" })}
         >
           <div
-            className={infoCloseButton}
+            className={cx("infoCloseButton", infoCloseButton)}
             onClick={(e) => {
               e.stopPropagation();
               setIsInfoOpen(false);
             }}
           >
-            x
+            <div className={infoCloseIcon}></div>
           </div>
-          <p>stuff</p>
+
+          <div className={infoContentScrollWrapper}>
+            <h1 className={contentHeading}>p5 Space</h1>
+            <p className={contentBody}>
+              A small interactive experience built with &lt;50 lines of
+              JavaScript in P5.js
+            </p>
+            <p className={contentBody}>
+              Click and drag to move the camera, scroll to zoom in and out.
+            </p>
+          </div>
         </div>
       </div>
 
