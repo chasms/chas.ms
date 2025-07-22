@@ -41,7 +41,7 @@ export default function Gallery() {
   return (
     <div className={gallery}>
       <GalleryItem
-        href={`/${RouteSlugs.nota}`}
+        href={`/${RouteSlugs.website}/${WebsiteKeys.nota}`}
         image={NotaThumbnail}
         imageAltText="Nota"
       >

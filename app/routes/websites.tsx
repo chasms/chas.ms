@@ -1,6 +1,7 @@
 import { css } from "../../styled-system/css";
 import GiantMachinesContent from "../components/GiantMachinesContent";
 import Nav from "../components/Nav";
+import NotaContent from "../components/NotaContent";
 import { toHomeWithOpeningSequenceComplete } from "../routes";
 import type { Route } from "./+types/websites";
 
@@ -11,29 +12,32 @@ const wrapper = css({
   display: "flex",
 });
 
-const contentWrapper = css({
+const contentSectionWrapper = css({
   width: "30%",
   height: "100%",
   color: "azure",
-  padding: "50px",
+  overflow: "scroll",
+  display: "flex",
 });
 
 const iframe = css({
   width: "100%",
   height: "100%",
   borderRadius: "16px",
-  marginRight: "16px",
+  marginRight: "25px",
 });
 
 export enum WebsiteKeys {
   giantmachines = "giantmachines",
+  nota = "nota",
 }
 
 interface WebsitePage {
-  siteSrc: string;
+  embedSrc: string;
   content: React.ReactNode;
   title: string;
   description: string;
+  autoplay?: boolean;
 }
 
 const WebsitePages: Record<WebsiteKeys, WebsitePage> = {
@@ -41,9 +45,16 @@ const WebsitePages: Record<WebsiteKeys, WebsitePage> = {
     title: "Giant Machines",
     description:
       "Giant Machines, a boutique engineering consulting firm that was acquired by Deloitte in 2024",
-    siteSrc:
+    embedSrc:
       "https://web.archive.org/web/20221129225342/https://www.giantmachines.com/",
     content: <GiantMachinesContent />,
+  },
+  [WebsiteKeys.nota]: {
+    title: "Nota",
+    description: "M&T Nota App for IOLTA Legal Account Management",
+    embedSrc:
+      "https://hsmandt.s3.amazonaws.com/mandt/courses/nota-iolta-management/introduction-to-nota/video_introduction-to-nota.mp4",
+    content: <NotaContent />,
   },
 };
 
@@ -52,7 +63,7 @@ export default function WebsitePage({ params }: Route.LoaderArgs) {
     return;
   }
 
-  const { title, description, siteSrc, content } =
+  const { title, description, embedSrc, content, autoplay } =
     WebsitePages[params.id as WebsiteKeys];
 
   return (
@@ -64,14 +75,14 @@ export default function WebsitePage({ params }: Route.LoaderArgs) {
       <Nav backButtonTo={toHomeWithOpeningSequenceComplete} />
 
       <div className={wrapper}>
-        <div className={contentWrapper}>{content}</div>
+        <div className={contentSectionWrapper}>{content}</div>
 
         <iframe
           className={iframe}
-          src={siteSrc}
+          src={embedSrc}
           title={title}
           frameBorder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allow={`${autoplay && "autoplay; "}accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share`}
           referrerPolicy="strict-origin-when-cross-origin"
           allowFullScreen
         ></iframe>
