@@ -6,7 +6,7 @@ import NotaContent from "../components/NotaContent";
 import { toHomeWithOpeningSequenceComplete } from "../routes";
 import type { Route } from "./+types/websites";
 
-const wrapper = css({
+const pageWrapper = css({
   width: "100%",
   height: "100%",
   paddingTop: "50px",
@@ -82,8 +82,8 @@ export default function WebsitePage({ params }: Route.LoaderArgs) {
 
       <Nav backButtonTo={toHomeWithOpeningSequenceComplete} />
 
-      <div className={wrapper}>
-        <div className={contentSectionWrapper}>{content}</div>
+      <div className={pageWrapper}>
+        {content && <div className={contentSectionWrapper}>{content}</div>}
 
         <iframe
           className={iframe}
