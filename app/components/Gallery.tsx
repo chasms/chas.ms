@@ -41,16 +41,6 @@ export default function Gallery() {
   return (
     <div className={gallery}>
       <GalleryItem
-        href={`/${RouteSlugs.website}/${WebsiteKeys.nota}`}
-        image={NotaThumbnail}
-        imageAltText="Nota"
-      >
-        <p className={galleryBannerText}>
-          <strong>Nota</strong>, An M&T Bank Product
-        </p>
-      </GalleryItem>
-
-      <GalleryItem
         href={`/${RouteSlugs.website}/${WebsiteKeys.giantmachines}`}
         image={GMGif}
         imageAltText="Giant Machines"
@@ -77,6 +67,16 @@ export default function Gallery() {
       >
         <p className={galleryBannerText}>
           <strong>Desktop App Interoperability,</strong> FinJS 2019
+        </p>
+      </GalleryItem>
+
+      <GalleryItem
+        href={`/${RouteSlugs.website}/${WebsiteKeys.nota}`}
+        image={NotaThumbnail}
+        imageAltText="Nota"
+      >
+        <p className={galleryBannerText}>
+          <strong>Nota</strong>, An M&T Bank Product
         </p>
       </GalleryItem>
 
