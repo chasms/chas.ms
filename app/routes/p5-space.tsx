@@ -39,6 +39,7 @@ const transitionsWhenOpening =
   "height 0.5s ease-in-out, width 0.5s ease-in-out, border-radius 0.1s ease-in-out, backdrop-filter 0.1s ease-in-out";
 const transitionWhenClosing = `${buttonHoverTransitions}, border-radius 0.1s ease-in-out 0.5s`;
 const sharedWidthValue = "calc(100% - 150px)";
+const sharedHeightValue = "20%";
 const info = cva({
   base: {
     position: "absolute",
@@ -48,7 +49,7 @@ const info = cva({
   variants: {
     state: {
       open: {
-        height: "15%",
+        height: sharedHeightValue,
         width: sharedWidthValue,
         borderRadius: "16px",
         backdropFilter: "invert(80%)",
@@ -56,9 +57,6 @@ const info = cva({
         transition: transitionsWhenOpening,
 
         _hover: {
-          height: "15%",
-          width: sharedWidthValue,
-          transition: transitionsWhenOpening,
           transform: "scale(1)",
         },
       },
@@ -77,7 +75,6 @@ const info = cva({
           backdropFilter: "invert(80%)",
           height: "80px",
           width: "80px",
-          transition: transitionWhenClosing,
         },
       },
     },

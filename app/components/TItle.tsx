@@ -8,12 +8,13 @@ const titleWrapper = css({
   textAlign: "center",
   justifyContent: "center",
   transition: "all 1s ease-in-out",
+  opacity: "0.7",
 });
 
 const titleText = css({
   fontFamily: "San Francisco, sans-serif",
   fontStyle: "italic",
-  fontSize: "11px",
+  fontSize: "14px",
   fontWeight: 700,
   color: "red",
   userSelect: "none",
@@ -40,8 +41,8 @@ export default function Title() {
   return (
     <div className={titleWrapper}>
       <h1 className={cx("group", titleText)}>
-        CH<p className={showWhenHovered}>ARLES </p>A
-        <p className={showWhenHovered}>LBERT </p>S
+        CH<p className={showWhenHovered}>ARLES&nbsp;</p>A
+        <p className={showWhenHovered}>LBERT&nbsp;</p>S
         <p className={showWhenHovered}>A</p>M
         <p className={showWhenHovered}>UEL</p>S
       </h1>
