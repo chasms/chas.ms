@@ -1,4 +1,5 @@
-import { css } from "../../styled-system/css";
+import { css, cx } from "../../styled-system/css";
+import ExpandingInfoButton from "../components/ExpandingInfoButton";
 import FinJSContent from "../components/FinJSContent";
 import GiantMachinesContent from "../components/GiantMachinesContent";
 import Nav from "../components/Nav";
@@ -6,7 +7,7 @@ import NotaContent from "../components/NotaContent";
 import { toHomeWithOpeningSequenceComplete } from "../routes";
 import type { Route } from "./+types/websites";
 
-const wrapper = css({
+const pageWrapper = css({
   width: "100%",
   height: "100%",
   paddingTop: "50px",
@@ -14,18 +15,30 @@ const wrapper = css({
 });
 
 const contentSectionWrapper = css({
-  width: "30%",
+  display: "none",
+  xl: {
+    width: "30%",
+  },
+  lg: {
+    width: "40%",
+  },
+  md: {
+    width: "50%",
+    display: "flex",
+  },
   height: "100%",
   color: "azure",
   overflow: "scroll",
-  display: "flex",
 });
 
 const iframe = css({
+  height: "80%",
+  sm: {
+    height: "100%",
+  },
   width: "100%",
-  height: "100%",
   borderRadius: "16px",
-  marginRight: "25px",
+  margin: "0 25px",
 });
 
 export enum WebsiteKeys {
@@ -82,8 +95,8 @@ export default function WebsitePage({ params }: Route.LoaderArgs) {
 
       <Nav backButtonTo={toHomeWithOpeningSequenceComplete} />
 
-      <div className={wrapper}>
-        <div className={contentSectionWrapper}>{content}</div>
+      <div className={pageWrapper}>
+        {content && <div className={contentSectionWrapper}>{content}</div>}
 
         <iframe
           className={iframe}
@@ -95,6 +108,10 @@ export default function WebsitePage({ params }: Route.LoaderArgs) {
           allowFullScreen
         ></iframe>
       </div>
+
+      {content && (
+        <ExpandingInfoButton fullScreen>{content}</ExpandingInfoButton>
+      )}
     </>
   );
 }

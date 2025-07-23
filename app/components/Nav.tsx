@@ -1,7 +1,9 @@
 import { Link } from "react-router";
 import { css, cx } from "../../styled-system/css";
 import emailIcon from "../assets/icons/email.png";
+import githubIcon from "../assets/icons/github.png";
 import linkedInIcon from "../assets/icons/linkedin.png";
+import mediumIcon from "../assets/icons/medium-icon-md.png";
 import avatar from "../assets/images/kundalini-avatar500x500.jpg";
 import Title from "./TItle";
 
@@ -15,8 +17,8 @@ const linkStyles = {
 
 const listItemStyles = {
   listStyleType: "none",
-  display: "inline-block",
-  padding: "15px 0px 20px 0px",
+  display: "inline-flex",
+  padding: "12px 0px 20px 0px",
 };
 
 const navWrapperStyles = css({
@@ -25,39 +27,41 @@ const navWrapperStyles = css({
   height: "50px",
   letterSpacing: "1.2px",
   zIndex: "900",
-  background: "rgba(0, 0, 0, 0.7)",
+  background: "rgba(0, 0, 0, 0.6)",
+  backdropFilter: "blur(4px)",
   display: "flex",
+  borderBottom: "0.5px solid rgba(255, 255, 255, 0.1)",
 });
 
-const navList = css({
-  margin: 0,
-  padding: 0,
-  display: "inline",
-  textDecoration: "none",
-  backgroundColor: "transparent",
-  color: "azure",
-  fontFamily: "San Francisco, sans-serif",
-  fontSize: "10px",
-  fontWeight: 700,
-  position: "absolute",
-  left: "300px",
-});
+// const navList = css({
+//   margin: 0,
+//   padding: 0,
+//   display: "inline",
+//   textDecoration: "none",
+//   backgroundColor: "transparent",
+//   color: "azure",
+//   fontFamily: "San Francisco, sans-serif",
+//   fontSize: "11px",
+//   fontWeight: 700,
+//   left: "300px",
+// });
 
-const navListItem = css({
-  ...listItemStyles,
-});
+// const navListItem = css({
+//   ...listItemStyles,
+//   paddingTop: "17px",
+//   marginLeft: "50px",
+// });
 
-const navLink = css({
-  ...linkStyles,
-  paddingRight: "30px",
-  paddingLeft: "30px",
-});
+// const navLink = css({
+//   ...linkStyles,
+//   paddingRight: "30px",
+//   paddingLeft: "30px",
+// });
 
 const iconsList = css({
   position: "absolute",
   right: "50px",
   display: "flex",
-  width: "50px",
   justifyContent: "space-between",
 });
 
@@ -65,6 +69,7 @@ const icon = css({
   ...listItemStyles,
   opacity: "0.2",
   transition: "opacity 0.5s ease-in-out",
+  height: "24px",
 
   _hover: {
     opacity: "0.8",
@@ -75,8 +80,8 @@ const iconLink = css({
   ...linkStyles,
   textDecoration: "none",
   transition: "color 0.5s ease-in-out",
-  width: "20px",
-  height: "20px",
+  width: "24px",
+  height: "24px",
   backgroundRepeat: "no-repeat",
   backgroundPosition: "center center",
   backgroundSize: "contain",
@@ -87,7 +92,7 @@ const iconLink = css({
   display: "inline-block",
   position: "relative",
   verticalAlign: "middle",
-  margin: "0 2px 5px 0",
+  margin: "0 6px 6px 0",
   fontSize: "90%",
   backgroundColor: "#ececec",
   border: "solid 1px white",
@@ -103,7 +108,7 @@ const iconLink = css({
 const backButton = css({
   display: "block",
   position: "absolute",
-  top: "22px",
+  top: "20px",
   left: "75px",
   fontSize: 0,
   lineHeight: 0,
@@ -118,10 +123,10 @@ const backButton = css({
 });
 
 const backButtonIcon = css({
-  borderRight: "2px solid red",
-  borderBottom: "2px solid red",
-  width: "8px",
-  height: "8px",
+  borderRight: "3px solid red",
+  borderBottom: "3px solid red",
+  width: "10px",
+  height: "10px",
   transform: "rotate(135deg)",
   transition: "border-color .3s ease-in-out",
 
@@ -155,7 +160,7 @@ export default function Nav({ backButtonTo }: NavProps) {
 
       <Title />
 
-      <ul className={navList}>
+      {/* <ul className={navList}>
         <li className={navListItem}>
           <Link
             className={navLink}
@@ -167,27 +172,41 @@ export default function Nav({ backButtonTo }: NavProps) {
           </Link>
         </li>
         <li className={navListItem}>
-          <Link
-            className={navLink}
-            to="https://www.github.com/chasms"
-            target="_blank"
-            rel="noreferrer"
-          >
-            GITHUB
-          </Link>
-        </li>
-        {/* <li className={navListItem}>
           <Link className={navLink} to="info.html">
             ABOUT
           </Link>
-        </li> */}
-      </ul>
+        </li>
+      </ul> */}
 
       <ul className={iconsList}>
         <li className={icon}>
           <Link
             className={iconLink}
+            to="https://www.medium.com/@chasms"
+            target="_blank"
+            rel="noreferrer"
+            style={{ backgroundImage: `url("${mediumIcon}")` }}
+          >
+            Medium
+          </Link>
+        </li>
+        <li className={icon}>
+          <Link
+            className={iconLink}
+            to="https://github.com/chasms"
+            target="_blank"
+            rel="noreferrer"
+            style={{ backgroundImage: `url("${githubIcon}")` }}
+          >
+            Github
+          </Link>
+        </li>
+        <li className={icon}>
+          <Link
+            className={iconLink}
             to="mailto:chasms@chas.ms"
+            target="_blank"
+            rel="noreferrer"
             style={{ backgroundImage: `url("${emailIcon}")` }}
           >
             Email
