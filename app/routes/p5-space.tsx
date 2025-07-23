@@ -3,6 +3,7 @@ import { Link } from "react-router";
 import { css, cva, cx } from "../../styled-system/css";
 import githubIcon from "../assets/icons/github.png";
 import { contentBody, contentHeading } from "../components/content.css";
+import ExpandingInfoButton from "../components/ExpandingInfoButton";
 import Nav from "../components/Nav";
 import { toHomeWithOpeningSequenceComplete } from "../routes";
 
@@ -35,159 +36,6 @@ const floatingButtonStyles = {
   },
 };
 
-const transitionsWhenOpening =
-  "height 0.5s ease-in-out, width 0.5s ease-in-out, border-radius 0.1s ease-in-out, backdrop-filter 0.1s ease-in-out";
-const transitionWhenClosing = `${buttonHoverTransitions}, border-radius 0.1s ease-in-out 0.5s`;
-const sharedWidthValue = "calc(100% - 150px)";
-const sharedHeightValue = "20%";
-const info = cva({
-  base: {
-    position: "absolute",
-    bottom: "25px",
-    left: "25px",
-  },
-  variants: {
-    state: {
-      open: {
-        height: sharedHeightValue,
-        width: sharedWidthValue,
-        borderRadius: "16px",
-        backdropFilter: "invert(80%)",
-        cursor: "default",
-        transition: transitionsWhenOpening,
-
-        _hover: {
-          transform: "scale(1)",
-        },
-      },
-      closed: {
-        height: "60px",
-        width: "60px",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        borderRadius: "50%",
-        backdropFilter: "invert(30%)",
-        cursor: "pointer",
-        transition: transitionWhenClosing,
-
-        _hover: {
-          backdropFilter: "invert(80%)",
-          height: "80px",
-          width: "80px",
-        },
-      },
-    },
-  },
-});
-
-const infoIcon = cva({
-  base: {
-    fontFamily: "serif",
-    fontWeight: "900",
-    fontSize: "36px",
-    color: "black",
-    position: "absolute",
-    transition:
-      "opacity 0.1s ease-in-out, bottom 0.5s ease-in-out, left 0.5s ease-in-out",
-    bottom: "4px",
-    left: "24px",
-
-    _groupHover: {
-      bottom: "12px",
-      left: "34px",
-    },
-  },
-  variants: {
-    state: {
-      shown: {
-        opacity: "0.7",
-      },
-      hidden: {
-        opacity: "0",
-      },
-    },
-  },
-});
-
-const infoContent = cva({
-  base: {
-    fontFamily: "San Francisco, sans-serif",
-    padding: "25px",
-    display: "flex",
-    flexDirection: "column",
-    userSelect: "none",
-    margin: "auto",
-    position: "relative",
-    height: "100%",
-    width: "100%",
-  },
-  variants: {
-    state: {
-      shown: {
-        color: "rgba(0, 0, 0, 0.8)",
-        transition: "left 0s ease-in-out 0.2s, color 0.5s ease-in-out 0.5s",
-      },
-      hidden: {
-        left: "-110%",
-        color: "rgba(0, 0, 0, 0)",
-        transition: "left 0s ease-in-out 0.5s, color 0.5s ease-in-out",
-      },
-    },
-  },
-});
-
-const infoCloseButtonGroupClassName = "infoCloseButton";
-const infoCloseButton = css({
-  position: "absolute",
-  top: "25px",
-  right: "25px",
-  height: "32px",
-  width: "32px",
-  cursor: "pointer",
-});
-
-const infoCloseIcon = css({
-  _before: {
-    position: "absolute",
-    top: "8px",
-    right: "0",
-    content: '""',
-    borderRight: "4px solid black",
-    borderBottom: "4px solid black",
-    width: "16px",
-    height: "16px",
-    transform: "rotate(135deg)",
-    transition: "border-color .3s ease-in-out",
-
-    [`.${infoCloseButtonGroupClassName}:is(:hover, [data-hover]) &`]: {
-      borderColor: "red",
-    },
-  },
-  _after: {
-    position: "absolute",
-    top: "8px",
-    left: "0",
-    content: '""',
-    borderRight: "4px solid black",
-    borderBottom: "4px solid black",
-    width: "16px",
-    height: "16px",
-    transform: "rotate(315deg)",
-    transition: "border-color .3s ease-in-out",
-
-    ".infoCloseButton:is(:hover, [data-hover]) &": {
-      borderColor: "red",
-    },
-  },
-});
-
-const infoContentScrollWrapper = css({
-  overflowY: "auto",
-  height: "100%",
-  width: "100%",
-});
-
 const githubButton = css({
   position: "absolute",
   bottom: "25px",
@@ -203,47 +51,24 @@ const githubImg = css({
 });
 
 export default function P5Space() {
-  const [isInfoOpen, setIsInfoOpen] = useState(false);
-
   return (
     <>
       <Nav backButtonTo={toHomeWithOpeningSequenceComplete} />
 
       <iframe className={iframe} src="https://p5-space.chas.ms" />
 
-      <div
-        className={cx("group", info({ state: isInfoOpen ? "open" : "closed" }))}
-        onClick={() => setIsInfoOpen(true)}
-      >
-        <div className={infoIcon({ state: isInfoOpen ? "hidden" : "shown" })}>
-          <p>i</p>
-        </div>
-
-        <div
-          className={infoContent({ state: isInfoOpen ? "shown" : "hidden" })}
-        >
-          <div
-            className={cx("infoCloseButton", infoCloseButton)}
-            onClick={(e) => {
-              e.stopPropagation();
-              setIsInfoOpen(false);
-            }}
-          >
-            <div className={infoCloseIcon}></div>
-          </div>
-
-          <div className={infoContentScrollWrapper}>
-            <h1 className={contentHeading}>p5 Space</h1>
-            <p className={contentBody}>
-              A small interactive experience built with &lt;50 lines of
-              JavaScript in P5.js
-            </p>
-            <p className={contentBody}>
-              Click and drag to move the camera, scroll to zoom in and out.
-            </p>
-          </div>
-        </div>
-      </div>
+      <ExpandingInfoButton>
+        <>
+          <h1 className={contentHeading}>p5 Space</h1>
+          <p className={contentBody}>
+            A small interactive experience built with &lt;50 lines of JavaScript
+            in P5.js
+          </p>
+          <p className={contentBody}>
+            Click and drag to move the camera, scroll to zoom in and out.
+          </p>
+        </>
+      </ExpandingInfoButton>
 
       <Link
         className={githubButton}

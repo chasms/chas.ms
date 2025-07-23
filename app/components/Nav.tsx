@@ -18,7 +18,7 @@ const linkStyles = {
 const listItemStyles = {
   listStyleType: "none",
   display: "inline-flex",
-  padding: "15px 0px 20px 0px",
+  padding: "12px 0px 20px 0px",
 };
 
 const navWrapperStyles = css({
@@ -62,7 +62,6 @@ const iconsList = css({
   position: "absolute",
   right: "50px",
   display: "flex",
-  width: "50px",
   justifyContent: "space-between",
 });
 
@@ -70,6 +69,7 @@ const icon = css({
   ...listItemStyles,
   opacity: "0.2",
   transition: "opacity 0.5s ease-in-out",
+  height: "24px",
 
   _hover: {
     opacity: "0.8",
@@ -80,8 +80,8 @@ const iconLink = css({
   ...linkStyles,
   textDecoration: "none",
   transition: "color 0.5s ease-in-out",
-  width: "20px",
-  height: "20px",
+  width: "24px",
+  height: "24px",
   backgroundRepeat: "no-repeat",
   backgroundPosition: "center center",
   backgroundSize: "contain",
@@ -92,7 +92,7 @@ const iconLink = css({
   display: "inline-block",
   position: "relative",
   verticalAlign: "middle",
-  margin: "0 4px 6px 0",
+  margin: "0 6px 6px 0",
   fontSize: "90%",
   backgroundColor: "#ececec",
   border: "solid 1px white",
