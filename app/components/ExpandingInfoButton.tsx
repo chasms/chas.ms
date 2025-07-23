@@ -46,6 +46,14 @@ const info = cva({
         },
       },
     },
+    hidden: {
+      true: {
+        md: {
+          display: "none",
+        },
+      },
+      false: {},
+    },
     size: {
       small: {},
       full: {},
@@ -198,6 +206,7 @@ const ExpandingInfoButton = ({
         info({
           state: isInfoOpen ? "open" : "closed",
           size: fullScreen ? "full" : "small",
+          hidden: fullScreen ? true : false,
         }),
       )}
       onClick={() => setIsInfoOpen(true)}
