@@ -5,21 +5,20 @@ const buttonHoverTransitions =
   "backdrop-filter 0.5s ease-in-out, height 0.5s ease-in-out, width 0.5s ease-in-out";
 
 const transitionsWhenOpening =
-  "height 0.5s ease-in-out, width 0.5s ease-in-out, border-radius 0.1s ease-in-out, backdrop-filter 0.1s ease-in-out";
-const transitionWhenClosing = `${buttonHoverTransitions}, border-radius 0.1s ease-in-out 0.5s`;
-const sharedWidthValue = "calc(100% - 150px)";
-const sharedHeightValue = "20%";
+  "height 0.5s ease-in-out, width 0.5s ease-in-out, border-radius 0.1s ease-in-out, backdrop-filter 0.1s ease-in-out, background-color 0.5s ease-in-out";
+const transitionWhenClosing = `${buttonHoverTransitions}, border-radius 0.1s ease-in-out 0.5s, background-color 0.5s ease-in-out`;
+const smallWidthValue = "calc(100% - 150px)";
+const smallHeightValue = "20%";
 const info = cva({
   base: {
     position: "absolute",
     bottom: "25px",
     left: "25px",
+    backgroundColor: "rgba(255, 255, 255, 0.1)",
   },
   variants: {
     state: {
       open: {
-        height: sharedHeightValue,
-        width: sharedWidthValue,
         borderRadius: "16px",
         backdropFilter: "invert(80%)",
         cursor: "default",
@@ -47,7 +46,31 @@ const info = cva({
         },
       },
     },
+    size: {
+      small: {},
+      full: {},
+    },
   },
+  compoundVariants: [
+    {
+      state: "open",
+      size: "small",
+      css: {
+        height: smallHeightValue,
+        width: smallWidthValue,
+      },
+    },
+    {
+      state: "open",
+      size: "full",
+      css: {
+        height: "calc(100% - 75px)",
+        width: "calc(100% - 50px)",
+        backdropFilter: "blur(10px)",
+        backgroundColor: "rgba(255, 255, 255, 0.4)",
+      },
+    },
+  ],
 });
 
 const infoIcon = cva({
@@ -159,14 +182,24 @@ const infoContentScrollWrapper = css({
 
 interface ExpandingInfoButtonProps {
   children: React.ReactNode;
+  fullScreen?: boolean;
 }
 
-const ExpandingInfoButton = ({ children }: ExpandingInfoButtonProps) => {
+const ExpandingInfoButton = ({
+  children,
+  fullScreen,
+}: ExpandingInfoButtonProps) => {
   const [isInfoOpen, setIsInfoOpen] = useState(false);
 
   return (
     <div
-      className={cx("group", info({ state: isInfoOpen ? "open" : "closed" }))}
+      className={cx(
+        "group",
+        info({
+          state: isInfoOpen ? "open" : "closed",
+          size: fullScreen ? "full" : "small",
+        }),
+      )}
       onClick={() => setIsInfoOpen(true)}
     >
       <div className={infoIcon({ state: isInfoOpen ? "hidden" : "shown" })}>

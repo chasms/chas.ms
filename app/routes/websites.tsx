@@ -109,7 +109,9 @@ export default function WebsitePage({ params }: Route.LoaderArgs) {
         ></iframe>
       </div>
 
-      {content && <ExpandingInfoButton>{content}</ExpandingInfoButton>}
+      {content && (
+        <ExpandingInfoButton fullScreen>{content}</ExpandingInfoButton>
+      )}
     </>
   );
 }
