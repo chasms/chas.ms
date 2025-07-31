@@ -1,6 +1,7 @@
 import { css } from "../../styled-system/css";
 import Carousel from "../components/Carousel";
 import ExpandingInfoButton from "../components/ExpandingInfoButton";
+import FurnitureContent from "../components/FurnitureContent";
 import Nav from "../components/Nav";
 import { toHomeWithOpeningSequenceComplete } from "../routes";
 import type { Route } from "./+types/websites";
@@ -8,7 +9,7 @@ import type { Route } from "./+types/websites";
 const pageWrapper = css({
   width: "100%",
   margin: "0 auto",
-  padding: "0 20px",
+  padding: "50px 20px",
   display: "flex",
   flexDirection: "column",
   height: "100vh",
@@ -37,7 +38,7 @@ const GalleryPages: Record<GalleryKeys, GalleryPageDataType> = {
       "/img/F4.png",
       "/img/F5.png",
     ],
-    content: <div />,
+    content: <FurnitureContent />,
   },
 };
 
