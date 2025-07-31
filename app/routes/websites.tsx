@@ -1,4 +1,4 @@
-import { css, cx } from "../../styled-system/css";
+import { css } from "../../styled-system/css";
 import ExpandingInfoButton from "../components/ExpandingInfoButton";
 import FinJSContent from "../components/FinJSContent";
 import GiantMachinesContent from "../components/GiantMachinesContent";
@@ -47,7 +47,7 @@ export enum WebsiteKeys {
   "fin-js" = "fin-js",
 }
 
-interface WebsitePage {
+interface WebsitePageDataType {
   embedSrc: string;
   content: React.ReactNode;
   title: string;
@@ -55,7 +55,7 @@ interface WebsitePage {
   autoplay?: boolean;
 }
 
-const WebsitePages: Record<WebsiteKeys, WebsitePage> = {
+const WebsitePages: Record<WebsiteKeys, WebsitePageDataType> = {
   [WebsiteKeys.giantmachines]: {
     title: "Giant Machines",
     description:
@@ -110,7 +110,9 @@ export default function WebsitePage({ params }: Route.LoaderArgs) {
       </div>
 
       {content && (
-        <ExpandingInfoButton fullScreen>{content}</ExpandingInfoButton>
+        <ExpandingInfoButton fullScreen mobileOnly>
+          {content}
+        </ExpandingInfoButton>
       )}
     </>
   );

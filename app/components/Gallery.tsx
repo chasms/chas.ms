@@ -11,6 +11,7 @@ import ShakersThumbnail from "../assets/images/ShakersThumbnail.png";
 import SkylandBanner from "../assets/images/SkylandBanner.png";
 import SkylandThumbnail from "../assets/images/SkylandThumbnail.png";
 import { RouteSlugs } from "../routes";
+import { GalleryKeys } from "../routes/gallery";
 import { WebsiteKeys } from "../routes/websites";
 import GalleryItem, { galleryItemHorizontalSpacing } from "./GalleryItem";
 
@@ -127,10 +128,10 @@ export default function Gallery() {
       </GalleryItem>
 
       <GalleryItem
-        href="https://chas.ms/f"
+        href={`/${RouteSlugs.gallery}/${GalleryKeys.furniture}`}
         reloadDocument
         image={FurnitureGalleryImage}
-        imageAltText=""
+        imageAltText="Furniture"
       >
         <p className={galleryBannerText}>
           <strong>furniture</strong>
