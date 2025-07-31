@@ -110,7 +110,9 @@ export default function WebsitePage({ params }: Route.LoaderArgs) {
       </div>
 
       {content && (
-        <ExpandingInfoButton fullScreen>{content}</ExpandingInfoButton>
+        <ExpandingInfoButton fullScreen mobileOnly>
+          {content}
+        </ExpandingInfoButton>
       )}
     </>
   );

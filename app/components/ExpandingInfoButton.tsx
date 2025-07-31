@@ -46,7 +46,7 @@ const info = cva({
         },
       },
     },
-    hidden: {
+    mobileOnly: {
       true: {
         md: {
           display: "none",
@@ -74,7 +74,7 @@ const info = cva({
       css: {
         height: "calc(100% - 75px)",
         width: "calc(100% - 50px)",
-        backdropFilter: "blur(10px)",
+        backdropFilter: "invert(80%) blur(10px)",
         backgroundColor: "rgba(255, 255, 255, 0.4)",
       },
     },
@@ -191,11 +191,13 @@ const infoContentScrollWrapper = css({
 interface ExpandingInfoButtonProps {
   children: React.ReactNode;
   fullScreen?: boolean;
+  mobileOnly?: boolean;
 }
 
 const ExpandingInfoButton = ({
   children,
   fullScreen,
+  mobileOnly,
 }: ExpandingInfoButtonProps) => {
   const [isInfoOpen, setIsInfoOpen] = useState(false);
 
@@ -206,7 +208,7 @@ const ExpandingInfoButton = ({
         info({
           state: isInfoOpen ? "open" : "closed",
           size: fullScreen ? "full" : "small",
-          hidden: fullScreen ? true : false,
+          mobileOnly: mobileOnly ? true : false,
         }),
       )}
       onClick={() => setIsInfoOpen(true)}
