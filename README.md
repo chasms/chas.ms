@@ -1,18 +1,15 @@
-# Welcome to React Router!
+# ![image](./public/favicon-32x32.png) [chas.ms](chas.ms)
 
-A modern, production-ready template for building full-stack React applications using React Router.
+Converting my old portfolio site that I built in 2014 before I became a software engineer using HTML and vanilla CSS and JS to a modern isomorphic JavaScript frontend!
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/remix-run/react-router-templates/tree/main/default)
+Using lean development to triage the incremental build - some parts of the site are still legacy! (see the [public folder](./public/))
 
-## Features
+Built using:
 
-- 🚀 Server-side rendering
-- ⚡️ Hot Module Replacement (HMR)
-- 📦 Asset bundling and optimization
-- 🔄 Data loading and mutations
-- 🔒 TypeScript by default
-- 🎉 TailwindCSS for styling
-- 📖 [React Router docs](https://reactrouter.com/)
+- [Remix/React Router 7](https://reactrouter.com/) for SSR and routing
+- [Panda CSS](https://panda-css.com/) for statically-compiled CSS-in-JS
+- [Vite](https://vite.dev/) for local dev server and bundler with HMR and build optimization
+- [Netlify](https://www.netlify.com/) for Isomorphic JavaScript deploys to the global edge with SSL and serverless functions
 
 ## Getting Started
 
@@ -42,9 +39,7 @@ Create a production build:
 npm run build
 ```
 
-## Deployment
-
-### Docker Deployment
+### Docker
 
 To build and run using Docker:
 
@@ -54,34 +49,3 @@ docker build -t my-app .
 # Run the container
 docker run -p 3000:3000 my-app
 ```
-
-The containerized application can be deployed to any platform that supports Docker, including:
-
-- AWS ECS
-- Google Cloud Run
-- Azure Container Apps
-- Digital Ocean App Platform
-- Fly.io
-- Railway
-
-### DIY Deployment
-
-If you're familiar with deploying Node applications, the built-in app server is production-ready.
-
-Make sure to deploy the output of `npm run build`
-
-```
-├── package.json
-├── package-lock.json (or pnpm-lock.yaml, or bun.lockb)
-├── build/
-│   ├── client/    # Static assets
-│   └── server/    # Server-side code
-```
-
-## Styling
-
-This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever CSS framework you prefer.
-
----
-
-Built with ❤️ using React Router.
