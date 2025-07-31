@@ -1,23 +1,46 @@
-import { useState, useRef, useEffect } from "react";
+import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { css } from "../../styled-system/css";
 
-const sliderWrapper = css({
-  width: "100%",
-  height: "100%",
-  display: "flex",
-  flexDirection: "column",
-  justifyContent: "center",
-  alignItems: "center",
-  padding: "0 20px",
-  boxSizing: "border-box",
-});
+// @ts-expect-error Need to use default for SSR to prevent 500 server error: https://github.com/akiran/react-slick/issues/2206
+const SliderComponent = Slider.default ? Slider.default : Slider;
 
-const mainSliderContainer = css({
-  width: "100%",
+const sliderWrapperStyles = css({
   margin: "0 auto",
+  height: "100%",
+  maxHeight: "calc(100% - 200px)",
+  width: "100%",
+  maxWidth: "1400px",
+  paddingBottom: "120px", // space for thumbnails
+  position: "relative",
+
+  "& .slick-dots": {
+    position: "absolute",
+    bottom: "0px",
+    display: "flex !important",
+    justifyContent: "center",
+    width: "100%",
+    listStyle: "none",
+    padding: "20px 0",
+    margin: 0,
+    "& li": {
+      width: "auto !important",
+      height: "auto",
+      margin: "0 5px",
+      cursor: "pointer",
+    },
+    "& li img": {
+      transition: "all 0.5s ease-in-out",
+      border: "2px solid transparent",
+      opacity: "0.6",
+    },
+    "& li.slick-active img": {
+      border: "2px solid white",
+      opacity: "1",
+    },
+  },
 });
 
 const imageStyle = css({
@@ -28,27 +51,11 @@ const imageStyle = css({
   margin: "auto",
 });
 
-const thumbnailWrapper = css({
-  width: "80%",
-  margin: "20px auto 0",
-  "& .slick-slide": {
-    padding: "0 5px",
-  },
-  "& .slick-slide img": {
-    cursor: "pointer",
-    border: "2px solid transparent",
-    "&:hover": {
-      borderColor: "gray.500",
-    },
-  },
-  "& .slick-current img": {
-    borderColor: "white",
-  },
-});
-
 const thumbnailImageStyle = css({
-  width: "100px",
+  width: "100%",
   height: "auto",
+  border: "2px solid transparent",
+  borderRadius: "4px",
 });
 
 interface CarouselProps {
@@ -56,55 +63,35 @@ interface CarouselProps {
 }
 
 export default function Carousel({ images }: CarouselProps) {
-  const [nav1, setNav1] = useState<Slider | undefined>();
-  const [nav2, setNav2] = useState<Slider | undefined>();
-
-  const slider1 = useRef<Slider>(null);
-  const slider2 = useRef<Slider>(null);
-
-  useEffect(() => {
-    if (slider1.current) {
-      setNav1(slider1.current);
-    }
-    if (slider2.current) {
-      setNav2(slider2.current);
-    }
-  }, []);
-
-  // @ts-expect-error Need to use default for SSR to prevent 500 server error: https://github.com/akiran/react-slick/issues/2206
-  const SliderComponent = Slider.default ? Slider.default : Slider;
+  const settings = {
+    customPaging: (i: number) => {
+      return (
+        <a>
+          <img
+            src={images[i]}
+            alt={`thumbnail-${i}`}
+            className={thumbnailImageStyle}
+          />
+        </a>
+      );
+    },
+    dots: true,
+    dotsClass: "slick-dots",
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+  };
 
   return (
-    <div className={sliderWrapper}>
-      <div className={mainSliderContainer}>
-        <SliderComponent asNavFor={nav2} ref={slider1}>
-          {images.map((src, index) => (
-            <div key={index}>
-              <img src={src} alt={`slide-${index}`} className={imageStyle} />
-            </div>
-          ))}
-        </SliderComponent>
-      </div>
-      <div className={thumbnailWrapper}>
-        <SliderComponent
-          asNavFor={nav1}
-          ref={slider2}
-          slidesToShow={images.length}
-          swipeToSlide={true}
-          focusOnSelect={true}
-          centerMode={true}
-        >
-          {images.map((src, index) => (
-            <div key={index}>
-              <img
-                src={src}
-                alt={`thumbnail-${index}`}
-                className={thumbnailImageStyle}
-              />
-            </div>
-          ))}
-        </SliderComponent>
-      </div>
+    <div className={sliderWrapperStyles}>
+      <SliderComponent {...settings}>
+        {images.map((src, index) => (
+          <div key={index}>
+            <img src={src} alt={`slide-${index}`} className={imageStyle} />
+          </div>
+        ))}
+      </SliderComponent>
     </div>
   );
 }
