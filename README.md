@@ -1,4 +1,4 @@
-# [chas.ms](chas.ms)
+# ![image](./public/favicon-32x32.png) [chas.ms](chas.ms)
 
 Converting my old portfolio site that I built in 2014 before I became a software engineer using HTML and vanilla CSS and JS to a modern isomorphic JavaScript frontend!
 
