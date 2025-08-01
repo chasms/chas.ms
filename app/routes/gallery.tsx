@@ -4,6 +4,16 @@ import furnitureBench2 from "../assets/images/furniture/furniture-bench-2.png";
 import furnitureMDF from "../assets/images/furniture/furniture-mdf.png";
 import furnitureTable1 from "../assets/images/furniture/furniture-table-1.png";
 import furnitureTable2 from "../assets/images/furniture/furniture-table-2.png";
+import peelers1 from "../assets/images/peelers/peelers1.png";
+import peelersbbk from "../assets/images/peelers/peelersbbk.png";
+import peelerscnc1 from "../assets/images/peelers/peelerscnc1.png";
+import peelerscnc2 from "../assets/images/peelers/peelerscnc2.png";
+import peelerscnc3 from "../assets/images/peelers/peelerscnc3.png";
+import peelerspbk from "../assets/images/peelers/peelerspbk.png";
+import peelerspr from "../assets/images/peelers/peelerspr.png";
+import peelerssbk from "../assets/images/peelers/peelerssbk.png";
+import peelerstbk from "../assets/images/peelers/peelerstbk.png";
+import peelerstr from "../assets/images/peelers/peelerstr.png";
 import Carousel from "../components/Carousel";
 import ExpandingInfoButton from "../components/ExpandingInfoButton";
 import FurnitureContent from "../components/FurnitureContent";
@@ -48,19 +58,19 @@ const GalleryPages: Record<GalleryKeys, GalleryPageDataType> = {
     content: <FurnitureContent />,
   },
   [GalleryKeys.peelers]: {
-    title: "Ergonomic Peeler",
+    title: "Ergonomic Potato Peeler",
     description: "Potato Peeler Handle Design",
     images: [
-      "/img/PP1.png",
-      "/img/PPsbk.png",
-      "/img/PPtbk.png",
-      "/img/PPtr.png",
-      "/img/PPbbk.png",
-      "/img/PPpbk.png",
-      "/img/PPpr.png",
-      "/img/PPcnc1.png",
-      "/img/PPcnc2.png",
-      "/img/PPcnc3.png",
+      peelers1,
+      peelerssbk,
+      peelerstbk,
+      peelerstr,
+      peelersbbk,
+      peelerspbk,
+      peelerspr,
+      peelerscnc1,
+      peelerscnc2,
+      peelerscnc3,
     ],
     content: <PeelersContent />,
   },
