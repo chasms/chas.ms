@@ -119,8 +119,7 @@ export default function HomeProjectsGallery() {
       </HomeProjectGalleryItem>
 
       <HomeProjectGalleryItem
-        href="https://chas.ms/pp"
-        reloadDocument
+        href={`/${RouteSlugs.gallery}/${GalleryKeys.peelers}`}
         imageAltText=""
         image={PeelerThumbnail}
       >
@@ -131,7 +130,6 @@ export default function HomeProjectsGallery() {
 
       <HomeProjectGalleryItem
         href={`/${RouteSlugs.gallery}/${GalleryKeys.furniture}`}
-        reloadDocument
         image={FurnitureGalleryImage}
         imageAltText="Furniture"
       >

@@ -3,13 +3,14 @@ import Carousel from "../components/Carousel";
 import ExpandingInfoButton from "../components/ExpandingInfoButton";
 import FurnitureContent from "../components/FurnitureContent";
 import Nav from "../components/Nav";
+import PeelersContent from "../components/PeelersContent";
 import { toHomeWithOpeningSequenceComplete } from "../routes";
 import type { Route } from "./+types/websites";
 
 const pageWrapper = css({
   width: "100%",
   margin: "0 auto",
-  padding: "50px 20px",
+  padding: "50px 40px",
   display: "flex",
   flexDirection: "column",
   height: "100vh",
@@ -18,6 +19,7 @@ const pageWrapper = css({
 
 export enum GalleryKeys {
   furniture = "furniture",
+  peelers = "peelers",
 }
 
 interface GalleryPageDataType {
@@ -39,6 +41,23 @@ const GalleryPages: Record<GalleryKeys, GalleryPageDataType> = {
       "/img/F5.png",
     ],
     content: <FurnitureContent />,
+  },
+  [GalleryKeys.peelers]: {
+    title: "Ergonomic Peeler",
+    description: "Potato Peeler Handle Design",
+    images: [
+      "/img/PP1.png",
+      "/img/PPsbk.png",
+      "/img/PPtbk.png",
+      "/img/PPtr.png",
+      "/img/PPbbk.png",
+      "/img/PPpbk.png",
+      "/img/PPpr.png",
+      "/img/PPcnc1.png",
+      "/img/PPcnc2.png",
+      "/img/PPcnc3.png",
+    ],
+    content: <PeelersContent />,
   },
 };
 
