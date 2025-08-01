@@ -4,7 +4,6 @@ import furnitureBench2 from "../assets/images/furniture/furniture-bench-2.png";
 import furnitureMDF from "../assets/images/furniture/furniture-mdf.png";
 import furnitureTable1 from "../assets/images/furniture/furniture-table-1.png";
 import furnitureTable2 from "../assets/images/furniture/furniture-table-2.png";
-import mardiGras1 from "../assets/images/mardi-gras/mardi-gras-1.png";
 import mardiGras10 from "../assets/images/mardi-gras/mardi-gras-10.png";
 import mardiGras11 from "../assets/images/mardi-gras/mardi-gras-11.png";
 import mardiGras12 from "../assets/images/mardi-gras/mardi-gras-12.png";
@@ -15,12 +14,10 @@ import mardiGras16 from "../assets/images/mardi-gras/mardi-gras-16.png";
 import mardiGras17 from "../assets/images/mardi-gras/mardi-gras-17.png";
 import mardiGras18 from "../assets/images/mardi-gras/mardi-gras-18.png";
 import mardiGras19 from "../assets/images/mardi-gras/mardi-gras-19.png";
-import mardiGras2 from "../assets/images/mardi-gras/mardi-gras-2.png";
 import mardiGras20 from "../assets/images/mardi-gras/mardi-gras-20.png";
 import mardiGras21 from "../assets/images/mardi-gras/mardi-gras-21.png";
 import mardiGras22 from "../assets/images/mardi-gras/mardi-gras-22.png";
 import mardiGras23 from "../assets/images/mardi-gras/mardi-gras-23.png";
-import mardiGras24 from "../assets/images/mardi-gras/mardi-gras-24.png";
 import mardiGras25 from "../assets/images/mardi-gras/mardi-gras-25.png";
 import mardiGras26 from "../assets/images/mardi-gras/mardi-gras-26.png";
 import mardiGras27 from "../assets/images/mardi-gras/mardi-gras-27.png";
@@ -28,11 +25,8 @@ import mardiGras28 from "../assets/images/mardi-gras/mardi-gras-28.png";
 import mardiGras29 from "../assets/images/mardi-gras/mardi-gras-29.png";
 import mardiGras3 from "../assets/images/mardi-gras/mardi-gras-3.png";
 import mardiGras30 from "../assets/images/mardi-gras/mardi-gras-30.png";
-import mardiGras31 from "../assets/images/mardi-gras/mardi-gras-31.png";
-import mardiGras32 from "../assets/images/mardi-gras/mardi-gras-32.png";
 import mardiGras33 from "../assets/images/mardi-gras/mardi-gras-33.png";
 import mardiGras34 from "../assets/images/mardi-gras/mardi-gras-34.png";
-import mardiGras4 from "../assets/images/mardi-gras/mardi-gras-4.png";
 import mardiGras5 from "../assets/images/mardi-gras/mardi-gras-5.png";
 import mardiGras6 from "../assets/images/mardi-gras/mardi-gras-6.png";
 import mardiGras7 from "../assets/images/mardi-gras/mardi-gras-7.png";
@@ -114,19 +108,21 @@ const GalleryPages: Record<GalleryKeys, GalleryPageDataType> = {
     title: "Mardi Gras",
     description: "Photos from Mardi Gras in New Orleans",
     images: [
-      mardiGras1,
-      mardiGras2,
-      mardiGras3,
-      mardiGras4,
-      mardiGras5,
-      mardiGras6,
-      mardiGras7,
+      mardiGras25,
+      mardiGras26,
+      mardiGras23,
+      mardiGras12,
+      mardiGras13,
+      mardiGras27,
+      mardiGras28,
+      mardiGras29,
+      mardiGras30,
+      mardiGras33,
+      mardiGras34,
       mardiGras8,
       mardiGras9,
       mardiGras10,
       mardiGras11,
-      mardiGras12,
-      mardiGras13,
       mardiGras14,
       mardiGras15,
       mardiGras16,
@@ -136,18 +132,10 @@ const GalleryPages: Record<GalleryKeys, GalleryPageDataType> = {
       mardiGras20,
       mardiGras21,
       mardiGras22,
-      mardiGras23,
-      mardiGras24,
-      mardiGras25,
-      mardiGras26,
-      mardiGras27,
-      mardiGras28,
-      mardiGras29,
-      mardiGras30,
-      mardiGras31,
-      mardiGras32,
-      mardiGras33,
-      mardiGras34,
+      mardiGras5,
+      mardiGras6,
+      mardiGras7,
+      mardiGras3,
     ],
     content: <MardiGrasContent />,
   },
