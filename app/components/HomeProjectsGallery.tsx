@@ -139,10 +139,9 @@ export default function HomeProjectsGallery() {
       </HomeProjectGalleryItem>
 
       <HomeProjectGalleryItem
-        href="https://chas.ms/mg"
-        reloadDocument
+        href={`/${RouteSlugs.gallery}/${GalleryKeys["mardi-gras"]}`}
         image={MardiGrasThumbnail}
-        imageAltText=""
+        imageAltText="Mardi Gras"
       >
         <p className={galleryBannerText}>
           <strong>mardi gras</strong>, new orleans
