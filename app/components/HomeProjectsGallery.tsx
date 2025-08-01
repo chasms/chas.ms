@@ -13,7 +13,9 @@ import SkylandThumbnail from "../assets/images/SkylandThumbnail.png";
 import { RouteSlugs } from "../routes";
 import { GalleryKeys } from "../routes/gallery";
 import { WebsiteKeys } from "../routes/websites";
-import GalleryItem, { galleryItemHorizontalSpacing } from "./GalleryItem";
+import HomeProjectGalleryItem, {
+  galleryItemHorizontalSpacing,
+} from "./HomeProjectGalleryItem";
 
 const gallery = css({
   width: "100%",
@@ -42,10 +44,10 @@ const galleryBannerText = css({
   },
 });
 
-export default function Gallery() {
+export default function HomeProjectsGallery() {
   return (
     <div className={gallery}>
-      <GalleryItem
+      <HomeProjectGalleryItem
         href={`/${RouteSlugs.website}/${WebsiteKeys.giantmachines}`}
         image={GMGif}
         imageAltText="Giant Machines"
@@ -53,9 +55,9 @@ export default function Gallery() {
         <p className={galleryBannerText}>
           <strong>Giant Machines</strong> Acquired by Deloitte
         </p>
-      </GalleryItem>
+      </HomeProjectGalleryItem>
 
-      <GalleryItem
+      <HomeProjectGalleryItem
         href={`/${RouteSlugs["p5-space"]}`}
         image={P5SpaceGif}
         imageAltText="P5 Space Project"
@@ -63,9 +65,9 @@ export default function Gallery() {
         <p className={galleryBannerText}>
           p5 <strong>Space</strong>
         </p>
-      </GalleryItem>
+      </HomeProjectGalleryItem>
 
-      <GalleryItem
+      <HomeProjectGalleryItem
         href={`/${RouteSlugs.website}/${WebsiteKeys["fin-js"]}`}
         image={FinJSGif}
         imageAltText="FinJS"
@@ -73,9 +75,9 @@ export default function Gallery() {
         <p className={galleryBannerText}>
           <strong>Desktop App Interoperability,</strong> FinJS 2019
         </p>
-      </GalleryItem>
+      </HomeProjectGalleryItem>
 
-      <GalleryItem
+      <HomeProjectGalleryItem
         href={`/${RouteSlugs.website}/${WebsiteKeys.nota}`}
         image={NotaThumbnail}
         imageAltText="Nota"
@@ -83,9 +85,9 @@ export default function Gallery() {
         <p className={galleryBannerText}>
           <strong>Nota</strong>, An M&T Bank Product
         </p>
-      </GalleryItem>
+      </HomeProjectGalleryItem>
 
-      <GalleryItem
+      <HomeProjectGalleryItem
         href="https://chas.ms/sp"
         reloadDocument
         image={ShakersThumbnail}
@@ -94,9 +96,9 @@ export default function Gallery() {
         <p className={galleryBannerText}>
           <strong>semantic</strong> shakers
         </p>
-      </GalleryItem>
+      </HomeProjectGalleryItem>
 
-      <GalleryItem
+      <HomeProjectGalleryItem
         href="https://chas.ms/js"
         reloadDocument
         image={JavascriptTranspilersThumbnail}
@@ -105,18 +107,18 @@ export default function Gallery() {
         <p className={galleryBannerText}>
           <strong>Presentation on Transpilers</strong>, 2017
         </p>
-      </GalleryItem>
+      </HomeProjectGalleryItem>
 
-      <GalleryItem
+      <HomeProjectGalleryItem
         href="https://chas.ms/sk"
         reloadDocument
         image={SkylandThumbnail}
         imageAltText=""
       >
         <img alt="s" className="banner" src={SkylandBanner} />
-      </GalleryItem>
+      </HomeProjectGalleryItem>
 
-      <GalleryItem
+      <HomeProjectGalleryItem
         href="https://chas.ms/pp"
         reloadDocument
         imageAltText=""
@@ -125,9 +127,9 @@ export default function Gallery() {
         <p className={galleryBannerText}>
           <strong>ergonomic</strong> peelers
         </p>
-      </GalleryItem>
+      </HomeProjectGalleryItem>
 
-      <GalleryItem
+      <HomeProjectGalleryItem
         href={`/${RouteSlugs.gallery}/${GalleryKeys.furniture}`}
         reloadDocument
         image={FurnitureGalleryImage}
@@ -136,9 +138,9 @@ export default function Gallery() {
         <p className={galleryBannerText}>
           <strong>furniture</strong>
         </p>
-      </GalleryItem>
+      </HomeProjectGalleryItem>
 
-      <GalleryItem
+      <HomeProjectGalleryItem
         href="https://chas.ms/mg"
         reloadDocument
         image={MardiGrasThumbnail}
@@ -147,7 +149,7 @@ export default function Gallery() {
         <p className={galleryBannerText}>
           <strong>mardi gras</strong>, new orleans
         </p>
-      </GalleryItem>
+      </HomeProjectGalleryItem>
     </div>
   );
 }

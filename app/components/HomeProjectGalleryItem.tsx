@@ -33,7 +33,7 @@ const galleryItemBanner = css({
   },
 });
 
-interface GalleryItemProps {
+interface HomeProjectGalleryItemProps {
   href: string;
   image: string;
   imageAltText: string;
@@ -42,14 +42,14 @@ interface GalleryItemProps {
   reloadDocument?: boolean;
 }
 
-export default function GalleryItem({
+export default function HomeProjectGalleryItem({
   href,
   image,
   imageAltText,
   children,
   newTab,
   reloadDocument,
-}: GalleryItemProps) {
+}: HomeProjectGalleryItemProps) {
   return (
     <Link
       className={cx("group", wrapper)}
