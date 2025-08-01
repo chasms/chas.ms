@@ -1,4 +1,9 @@
 import { css } from "../../styled-system/css";
+import furnitureBench1 from "../assets/images/furniture/furniture-bench-1.png";
+import furnitureBench2 from "../assets/images/furniture/furniture-bench-2.png";
+import furnitureMDF from "../assets/images/furniture/furniture-mdf.png";
+import furnitureTable1 from "../assets/images/furniture/furniture-table-1.png";
+import furnitureTable2 from "../assets/images/furniture/furniture-table-2.png";
 import Carousel from "../components/Carousel";
 import ExpandingInfoButton from "../components/ExpandingInfoButton";
 import FurnitureContent from "../components/FurnitureContent";
@@ -34,11 +39,11 @@ const GalleryPages: Record<GalleryKeys, GalleryPageDataType> = {
     title: "Furniture",
     description: "Hand-made furniture",
     images: [
-      "/img/F1.png",
-      "/img/F2.png",
-      "/img/F3.png",
-      "/img/F4.png",
-      "/img/F5.png",
+      furnitureMDF,
+      furnitureTable1,
+      furnitureTable2,
+      furnitureBench1,
+      furnitureBench2,
     ],
     content: <FurnitureContent />,
   },

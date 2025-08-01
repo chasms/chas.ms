@@ -26,6 +26,7 @@ const thumbnailsSection = css({
   width: "100%",
   bottom: "unset !important",
   display: "flex !important",
+  justifyContent: "space-between",
   "& li": {
     width: "auto !important",
     height: `${thumbnailsHeight} !important`,
