@@ -45,6 +45,7 @@ export enum WebsiteKeys {
   giantmachines = "giantmachines",
   nota = "nota",
   "fin-js" = "fin-js",
+  "js-transpilers" = "js-transpilers",
 }
 
 interface WebsitePageDataType {
@@ -76,6 +77,13 @@ const WebsitePages: Record<WebsiteKeys, WebsitePageDataType> = {
     description: "FinJS Talk, 2019",
     embedSrc: "https://www.youtube.com/embed/P1-SmUtwrlY?controls=0",
     content: <FinJSContent />,
+  },
+  [WebsiteKeys["js-transpilers"]]: {
+    title: "FinJS",
+    description: "FinJS Talk, 2019",
+    embedSrc:
+      "https://docs.google.com/presentation/d/1_9895A-uMjuLnozftAOXUhpf2ogGIqH0ZEE1440-PZ4/embed?start=true&loop=true&delayms=3000",
+    content: <div />,
   },
 };
 

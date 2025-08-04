@@ -48,6 +48,12 @@ import FurnitureContent from "../components/FurnitureContent";
 import MardiGrasContent from "../components/MardiGrasContent";
 import Nav from "../components/Nav";
 import PeelersContent from "../components/PeelersContent";
+import SaltAndPepperContent from "../components/SaltAndPepperContent";
+import saltAndPepper1 from "../assets/images/salt-and-pepper/salt-and-pepper-1.png";
+import saltAndPepper2 from "../assets/images/salt-and-pepper/salt-and-pepper-2.png";
+import saltAndPepper3 from "../assets/images/salt-and-pepper/salt-and-pepper-3.png";
+import saltAndPepper4 from "../assets/images/salt-and-pepper/salt-and-pepper-4.png";
+import saltAndPepper5 from "../assets/images/salt-and-pepper/salt-and-pepper-5.png";
 import { toHomeWithOpeningSequenceComplete } from "../routes";
 import type { Route } from "./+types/websites";
 
@@ -65,6 +71,7 @@ export enum GalleryKeys {
   furniture = "furniture",
   peelers = "peelers",
   "mardi-gras" = "mardi-gras",
+  "salt-and-pepper" = "salt-and-pepper",
 }
 
 interface GalleryPageDataType {
@@ -138,6 +145,18 @@ const GalleryPages: Record<GalleryKeys, GalleryPageDataType> = {
       mardiGras3,
     ],
     content: <MardiGrasContent />,
+  },
+  [GalleryKeys["salt-and-pepper"]]: {
+    title: "Semantic Shakers",
+    description: "Salt and Pepper Shakers",
+    images: [
+      saltAndPepper1,
+      saltAndPepper2,
+      saltAndPepper3,
+      saltAndPepper4,
+      saltAndPepper5,
+    ],
+    content: <SaltAndPepperContent />,
   },
 };
 

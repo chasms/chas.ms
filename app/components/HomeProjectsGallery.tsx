@@ -88,8 +88,7 @@ export default function HomeProjectsGallery() {
       </HomeProjectGalleryItem>
 
       <HomeProjectGalleryItem
-        href="https://chas.ms/sp"
-        reloadDocument
+        href={`/${RouteSlugs.gallery}/${GalleryKeys["salt-and-pepper"]}`}
         image={ShakersThumbnail}
         imageAltText="Salt & Pepper Shakers"
       >
@@ -99,10 +98,9 @@ export default function HomeProjectsGallery() {
       </HomeProjectGalleryItem>
 
       <HomeProjectGalleryItem
-        href="https://chas.ms/js"
-        reloadDocument
+        href={`/${RouteSlugs.website}/${WebsiteKeys["js-transpilers"]}`}
         image={JavascriptTranspilersThumbnail}
-        imageAltText=""
+        imageAltText="JavaScript Transpilers Presentation"
       >
         <p className={galleryBannerText}>
           <strong>Presentation on Transpilers</strong>, 2017
