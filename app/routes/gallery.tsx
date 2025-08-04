@@ -42,6 +42,25 @@ import peelerspr from "../assets/images/peelers/peelerspr.png";
 import peelerssbk from "../assets/images/peelers/peelerssbk.png";
 import peelerstbk from "../assets/images/peelers/peelerstbk.png";
 import peelerstr from "../assets/images/peelers/peelerstr.png";
+import saltAndPepper1 from "../assets/images/salt-and-pepper/salt-and-pepper-1.png";
+import saltAndPepper2 from "../assets/images/salt-and-pepper/salt-and-pepper-2.png";
+import saltAndPepper3 from "../assets/images/salt-and-pepper/salt-and-pepper-3.png";
+import saltAndPepper4 from "../assets/images/salt-and-pepper/salt-and-pepper-4.png";
+import saltAndPepper5 from "../assets/images/salt-and-pepper/salt-and-pepper-5.png";
+import skyland1 from "../assets/images/skyland/skyland-1.png";
+import skyland10 from "../assets/images/skyland/skyland-10.png";
+import skyland11 from "../assets/images/skyland/skyland-11.png";
+import skyland12 from "../assets/images/skyland/skyland-12.png";
+import skyland13 from "../assets/images/skyland/skyland-13.png";
+import skyland14 from "../assets/images/skyland/skyland-14.png";
+import skyland2 from "../assets/images/skyland/skyland-2.png";
+import skyland3 from "../assets/images/skyland/skyland-3.png";
+import skyland4 from "../assets/images/skyland/skyland-4.png";
+import skyland5 from "../assets/images/skyland/skyland-5.png";
+import skyland6 from "../assets/images/skyland/skyland-6.png";
+import skyland7 from "../assets/images/skyland/skyland-7.png";
+import skyland8 from "../assets/images/skyland/skyland-8.png";
+import skyland9 from "../assets/images/skyland/skyland-9.png";
 import Carousel from "../components/Carousel";
 import ExpandingInfoButton from "../components/ExpandingInfoButton";
 import FurnitureContent from "../components/FurnitureContent";
@@ -49,11 +68,7 @@ import MardiGrasContent from "../components/MardiGrasContent";
 import Nav from "../components/Nav";
 import PeelersContent from "../components/PeelersContent";
 import SaltAndPepperContent from "../components/SaltAndPepperContent";
-import saltAndPepper1 from "../assets/images/salt-and-pepper/salt-and-pepper-1.png";
-import saltAndPepper2 from "../assets/images/salt-and-pepper/salt-and-pepper-2.png";
-import saltAndPepper3 from "../assets/images/salt-and-pepper/salt-and-pepper-3.png";
-import saltAndPepper4 from "../assets/images/salt-and-pepper/salt-and-pepper-4.png";
-import saltAndPepper5 from "../assets/images/salt-and-pepper/salt-and-pepper-5.png";
+import SkylandContent from "../components/SkylandContent";
 import { toHomeWithOpeningSequenceComplete } from "../routes";
 import type { Route } from "./+types/websites";
 
@@ -72,6 +87,7 @@ export enum GalleryKeys {
   peelers = "peelers",
   "mardi-gras" = "mardi-gras",
   "salt-and-pepper" = "salt-and-pepper",
+  skyland = "skyland",
 }
 
 interface GalleryPageDataType {
@@ -157,6 +173,27 @@ const GalleryPages: Record<GalleryKeys, GalleryPageDataType> = {
       saltAndPepper5,
     ],
     content: <SaltAndPepperContent />,
+  },
+  [GalleryKeys.skyland]: {
+    title: "Skyland",
+    description: "A collection of photos from Skyland.",
+    images: [
+      skyland1,
+      skyland2,
+      skyland3,
+      skyland4,
+      skyland5,
+      skyland6,
+      skyland7,
+      skyland8,
+      skyland9,
+      skyland10,
+      skyland11,
+      skyland12,
+      skyland13,
+      skyland14,
+    ],
+    content: <SkylandContent />,
   },
 };
 

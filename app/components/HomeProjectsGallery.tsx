@@ -98,18 +98,7 @@ export default function HomeProjectsGallery() {
       </HomeProjectGalleryItem>
 
       <HomeProjectGalleryItem
-        href={`/${RouteSlugs.website}/${WebsiteKeys["js-transpilers"]}`}
-        image={JavascriptTranspilersThumbnail}
-        imageAltText="JavaScript Transpilers Presentation"
-      >
-        <p className={galleryBannerText}>
-          <strong>Presentation on Transpilers</strong>, 2017
-        </p>
-      </HomeProjectGalleryItem>
-
-      <HomeProjectGalleryItem
-        href="https://chas.ms/sk"
-        reloadDocument
+        href={`/${RouteSlugs.gallery}/${GalleryKeys.skyland}`}
         image={SkylandThumbnail}
         imageAltText=""
       >
@@ -143,6 +132,16 @@ export default function HomeProjectsGallery() {
       >
         <p className={galleryBannerText}>
           <strong>mardi gras</strong>, new orleans
+        </p>
+      </HomeProjectGalleryItem>
+
+      <HomeProjectGalleryItem
+        href={`/${RouteSlugs.website}/${WebsiteKeys["js-transpilers"]}`}
+        image={JavascriptTranspilersThumbnail}
+        imageAltText="JavaScript Transpilers Presentation"
+      >
+        <p className={galleryBannerText}>
+          <strong>Presentation on Transpilers</strong>, 2017
         </p>
       </HomeProjectGalleryItem>
     </div>

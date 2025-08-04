@@ -2,6 +2,7 @@ import { css } from "../../styled-system/css";
 import ExpandingInfoButton from "../components/ExpandingInfoButton";
 import FinJSContent from "../components/FinJSContent";
 import GiantMachinesContent from "../components/GiantMachinesContent";
+import JavascriptTranspilersContent from "../components/JavascriptTranspilersContent";
 import Nav from "../components/Nav";
 import NotaContent from "../components/NotaContent";
 import { toHomeWithOpeningSequenceComplete } from "../routes";
@@ -83,7 +84,7 @@ const WebsitePages: Record<WebsiteKeys, WebsitePageDataType> = {
     description: "FinJS Talk, 2019",
     embedSrc:
       "https://docs.google.com/presentation/d/1_9895A-uMjuLnozftAOXUhpf2ogGIqH0ZEE1440-PZ4/embed?start=true&loop=true&delayms=3000",
-    content: <div />,
+    content: <JavascriptTranspilersContent />,
   },
 };
 
