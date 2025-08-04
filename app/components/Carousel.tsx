@@ -49,7 +49,7 @@ const thumbnailImageStyle = css({
   transition: "all 0.5s ease-in-out",
   border: "2px solid transparent",
   opacity: "0.6",
-  maxHeight: thumbnailsHeight,
+  maxHeight: `calc(${thumbnailsHeight} - 15px)`,
 });
 
 interface CarouselProps {
