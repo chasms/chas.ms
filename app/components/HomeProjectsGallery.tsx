@@ -120,7 +120,7 @@ export default function HomeProjectsGallery() {
 
       <HomeProjectGalleryItem
         href={`/${RouteSlugs.gallery}/${GalleryKeys.peelers}`}
-        imageAltText=""
+        imageAltText="Potato Peelers"
         image={PeelerThumbnail}
       >
         <p className={galleryBannerText}>
