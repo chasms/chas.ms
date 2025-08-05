@@ -84,7 +84,7 @@ export default function HomeProjectsGallery() {
         imageAltText="Extended Reflections Photographs"
       >
         <p className={galleryBannerText}>
-          Extended <strong>Reflections</strong>
+          Extended <strong>Reflections</strong>, 2011
         </p>
       </HomeProjectGalleryItem>
 
@@ -152,7 +152,7 @@ export default function HomeProjectsGallery() {
         imageAltText="Mardi Gras"
       >
         <p className={galleryBannerText}>
-          <strong>mardi gras</strong>, new orleans
+          <strong>mardi gras</strong>, new orleans, 2014
         </p>
       </HomeProjectGalleryItem>
 
