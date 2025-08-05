@@ -1,10 +1,10 @@
 import { css } from "../../styled-system/css";
 import ExpandingInfoButton from "../components/ExpandingInfoButton";
-import FinJSContent from "../components/FinJSContent";
-import GiantMachinesContent from "../components/GiantMachinesContent";
-import JavascriptTranspilersContent from "../components/JavascriptTranspilersContent";
 import Nav from "../components/Nav";
-import NotaContent from "../components/NotaContent";
+import FinJSContent from "../content/FinJSContent";
+import GiantMachinesContent from "../content/GiantMachinesContent";
+import JavascriptTranspilersContent from "../content/JavascriptTranspilersContent";
+import NotaContent from "../content/NotaContent";
 import { toHomeWithOpeningSequenceComplete } from "../routes";
 import type { Route } from "./+types/websites";
 
@@ -34,7 +34,7 @@ const contentSectionWrapper = css({
 
 const iframe = css({
   height: "80%",
-  sm: {
+  md: {
     height: "100%",
   },
   width: "100%",

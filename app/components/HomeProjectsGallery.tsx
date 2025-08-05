@@ -11,8 +11,8 @@ import PeelerThumbnail from "../assets/images/PeelerThumbnail.png";
 import ShakersThumbnail from "../assets/images/ShakersThumbnail.png";
 import SkylandBanner from "../assets/images/SkylandBanner.png";
 import SkylandThumbnail from "../assets/images/SkylandThumbnail.png";
+import { GalleryKeys } from "../content/galleryPages";
 import { RouteSlugs } from "../routes";
-import { GalleryKeys } from "../routes/gallery";
 import { WebsiteKeys } from "../routes/websites";
 import HomeProjectGalleryItem, {
   galleryItemHorizontalSpacing,
