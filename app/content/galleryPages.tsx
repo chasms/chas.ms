@@ -79,8 +79,12 @@ import skyland6 from "../assets/images/skyland/skyland-6.png";
 import skyland7 from "../assets/images/skyland/skyland-7.png";
 import skyland8 from "../assets/images/skyland/skyland-8.png";
 import skyland9 from "../assets/images/skyland/skyland-9.png";
+import FinJSContent from "./FinJSContent";
 import FurnitureContent from "./FurnitureContent";
+import GiantMachinesContent from "./GiantMachinesContent";
+import JavascriptTranspilersContent from "./JavascriptTranspilersContent";
 import MardiGrasContent from "./MardiGrasContent";
+import NotaContent from "./NotaContent";
 import PeelersContent from "./PeelersContent";
 import SaltAndPepperContent from "./SaltAndPepperContent";
 import SkylandContent from "./SkylandContent";
@@ -92,6 +96,10 @@ export enum GalleryKeys {
   "salt-and-pepper" = "salt-and-pepper",
   skyland = "skyland",
   onmyway = "onmyway",
+  giantmachines = "giantmachines",
+  nota = "nota",
+  "fin-js" = "fin-js",
+  "js-transpilers" = "js-transpilers",
 }
 
 export interface GalleryPageDataType {
@@ -99,6 +107,7 @@ export interface GalleryPageDataType {
   description: string;
   images?: string[];
   content: React.ReactNode;
+  autoplay?: boolean;
 }
 
 export const GalleryPages: Record<GalleryKeys, GalleryPageDataType> = {
@@ -225,5 +234,36 @@ export const GalleryPages: Record<GalleryKeys, GalleryPageDataType> = {
       onmywaySupervisorJobDetail,
     ],
     content: <div />,
+  },
+  [GalleryKeys.giantmachines]: {
+    title: "Giant Machines",
+    description:
+      "Giant Machines, a boutique engineering consulting firm that was acquired by Deloitte in 2024",
+    images: [
+      "https://web.archive.org/web/20221129225342/https://www.giantmachines.com/",
+    ],
+    content: <GiantMachinesContent />,
+  },
+  [GalleryKeys.nota]: {
+    title: "Nota",
+    description: "M&T Nota App for IOLTA Legal Account Management",
+    images: [
+      "https://hsmandt.s3.amazonaws.com/mandt/courses/nota-iolta-management/introduction-to-nota/video_introduction-to-nota.mp4",
+    ],
+    content: <NotaContent />,
+  },
+  [GalleryKeys["fin-js"]]: {
+    title: "FinJS",
+    description: "FinJS Talk, 2019",
+    images: ["https://www.youtube.com/embed/P1-SmUtwrlY?controls=0"],
+    content: <FinJSContent />,
+  },
+  [GalleryKeys["js-transpilers"]]: {
+    title: "FinJS",
+    description: "FinJS Talk, 2019",
+    images: [
+      "https://docs.google.com/presentation/d/1_9895A-uMjuLnozftAOXUhpf2ogGIqH0ZEE1440-PZ4/embed?start=true&loop=true&delayms=3000",
+    ],
+    content: <JavascriptTranspilersContent />,
   },
 };

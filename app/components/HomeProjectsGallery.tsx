@@ -13,7 +13,6 @@ import SkylandBanner from "../assets/images/SkylandBanner.png";
 import SkylandThumbnail from "../assets/images/SkylandThumbnail.png";
 import { GalleryKeys } from "../content/galleryPages";
 import { RouteSlugs } from "../routes";
-import { WebsiteKeys } from "../routes/websites";
 import HomeProjectGalleryItem, {
   galleryItemHorizontalSpacing,
 } from "./HomeProjectGalleryItem";
@@ -49,7 +48,7 @@ export default function HomeProjectsGallery() {
   return (
     <div className={gallery}>
       <HomeProjectGalleryItem
-        href={`/${RouteSlugs.website}/${WebsiteKeys.giantmachines}`}
+        href={`/${RouteSlugs.project}/${GalleryKeys.giantmachines}`}
         image={GMGif}
         imageAltText="Giant Machines"
       >
@@ -59,7 +58,7 @@ export default function HomeProjectsGallery() {
       </HomeProjectGalleryItem>
 
       <HomeProjectGalleryItem
-        href={`/${RouteSlugs.gallery}/${GalleryKeys.onmyway}`}
+        href={`/${RouteSlugs.project}/${GalleryKeys.onmyway}`}
         image={OMWThumbnail}
         imageAltText="On My Way"
       >
@@ -79,7 +78,7 @@ export default function HomeProjectsGallery() {
       </HomeProjectGalleryItem>
 
       <HomeProjectGalleryItem
-        href={`/${RouteSlugs.website}/${WebsiteKeys["fin-js"]}`}
+        href={`/${RouteSlugs.project}/${GalleryKeys["fin-js"]}`}
         image={FinJSGif}
         imageAltText="FinJS"
       >
@@ -89,7 +88,7 @@ export default function HomeProjectsGallery() {
       </HomeProjectGalleryItem>
 
       <HomeProjectGalleryItem
-        href={`/${RouteSlugs.website}/${WebsiteKeys.nota}`}
+        href={`/${RouteSlugs.project}/${GalleryKeys.nota}`}
         image={NotaThumbnail}
         imageAltText="Nota"
       >
@@ -99,7 +98,7 @@ export default function HomeProjectsGallery() {
       </HomeProjectGalleryItem>
 
       <HomeProjectGalleryItem
-        href={`/${RouteSlugs.gallery}/${GalleryKeys["salt-and-pepper"]}`}
+        href={`/${RouteSlugs.project}/${GalleryKeys["salt-and-pepper"]}`}
         image={ShakersThumbnail}
         imageAltText="Salt & Pepper Shakers"
       >
@@ -109,7 +108,7 @@ export default function HomeProjectsGallery() {
       </HomeProjectGalleryItem>
 
       <HomeProjectGalleryItem
-        href={`/${RouteSlugs.gallery}/${GalleryKeys.skyland}`}
+        href={`/${RouteSlugs.project}/${GalleryKeys.skyland}`}
         image={SkylandThumbnail}
         imageAltText=""
       >
@@ -117,7 +116,7 @@ export default function HomeProjectsGallery() {
       </HomeProjectGalleryItem>
 
       <HomeProjectGalleryItem
-        href={`/${RouteSlugs.gallery}/${GalleryKeys.peelers}`}
+        href={`/${RouteSlugs.project}/${GalleryKeys.peelers}`}
         imageAltText="Potato Peelers"
         image={PeelerThumbnail}
       >
@@ -127,7 +126,7 @@ export default function HomeProjectsGallery() {
       </HomeProjectGalleryItem>
 
       <HomeProjectGalleryItem
-        href={`/${RouteSlugs.gallery}/${GalleryKeys.furniture}`}
+        href={`/${RouteSlugs.project}/${GalleryKeys.furniture}`}
         image={FurnitureGalleryImage}
         imageAltText="Furniture"
       >
@@ -137,7 +136,7 @@ export default function HomeProjectsGallery() {
       </HomeProjectGalleryItem>
 
       <HomeProjectGalleryItem
-        href={`/${RouteSlugs.gallery}/${GalleryKeys["mardi-gras"]}`}
+        href={`/${RouteSlugs.project}/${GalleryKeys["mardi-gras"]}`}
         image={MardiGrasThumbnail}
         imageAltText="Mardi Gras"
       >
@@ -147,7 +146,7 @@ export default function HomeProjectsGallery() {
       </HomeProjectGalleryItem>
 
       <HomeProjectGalleryItem
-        href={`/${RouteSlugs.website}/${WebsiteKeys["js-transpilers"]}`}
+        href={`/${RouteSlugs.project}/${GalleryKeys["js-transpilers"]}`}
         image={JavascriptTranspilersThumbnail}
         imageAltText="JavaScript Transpilers Presentation"
       >
