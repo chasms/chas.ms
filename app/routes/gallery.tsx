@@ -32,6 +32,25 @@ import mardiGras6 from "../assets/images/mardi-gras/mardi-gras-6.png";
 import mardiGras7 from "../assets/images/mardi-gras/mardi-gras-7.png";
 import mardiGras8 from "../assets/images/mardi-gras/mardi-gras-8.png";
 import mardiGras9 from "../assets/images/mardi-gras/mardi-gras-9.png";
+import omw from "../assets/images/omw/OMW.png";
+import onmywayFieldforceHome from "../assets/images/omw/onmyway-fieldforce-home.png";
+import onmywayFieldforceInformationArchitecture from "../assets/images/omw/onmyway-fieldforce-information-architecture.png";
+import onmywayFieldforceJobPacket from "../assets/images/omw/onmyway-fieldforce-job-packet.png";
+import onmywayFieldforceJobStatus from "../assets/images/omw/onmyway-fieldforce-job-status.png";
+import onmywayFieldforceJobSummary from "../assets/images/omw/onmyway-fieldforce-job-summary.png";
+import onmywayIntro from "../assets/images/omw/onmyway-intro.png";
+import onmywayPlanAgile from "../assets/images/omw/onmyway-plan-agile.png";
+import onmywayPlanLaunch from "../assets/images/omw/onmyway-plan-launch.png";
+import onmywayPlanRoadmap from "../assets/images/omw/onmyway-plan-roadmap.png";
+import onmywayResearchChallenges from "../assets/images/omw/onmyway-research-challenges.png";
+import onmywayResearchConceptTesting from "../assets/images/omw/onmyway-research-concept-testing.png";
+import onmywayResearchJobPacket from "../assets/images/omw/onmyway-research-job-packet.png";
+import onmywayResearchPersonas from "../assets/images/omw/onmyway-research-personas.png";
+import onmywayResearchPilot from "../assets/images/omw/onmyway-research-pilot.png";
+import onmywaySupervisorJobDetail from "../assets/images/omw/onmyway-supervisor-job-detail.png";
+import onmywaySupervisorResponsive from "../assets/images/omw/onmyway-supervisor-responsive.png";
+import onmywayUxDesignSystem from "../assets/images/omw/onmyway-ux-design-system.png";
+import onmywayUxResponsive from "../assets/images/omw/onmyway-ux-responsive.png";
 import peelers1 from "../assets/images/peelers/peelers1.png";
 import peelersbbk from "../assets/images/peelers/peelersbbk.png";
 import peelerscnc1 from "../assets/images/peelers/peelerscnc1.png";
@@ -88,6 +107,7 @@ export enum GalleryKeys {
   "mardi-gras" = "mardi-gras",
   "salt-and-pepper" = "salt-and-pepper",
   skyland = "skyland",
+  onmyway = "onmyway",
 }
 
 interface GalleryPageDataType {
@@ -194,6 +214,33 @@ const GalleryPages: Record<GalleryKeys, GalleryPageDataType> = {
       skyland14,
     ],
     content: <SkylandContent />,
+  },
+  [GalleryKeys.onmyway]: {
+    title: "On My Way",
+    description:
+      "A multi-app field force operations solution custom built for National Grid",
+    images: [
+      omw,
+      onmywayIntro,
+      onmywayPlanRoadmap,
+      onmywayPlanAgile,
+      onmywayPlanLaunch,
+      onmywayResearchChallenges,
+      onmywayResearchPersonas,
+      onmywayResearchConceptTesting,
+      onmywayResearchPilot,
+      onmywayResearchJobPacket,
+      onmywayUxDesignSystem,
+      onmywayUxResponsive,
+      onmywayFieldforceInformationArchitecture,
+      onmywayFieldforceHome,
+      onmywayFieldforceJobSummary,
+      onmywayFieldforceJobStatus,
+      onmywayFieldforceJobPacket,
+      onmywaySupervisorResponsive,
+      onmywaySupervisorJobDetail,
+    ],
+    content: <div />,
   },
 };
 

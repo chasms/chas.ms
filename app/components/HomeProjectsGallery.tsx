@@ -5,6 +5,7 @@ import GMGif from "../assets/images/gm-halfspeed.gif";
 import JavascriptTranspilersThumbnail from "../assets/images/JavascriptTranspilersThumbnail.png";
 import MardiGrasThumbnail from "../assets/images/MardiGrasThumbnail.png";
 import NotaThumbnail from "../assets/images/nota.png";
+import OMWThumbnail from "../assets/images/OMWThumbnail.png";
 import P5SpaceGif from "../assets/images/p5-space-halfspeed.gif";
 import PeelerThumbnail from "../assets/images/PeelerThumbnail.png";
 import ShakersThumbnail from "../assets/images/ShakersThumbnail.png";
@@ -54,6 +55,16 @@ export default function HomeProjectsGallery() {
       >
         <p className={galleryBannerText}>
           <strong>Giant Machines</strong> Acquired by Deloitte
+        </p>
+      </HomeProjectGalleryItem>
+
+      <HomeProjectGalleryItem
+        href={`/${RouteSlugs.gallery}/${GalleryKeys.onmyway}`}
+        image={OMWThumbnail}
+        imageAltText="On My Way"
+      >
+        <p className={galleryBannerText}>
+          <strong>On My Way</strong> National Grid
         </p>
       </HomeProjectGalleryItem>
 
