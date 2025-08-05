@@ -1,7 +1,7 @@
 import { useSearchParams } from "react-router";
 import { css, cx } from "../../styled-system/css";
 import ReflectionsRed from "../assets/images/ReflectionsRed.png";
-import Gallery from "../components/Gallery";
+import HomeProjectsGallery from "../components/HomeProjectsGallery";
 import LogoOverlay from "../components/LogoOverlay";
 import Nav from "../components/Nav";
 import { params } from "../routes";
@@ -65,7 +65,7 @@ export default function Home() {
         <Nav />
 
         <div className={contentArea}>
-          <Gallery />
+          <HomeProjectsGallery />
         </div>
       </div>
     </>

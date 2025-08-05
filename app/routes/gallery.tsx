@@ -1,54 +1,93 @@
-import { css } from "../../styled-system/css";
+import { css, cva } from "../../styled-system/css";
 import Carousel from "../components/Carousel";
 import ExpandingInfoButton from "../components/ExpandingInfoButton";
-import FurnitureContent from "../components/FurnitureContent";
 import Nav from "../components/Nav";
+import { GalleryKeys, GalleryPages } from "../content/galleryPages";
 import { toHomeWithOpeningSequenceComplete } from "../routes";
-import type { Route } from "./+types/websites";
+import type { Route } from "./+types/gallery";
 
 const pageWrapper = css({
   width: "100%",
   margin: "0 auto",
-  padding: "50px 20px",
+  padding: "50px 40px",
   display: "flex",
-  flexDirection: "column",
+  flexDirection: "row",
   height: "100vh",
   overflow: "hidden",
 });
 
-export enum GalleryKeys {
-  furniture = "furniture",
-}
-
-interface GalleryPageDataType {
-  title: string;
-  description: string;
-  images?: string[];
-  content: React.ReactNode;
-}
-
-const GalleryPages: Record<GalleryKeys, GalleryPageDataType> = {
-  [GalleryKeys.furniture]: {
-    title: "Furniture",
-    description: "Hand-made furniture",
-    images: [
-      "/img/F1.png",
-      "/img/F2.png",
-      "/img/F3.png",
-      "/img/F4.png",
-      "/img/F5.png",
-    ],
-    content: <FurnitureContent />,
+const contentSectionWrapper = css({
+  display: "none",
+  xl: {
+    width: "20%",
   },
-};
+  lg: {
+    width: "30%",
+  },
+  md: {
+    width: "40%",
+    display: "flex",
+  },
+  height: "100%",
+  color: "azure",
+  overflow: "scroll",
+});
+
+const carouselWrapper = cva({
+  base: {
+    height: "80%",
+    display: "flex",
+    md: {
+      height: "100%",
+    },
+  },
+  variants: {
+    size: {
+      fullwidth: {
+        width: "100%",
+      },
+      withContentSideSection: {
+        width: "100%",
+        xl: {
+          width: "80%",
+        },
+        lg: {
+          width: "70%",
+        },
+        md: {
+          width: "60%",
+        },
+      },
+    },
+  },
+});
+
+const iframe = css({
+  height: "80%",
+  md: {
+    height: "100%",
+  },
+  width: "100%",
+  borderRadius: "16px",
+  margin: "0 25px",
+});
 
 export default function GalleryPage({ params }: Route.LoaderArgs) {
   if (!(params.id in GalleryKeys)) {
     return;
   }
 
-  const { title, description, content, images } =
-    GalleryPages[params.id as GalleryKeys];
+  const {
+    title,
+    description,
+    content,
+    images,
+    autoplay,
+    infoOverlayHalfScreen,
+    infoOverlayAllSizes,
+  } = GalleryPages[params.id as GalleryKeys];
+
+  const isAGallery = images && images.length > 1;
 
   return (
     <>
@@ -59,11 +98,43 @@ export default function GalleryPage({ params }: Route.LoaderArgs) {
       <Nav backButtonTo={toHomeWithOpeningSequenceComplete} />
 
       <div className={pageWrapper}>
-        {images && <Carousel images={images} />}
+        {content && !infoOverlayAllSizes && (
+          <div className={contentSectionWrapper}>{content}</div>
+        )}
+
+        {isAGallery ? (
+          <div
+            className={carouselWrapper({
+              size:
+                content && !infoOverlayAllSizes
+                  ? "withContentSideSection"
+                  : "fullwidth",
+            })}
+          >
+            <Carousel images={images} />
+          </div>
+        ) : (
+          images && (
+            <iframe
+              className={iframe}
+              src={images[0]}
+              title={title}
+              frameBorder="0"
+              allow={`${autoplay && "autoplay; "}accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share`}
+              referrerPolicy="strict-origin-when-cross-origin"
+              allowFullScreen
+            ></iframe>
+          )
+        )}
       </div>
 
       {content && (
-        <ExpandingInfoButton fullScreen>{content}</ExpandingInfoButton>
+        <ExpandingInfoButton
+          fullScreen={!infoOverlayHalfScreen}
+          mobileOnly={!infoOverlayAllSizes}
+        >
+          {content}
+        </ExpandingInfoButton>
       )}
     </>
   );
