@@ -12,6 +12,13 @@ const sliderWrapperStyles = css({
   margin: "auto",
   width: "100%",
   maxWidth: "1600px",
+
+  "& .slick-track": {
+    display: "flex !important",
+  },
+  "& .slick-slide": {
+    margin: "auto",
+  },
 });
 
 const imageStyle = css({
@@ -27,6 +34,7 @@ const thumbnailsSection = css({
   bottom: "unset !important",
   display: "flex !important",
   justifyContent: "space-between",
+
   "& li": {
     width: "auto !important",
     height: `${thumbnailsHeight} !important`,

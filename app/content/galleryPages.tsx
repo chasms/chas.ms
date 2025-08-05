@@ -3,6 +3,7 @@ import furnitureBench2 from "../assets/images/furniture/furniture-bench-2.png";
 import furnitureMDF from "../assets/images/furniture/furniture-mdf.png";
 import furnitureTable1 from "../assets/images/furniture/furniture-table-1.png";
 import furnitureTable2 from "../assets/images/furniture/furniture-table-2.png";
+
 import mardiGras10 from "../assets/images/mardi-gras/mardi-gras-10.png";
 import mardiGras11 from "../assets/images/mardi-gras/mardi-gras-11.png";
 import mardiGras12 from "../assets/images/mardi-gras/mardi-gras-12.png";
@@ -31,6 +32,7 @@ import mardiGras6 from "../assets/images/mardi-gras/mardi-gras-6.png";
 import mardiGras7 from "../assets/images/mardi-gras/mardi-gras-7.png";
 import mardiGras8 from "../assets/images/mardi-gras/mardi-gras-8.png";
 import mardiGras9 from "../assets/images/mardi-gras/mardi-gras-9.png";
+
 import omw from "../assets/images/omw/OMW.png";
 import onmywayFieldforceHome from "../assets/images/omw/onmyway-fieldforce-home.png";
 import onmywayFieldforceInformationArchitecture from "../assets/images/omw/onmyway-fieldforce-information-architecture.png";
@@ -50,6 +52,7 @@ import onmywaySupervisorJobDetail from "../assets/images/omw/onmyway-supervisor-
 import onmywaySupervisorResponsive from "../assets/images/omw/onmyway-supervisor-responsive.png";
 import onmywayUxDesignSystem from "../assets/images/omw/onmyway-ux-design-system.png";
 import onmywayUxResponsive from "../assets/images/omw/onmyway-ux-responsive.png";
+
 import peelers1 from "../assets/images/peelers/peelers1.png";
 import peelersbbk from "../assets/images/peelers/peelersbbk.png";
 import peelerscnc1 from "../assets/images/peelers/peelerscnc1.png";
@@ -60,11 +63,17 @@ import peelerspr from "../assets/images/peelers/peelerspr.png";
 import peelerssbk from "../assets/images/peelers/peelerssbk.png";
 import peelerstbk from "../assets/images/peelers/peelerstbk.png";
 import peelerstr from "../assets/images/peelers/peelerstr.png";
+
+import reflectionsBlack from "../assets/images/reflections-black.png";
+import reflectionsOrangePurple from "../assets/images/reflections-orange-purple.png";
+import reflectionsRed from "../assets/images/ReflectionsRed.png";
+
 import saltAndPepper1 from "../assets/images/salt-and-pepper/salt-and-pepper-1.png";
 import saltAndPepper2 from "../assets/images/salt-and-pepper/salt-and-pepper-2.png";
 import saltAndPepper3 from "../assets/images/salt-and-pepper/salt-and-pepper-3.png";
 import saltAndPepper4 from "../assets/images/salt-and-pepper/salt-and-pepper-4.png";
 import saltAndPepper5 from "../assets/images/salt-and-pepper/salt-and-pepper-5.png";
+
 import skyland1 from "../assets/images/skyland/skyland-1.png";
 import skyland10 from "../assets/images/skyland/skyland-10.png";
 import skyland11 from "../assets/images/skyland/skyland-11.png";
@@ -79,6 +88,7 @@ import skyland6 from "../assets/images/skyland/skyland-6.png";
 import skyland7 from "../assets/images/skyland/skyland-7.png";
 import skyland8 from "../assets/images/skyland/skyland-8.png";
 import skyland9 from "../assets/images/skyland/skyland-9.png";
+
 import FinJSContent from "./FinJSContent";
 import FurnitureContent from "./FurnitureContent";
 import GiantMachinesContent from "./GiantMachinesContent";
@@ -100,6 +110,7 @@ export enum GalleryKeys {
   nota = "nota",
   "fin-js" = "fin-js",
   "js-transpilers" = "js-transpilers",
+  reflections = "reflections",
 }
 
 export interface GalleryPageDataType {
@@ -108,6 +119,8 @@ export interface GalleryPageDataType {
   images?: string[];
   content: React.ReactNode;
   autoplay?: boolean;
+  infoOverlayHalfScreen?: boolean;
+  infoOverlayAllSizes?: boolean;
 }
 
 export const GalleryPages: Record<GalleryKeys, GalleryPageDataType> = {
@@ -233,7 +246,7 @@ export const GalleryPages: Record<GalleryKeys, GalleryPageDataType> = {
       onmywaySupervisorResponsive,
       onmywaySupervisorJobDetail,
     ],
-    content: <div />,
+    content: "",
   },
   [GalleryKeys.giantmachines]: {
     title: "Giant Machines",
@@ -265,5 +278,12 @@ export const GalleryPages: Record<GalleryKeys, GalleryPageDataType> = {
       "https://docs.google.com/presentation/d/1_9895A-uMjuLnozftAOXUhpf2ogGIqH0ZEE1440-PZ4/embed?start=true&loop=true&delayms=3000",
     ],
     content: <JavascriptTranspilersContent />,
+  },
+  [GalleryKeys.reflections]: {
+    title: "Extended Reflections",
+    description:
+      "Extended Reflections: A photo series of long exposures of water and fire",
+    images: [reflectionsBlack, reflectionsRed, reflectionsOrangePurple],
+    content: "",
   },
 };

@@ -8,6 +8,7 @@ import NotaThumbnail from "../assets/images/nota.png";
 import OMWThumbnail from "../assets/images/OMWThumbnail.png";
 import P5SpaceGif from "../assets/images/p5-space-halfspeed.gif";
 import PeelerThumbnail from "../assets/images/PeelerThumbnail.png";
+import ReflectionsThumbnail from "../assets/images/ReflectionsThumbnail.png";
 import ShakersThumbnail from "../assets/images/ShakersThumbnail.png";
 import SkylandBanner from "../assets/images/SkylandBanner.png";
 import SkylandThumbnail from "../assets/images/SkylandThumbnail.png";
@@ -74,6 +75,16 @@ export default function HomeProjectsGallery() {
       >
         <p className={galleryBannerText}>
           p5 <strong>Space</strong>
+        </p>
+      </HomeProjectGalleryItem>
+
+      <HomeProjectGalleryItem
+        href={`/${RouteSlugs.project}/${GalleryKeys.reflections}`}
+        image={ReflectionsThumbnail}
+        imageAltText="Extended Reflections Photographs"
+      >
+        <p className={galleryBannerText}>
+          Extended <strong>Reflections</strong>
         </p>
       </HomeProjectGalleryItem>
 

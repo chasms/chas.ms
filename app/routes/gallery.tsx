@@ -64,8 +64,15 @@ export default function GalleryPage({ params }: Route.LoaderArgs) {
     return;
   }
 
-  const { title, description, content, images, autoplay } =
-    GalleryPages[params.id as GalleryKeys];
+  const {
+    title,
+    description,
+    content,
+    images,
+    autoplay,
+    infoOverlayHalfScreen,
+    infoOverlayAllSizes,
+  } = GalleryPages[params.id as GalleryKeys];
 
   const isAGallery = images && images.length > 1;
 
@@ -78,7 +85,9 @@ export default function GalleryPage({ params }: Route.LoaderArgs) {
       <Nav backButtonTo={toHomeWithOpeningSequenceComplete} />
 
       <div className={pageWrapper}>
-        {content && <div className={contentSectionWrapper}>{content}</div>}
+        {content && !infoOverlayAllSizes && (
+          <div className={contentSectionWrapper}>{content}</div>
+        )}
 
         {isAGallery ? (
           <div className={carouselWrapper}>
@@ -100,7 +109,10 @@ export default function GalleryPage({ params }: Route.LoaderArgs) {
       </div>
 
       {content && (
-        <ExpandingInfoButton fullScreen mobileOnly>
+        <ExpandingInfoButton
+          fullScreen={!infoOverlayHalfScreen}
+          mobileOnly={!infoOverlayAllSizes}
+        >
           {content}
         </ExpandingInfoButton>
       )}
