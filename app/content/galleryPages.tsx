@@ -96,6 +96,7 @@ import JavascriptTranspilersContent from "./JavascriptTranspilersContent";
 import MardiGrasContent from "./MardiGrasContent";
 import NotaContent from "./NotaContent";
 import PeelersContent from "./PeelersContent";
+import ReflectionsContent from "./ReflectionsContent";
 import SaltAndPepperContent from "./SaltAndPepperContent";
 import SkylandContent from "./SkylandContent";
 
@@ -284,6 +285,6 @@ export const GalleryPages: Record<GalleryKeys, GalleryPageDataType> = {
     description:
       "Extended Reflections: A photo series of long exposures of water and fire",
     images: [reflectionsBlack, reflectionsRed, reflectionsOrangePurple],
-    content: "",
+    content: <ReflectionsContent />,
   },
 };
