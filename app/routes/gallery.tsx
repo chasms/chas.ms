@@ -1,4 +1,4 @@
-import { css } from "../../styled-system/css";
+import { css, cva } from "../../styled-system/css";
 import Carousel from "../components/Carousel";
 import ExpandingInfoButton from "../components/ExpandingInfoButton";
 import Nav from "../components/Nav";
@@ -33,19 +33,32 @@ const contentSectionWrapper = css({
   overflow: "scroll",
 });
 
-const carouselWrapper = css({
-  width: "100%",
-  height: "80%",
-  display: "flex",
-  xl: {
-    width: "80%",
+const carouselWrapper = cva({
+  base: {
+    height: "80%",
+    display: "flex",
+    md: {
+      height: "100%",
+    },
   },
-  lg: {
-    width: "70%",
-  },
-  md: {
-    width: "60%",
-    height: "100%",
+  variants: {
+    size: {
+      fullwidth: {
+        width: "100%",
+      },
+      withContentSideSection: {
+        width: "100%",
+        xl: {
+          width: "80%",
+        },
+        lg: {
+          width: "70%",
+        },
+        md: {
+          width: "60%",
+        },
+      },
+    },
   },
 });
 
@@ -90,7 +103,14 @@ export default function GalleryPage({ params }: Route.LoaderArgs) {
         )}
 
         {isAGallery ? (
-          <div className={carouselWrapper}>
+          <div
+            className={carouselWrapper({
+              size:
+                content && !infoOverlayAllSizes
+                  ? "withContentSideSection"
+                  : "fullwidth",
+            })}
+          >
             <Carousel images={images} />
           </div>
         ) : (
