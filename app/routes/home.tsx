@@ -1,6 +1,6 @@
 import { useSearchParams } from "react-router";
 import { css, cx } from "../../styled-system/css";
-import ReflectionsRed from "../assets/images/ReflectionsRed.png";
+import ReflectionsRed from "../assets/images/reflections/reflections-red.png";
 import HomeProjectsGallery from "../components/HomeProjectsGallery";
 import LogoOverlay from "../components/LogoOverlay";
 import Nav from "../components/Nav";

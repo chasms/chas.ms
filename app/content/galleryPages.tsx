@@ -64,9 +64,9 @@ import peelerssbk from "../assets/images/peelers/peelerssbk.png";
 import peelerstbk from "../assets/images/peelers/peelerstbk.png";
 import peelerstr from "../assets/images/peelers/peelerstr.png";
 
-import reflectionsBlack from "../assets/images/reflections-black.png";
-import reflectionsOrangePurple from "../assets/images/reflections-orange-purple.png";
-import reflectionsRed from "../assets/images/ReflectionsRed.png";
+import reflectionsBlack from "../assets/images/reflections/reflections-black.png";
+import reflectionsOrangePurple from "../assets/images/reflections/reflections-orange-purple.png";
+import reflectionsRed from "../assets/images/reflections/reflections-red.png";
 
 import saltAndPepper1 from "../assets/images/salt-and-pepper/salt-and-pepper-1.png";
 import saltAndPepper2 from "../assets/images/salt-and-pepper/salt-and-pepper-2.png";
