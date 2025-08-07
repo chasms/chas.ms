@@ -1,11 +1,12 @@
-import { default as defaultConfig } from "@epic-web/config/eslint";
 import js from "@eslint/js";
 import panda from "@pandacss/eslint-plugin";
 import { defineConfig } from "eslint/config";
+import importPlugin from "eslint-plugin-import";
 import eslintPluginPrettierRecommended from "eslint-plugin-prettier/recommended";
 import pluginReact from "eslint-plugin-react";
 import globals from "globals";
 import tseslint from "typescript-eslint";
+import simpleImportSort from "eslint-plugin-simple-import-sort";
 
 const pandaPluginRecommended = {
   ignores: [
@@ -35,7 +36,6 @@ export default defineConfig([
   },
   tseslint.configs.recommended,
   pluginReact.configs.flat.recommended,
-  defaultConfig,
   {
     ignores: [".react-router/*"],
   },
@@ -47,4 +47,16 @@ export default defineConfig([
   },
   eslintPluginPrettierRecommended,
   pandaPluginRecommended,
+  {
+    files: ["**/*.{ts,tsx}"],
+    extends: [
+      importPlugin.flatConfigs.recommended,
+      importPlugin.flatConfigs.typescript,
+    ],
+  },
+  {
+    plugins: {
+      "simple-import-sort": simpleImportSort,
+    },
+  },
 ]);
