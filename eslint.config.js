@@ -1,6 +1,6 @@
 import js from "@eslint/js";
 import panda from "@pandacss/eslint-plugin";
-import { defineConfig } from "eslint/config";
+import { defineConfig, globalIgnores } from "eslint/config";
 import importPlugin from "eslint-plugin-import";
 import eslintPluginPrettierRecommended from "eslint-plugin-prettier/recommended";
 import pluginReact from "eslint-plugin-react";
@@ -25,6 +25,13 @@ const pandaPluginRecommended = {
 
 /** @type {import("eslint").Linter.Config} */
 export default defineConfig([
+  globalIgnores([
+    ".react-router/**/*",
+    ".netlify/**/*",
+    "build/**/*",
+    "styled-system/**/*",
+    "node_modules/**/*",
+  ]),
   {
     files: ["**/*.{js,mjs,cjs,ts,mts,cts,jsx,tsx}"],
     plugins: { js },
