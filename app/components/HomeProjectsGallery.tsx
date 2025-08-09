@@ -12,6 +12,7 @@ import ReflectionsThumbnail from "../assets/thumbnails/reflections-thumbnail.png
 import ShakersThumbnail from "../assets/thumbnails/shakers-thumbnail.png";
 import SkylandBanner from "../assets/thumbnails/skyland-thumbnail-banner.png";
 import SkylandThumbnail from "../assets/thumbnails/skyland-thumbnail.png";
+import OriginTheoryThumbnail from "../assets/thumbnails/origin-theory-thumbnail.png";
 import { GalleryKeys } from "../content/galleryPages";
 import { RouteSlugs } from "../routes";
 import HomeProjectGalleryItem, {
@@ -85,6 +86,16 @@ export default function HomeProjectsGallery() {
       >
         <p className={galleryBannerText}>
           Extended <strong>Reflections</strong>, 2011
+        </p>
+      </HomeProjectGalleryItem>
+
+      <HomeProjectGalleryItem
+        href={RouteSlugs["origin-theory"]}
+        image={OriginTheoryThumbnail}
+        imageAltText="Origin Theory"
+      >
+        <p className={galleryBannerText}>
+          <strong>Origin</strong> Theory
         </p>
       </HomeProjectGalleryItem>
 
