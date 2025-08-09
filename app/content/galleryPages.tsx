@@ -64,9 +64,9 @@ import peelerssbk from "../assets/images/peelers/peelerssbk.png";
 import peelerstbk from "../assets/images/peelers/peelerstbk.png";
 import peelerstr from "../assets/images/peelers/peelerstr.png";
 
-import reflectionsBlack from "../assets/images/reflections-black.png";
-import reflectionsOrangePurple from "../assets/images/reflections-orange-purple.png";
-import reflectionsRed from "../assets/images/ReflectionsRed.png";
+import reflectionsBlack from "../assets/images/reflections/reflections-black.png";
+import reflectionsOrangePurple from "../assets/images/reflections/reflections-orange-purple.png";
+import reflectionsRed from "../assets/images/reflections/reflections-red.png";
 
 import saltAndPepper1 from "../assets/images/salt-and-pepper/salt-and-pepper-1.png";
 import saltAndPepper2 from "../assets/images/salt-and-pepper/salt-and-pepper-2.png";
@@ -74,12 +74,12 @@ import saltAndPepper3 from "../assets/images/salt-and-pepper/salt-and-pepper-3.p
 import saltAndPepper4 from "../assets/images/salt-and-pepper/salt-and-pepper-4.png";
 import saltAndPepper5 from "../assets/images/salt-and-pepper/salt-and-pepper-5.png";
 
+import skylandCover from "../assets/images/skyland/skyland-0-cover.jpg";
 import skyland1 from "../assets/images/skyland/skyland-1.png";
 import skyland10 from "../assets/images/skyland/skyland-10.png";
 import skyland11 from "../assets/images/skyland/skyland-11.png";
 import skyland12 from "../assets/images/skyland/skyland-12.png";
 import skyland13 from "../assets/images/skyland/skyland-13.png";
-import skyland14 from "../assets/images/skyland/skyland-14.png";
 import skyland2 from "../assets/images/skyland/skyland-2.png";
 import skyland3 from "../assets/images/skyland/skyland-3.png";
 import skyland4 from "../assets/images/skyland/skyland-4.png";
@@ -205,6 +205,7 @@ export const GalleryPages: Record<GalleryKeys, GalleryPageDataType> = {
     title: "Skyland",
     description: "A collection of photos from Skyland.",
     images: [
+      skylandCover,
       skyland1,
       skyland2,
       skyland3,
@@ -218,7 +219,6 @@ export const GalleryPages: Record<GalleryKeys, GalleryPageDataType> = {
       skyland11,
       skyland12,
       skyland13,
-      skyland14,
     ],
     content: <SkylandContent />,
   },

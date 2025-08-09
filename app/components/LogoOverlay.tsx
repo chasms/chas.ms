@@ -1,6 +1,6 @@
 import { Link, useSearchParams } from "react-router";
 import { css, cx } from "../../styled-system/css";
-import KundaliniWhiteLogo from "../assets/images/kundalini-white.png";
+import KundaliniWhiteLogo from "../assets/kundalini-white.png";
 import { params } from "../routes";
 
 const logoOverlay = css({

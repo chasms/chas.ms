@@ -4,8 +4,8 @@ import emailIcon from "../assets/icons/email.png";
 import githubIcon from "../assets/icons/github.png";
 import linkedInIcon from "../assets/icons/linkedin.png";
 import mediumIcon from "../assets/icons/medium-icon-md.png";
-import avatar from "../assets/images/kundalini-avatar500x500.jpg";
-import Title from "./TItle";
+import avatar from "../assets/kundalini-avatar500x500.jpg";
+import Title from "./Headline";
 
 const linkStyles = {
   color: "azure",
