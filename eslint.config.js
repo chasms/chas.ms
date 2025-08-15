@@ -36,24 +36,8 @@ export default defineConfig([
     files: ["**/*.{js,mjs,cjs,ts,mts,cts,jsx,tsx}"],
     plugins: { js },
     extends: ["js/recommended"],
-  },
-  {
-    files: ["**/*.{js,mjs,cjs,ts,mts,cts,jsx,tsx}"],
     languageOptions: { globals: { ...globals.browser, ...globals.node } },
   },
-  tseslint.configs.recommended,
-  pluginReact.configs.flat.recommended,
-  {
-    ignores: [".react-router/*"],
-  },
-  {
-    rules: {
-      "import/consistent-type-specifier-style": "off",
-      "react/react-in-jsx-scope": "off",
-    },
-  },
-  eslintPluginPrettierRecommended,
-  pandaPluginRecommended,
   {
     files: ["**/*.{ts,tsx}"],
     extends: [
@@ -61,12 +45,18 @@ export default defineConfig([
       importPlugin.flatConfigs.typescript,
     ],
   },
+  tseslint.configs.recommended,
+  pluginReact.configs.flat.recommended,
+  eslintPluginPrettierRecommended,
+  pandaPluginRecommended,
   {
     plugins: {
       "simple-import-sort": simpleImportSort,
     },
-  },
-  {
+    rules: {
+      "import/consistent-type-specifier-style": "off",
+      "react/react-in-jsx-scope": "off",
+    },
     settings: {
       react: {
         version: "detect", // React version. "detect" automatically picks the version you have installed.
