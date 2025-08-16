@@ -13,6 +13,7 @@ import ShakersThumbnail from "../assets/thumbnails/shakers-thumbnail.png";
 import SkylandBanner from "../assets/thumbnails/skyland-thumbnail-banner.png";
 import SkylandThumbnail from "../assets/thumbnails/skyland-thumbnail.png";
 import OriginTheoryThumbnail from "../assets/thumbnails/origin-theory-thumbnail.png";
+import OlioThumbnail from "../assets/thumbnails/olio-thumbnail.png";
 import { GalleryKeys } from "../content/galleryPages";
 import { RouteSlugs } from "../routes";
 import HomeProjectGalleryItem, {
@@ -164,6 +165,17 @@ export default function HomeProjectsGallery() {
       >
         <p className={galleryBannerText}>
           <strong>mardi gras</strong>, new orleans, 2014
+        </p>
+      </HomeProjectGalleryItem>
+
+      <HomeProjectGalleryItem
+        href="https://olio.chas.ms"
+        newTab
+        image={OlioThumbnail}
+        imageAltText="Olio"
+      >
+        <p className={galleryBannerText}>
+          <strong>olio app</strong>, a collection of things
         </p>
       </HomeProjectGalleryItem>
 
