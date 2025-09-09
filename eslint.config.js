@@ -1,20 +1,15 @@
 import js from "@eslint/js";
 import panda from "@pandacss/eslint-plugin";
-import { defineConfig, globalIgnores } from "eslint/config";
 import importPlugin from "eslint-plugin-import";
 import eslintPluginPrettierRecommended from "eslint-plugin-prettier/recommended";
 import pluginReact from "eslint-plugin-react";
+import simpleImportSort from "eslint-plugin-simple-import-sort";
+import { defineConfig, globalIgnores } from "eslint/config";
 import globals from "globals";
 import tseslint from "typescript-eslint";
-import simpleImportSort from "eslint-plugin-simple-import-sort";
 
 const pandaPluginRecommended = {
-  ignores: [
-    "**/*.d.ts",
-    "styled-system",
-    // Ignore panda errors cause that's what we're here for
-    // 'src/App.tsx',
-  ],
+  ignores: ["**/*.d.ts", "styled-system"],
   plugins: {
     "@pandacss": panda,
   },
