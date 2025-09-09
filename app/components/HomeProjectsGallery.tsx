@@ -103,16 +103,6 @@ export default function HomeProjectsGallery() {
       </HomeProjectGalleryItem>
 
       <HomeProjectGalleryItem
-        href={RouteSlugs["origin-theory"]}
-        image={OriginTheoryThumbnail}
-        imageAltText="Origin Theory"
-      >
-        <p className={galleryBannerText}>
-          <strong>Origin</strong> Theory
-        </p>
-      </HomeProjectGalleryItem>
-
-      <HomeProjectGalleryItem
         href={`/${RouteSlugs.project}/${GalleryKeys["fin-js"]}`}
         image={FinJSGif}
         imageAltText="FinJS"
@@ -129,6 +119,16 @@ export default function HomeProjectsGallery() {
       >
         <p className={galleryBannerText}>
           <strong>Nota</strong>, An M&T Bank Product
+        </p>
+      </HomeProjectGalleryItem>
+
+      <HomeProjectGalleryItem
+        href={RouteSlugs["origin-theory"]}
+        image={OriginTheoryThumbnail}
+        imageAltText="Origin Theory"
+      >
+        <p className={galleryBannerText}>
+          <strong>Origin</strong> Theory, 2014
         </p>
       </HomeProjectGalleryItem>
 
