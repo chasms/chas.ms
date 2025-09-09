@@ -5,15 +5,16 @@ import GMGif from "../assets/thumbnails/gm-halfspeed-thumbnail.gif";
 import JavascriptTranspilersThumbnail from "../assets/thumbnails/javascript-transpilers-thumbnail.png";
 import MardiGrasThumbnail from "../assets/thumbnails/mardi-gras-thumbnail.png";
 import NotaThumbnail from "../assets/thumbnails/nota-thumbnail.png";
+import OlioThumbnail from "../assets/thumbnails/olio-thumbnail.png";
 import OMWThumbnail from "../assets/thumbnails/omw-thumbnail.png";
+import OriginTheoryThumbnail from "../assets/thumbnails/origin-theory-thumbnail.png";
 import P5SpaceGif from "../assets/thumbnails/p5-space-halfspeed-thumbnail.gif";
 import PeelerThumbnail from "../assets/thumbnails/peeler-thumbnail.png";
 import ReflectionsThumbnail from "../assets/thumbnails/reflections-thumbnail.png";
+import Roll2WriteThumbnail from "../assets/thumbnails/roll2write-thumbnail1.png";
 import ShakersThumbnail from "../assets/thumbnails/shakers-thumbnail.png";
 import SkylandBanner from "../assets/thumbnails/skyland-thumbnail-banner.png";
 import SkylandThumbnail from "../assets/thumbnails/skyland-thumbnail.png";
-import OriginTheoryThumbnail from "../assets/thumbnails/origin-theory-thumbnail.png";
-import OlioThumbnail from "../assets/thumbnails/olio-thumbnail.png";
 import { GalleryKeys } from "../content/galleryPages";
 import { RouteSlugs } from "../routes";
 import HomeProjectGalleryItem, {
@@ -61,6 +62,17 @@ export default function HomeProjectsGallery() {
       </HomeProjectGalleryItem>
 
       <HomeProjectGalleryItem
+        href="https://roll2write.chas.ms"
+        newTab
+        image={Roll2WriteThumbnail}
+        imageAltText="Roll2Write"
+      >
+        <p className={galleryBannerText}>
+          <strong>Roll2Write</strong>, a songwriting oracle
+        </p>
+      </HomeProjectGalleryItem>
+
+      <HomeProjectGalleryItem
         href={`/${RouteSlugs.project}/${GalleryKeys.onmyway}`}
         image={OMWThumbnail}
         imageAltText="On My Way"
@@ -91,16 +103,6 @@ export default function HomeProjectsGallery() {
       </HomeProjectGalleryItem>
 
       <HomeProjectGalleryItem
-        href={RouteSlugs["origin-theory"]}
-        image={OriginTheoryThumbnail}
-        imageAltText="Origin Theory"
-      >
-        <p className={galleryBannerText}>
-          <strong>Origin</strong> Theory
-        </p>
-      </HomeProjectGalleryItem>
-
-      <HomeProjectGalleryItem
         href={`/${RouteSlugs.project}/${GalleryKeys["fin-js"]}`}
         image={FinJSGif}
         imageAltText="FinJS"
@@ -117,6 +119,16 @@ export default function HomeProjectsGallery() {
       >
         <p className={galleryBannerText}>
           <strong>Nota</strong>, An M&T Bank Product
+        </p>
+      </HomeProjectGalleryItem>
+
+      <HomeProjectGalleryItem
+        href={RouteSlugs["origin-theory"]}
+        image={OriginTheoryThumbnail}
+        imageAltText="Origin Theory"
+      >
+        <p className={galleryBannerText}>
+          <strong>Origin</strong> Theory, 2014
         </p>
       </HomeProjectGalleryItem>
 
