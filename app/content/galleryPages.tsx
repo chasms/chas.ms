@@ -89,6 +89,44 @@ import skyland7 from "../assets/images/skyland/skyland-7.png";
 import skyland8 from "../assets/images/skyland/skyland-8.png";
 import skyland9 from "../assets/images/skyland/skyland-9.png";
 
+import indonesia1 from "../assets/images/indonesia/indonesia1.webp";
+import indonesia10 from "../assets/images/indonesia/indonesia10.webp";
+import indonesia11 from "../assets/images/indonesia/indonesia11.webp";
+import indonesia12 from "../assets/images/indonesia/indonesia12.webp";
+import indonesia13 from "../assets/images/indonesia/indonesia13.webp";
+import indonesia14 from "../assets/images/indonesia/indonesia14.webp";
+import indonesia15 from "../assets/images/indonesia/indonesia15.webp";
+import indonesia16 from "../assets/images/indonesia/indonesia16.webp";
+import indonesia17 from "../assets/images/indonesia/indonesia17.webp";
+import indonesia18 from "../assets/images/indonesia/indonesia18.webp";
+import indonesia19 from "../assets/images/indonesia/indonesia19.webp";
+import indonesia2 from "../assets/images/indonesia/indonesia2.webp";
+import indonesia20 from "../assets/images/indonesia/indonesia20.webp";
+import indonesia21 from "../assets/images/indonesia/indonesia21.webp";
+import indonesia22 from "../assets/images/indonesia/indonesia22.webp";
+import indonesia23 from "../assets/images/indonesia/indonesia23.webp";
+import indonesia24 from "../assets/images/indonesia/indonesia24.webp";
+import indonesia25 from "../assets/images/indonesia/indonesia25.webp";
+import indonesia26 from "../assets/images/indonesia/indonesia26.webp";
+import indonesia27 from "../assets/images/indonesia/indonesia27.webp";
+import indonesia28 from "../assets/images/indonesia/indonesia28.webp";
+import indonesia29 from "../assets/images/indonesia/indonesia29.webp";
+import indonesia3 from "../assets/images/indonesia/indonesia3.webp";
+import indonesia30 from "../assets/images/indonesia/indonesia30.webp";
+import indonesia31 from "../assets/images/indonesia/indonesia31.webp";
+import indonesia32 from "../assets/images/indonesia/indonesia32.webp";
+import indonesia33 from "../assets/images/indonesia/indonesia33.webp";
+import indonesia34 from "../assets/images/indonesia/indonesia34.webp";
+import indonesia35 from "../assets/images/indonesia/indonesia35.webp";
+import indonesia36 from "../assets/images/indonesia/indonesia36.webp";
+import indonesia37 from "../assets/images/indonesia/indonesia37.webp";
+import indonesia4 from "../assets/images/indonesia/indonesia4.webp";
+import indonesia5 from "../assets/images/indonesia/indonesia5.webp";
+import indonesia6 from "../assets/images/indonesia/indonesia6.webp";
+import indonesia7 from "../assets/images/indonesia/indonesia7.webp";
+import indonesia8 from "../assets/images/indonesia/indonesia8.webp";
+import indonesia9 from "../assets/images/indonesia/indonesia9.webp";
+
 import FinJSContent from "./FinJSContent";
 import FurnitureContent from "./FurnitureContent";
 import GiantMachinesContent from "./GiantMachinesContent";
@@ -112,19 +150,64 @@ export enum GalleryKeys {
   "fin-js" = "fin-js",
   "js-transpilers" = "js-transpilers",
   reflections = "reflections",
+  indonesia = "indonesia",
 }
 
 export interface GalleryPageDataType {
   title: string;
   description: string;
   images?: string[];
-  content: React.ReactNode;
+  content?: React.ReactNode;
   autoplay?: boolean;
   infoOverlayHalfScreen?: boolean;
   infoOverlayAllSizes?: boolean;
 }
 
 export const GalleryPages: Record<GalleryKeys, GalleryPageDataType> = {
+  [GalleryKeys.indonesia]: {
+    title: "Yogyakarta, Indonesia 2014",
+    description:
+      "Photos taken while studying with and living with printmaking collective Taring Padi",
+    images: [
+      indonesia1,
+      indonesia2,
+      indonesia3,
+      indonesia4,
+      indonesia5,
+      indonesia6,
+      indonesia7,
+      indonesia8,
+      indonesia9,
+      indonesia10,
+      indonesia11,
+      indonesia12,
+      indonesia13,
+      indonesia14,
+      indonesia15,
+      indonesia16,
+      indonesia17,
+      indonesia18,
+      indonesia19,
+      indonesia20,
+      indonesia21,
+      indonesia22,
+      indonesia23,
+      indonesia24,
+      indonesia25,
+      indonesia26,
+      indonesia27,
+      indonesia28,
+      indonesia29,
+      indonesia30,
+      indonesia31,
+      indonesia32,
+      indonesia33,
+      indonesia34,
+      indonesia35,
+      indonesia36,
+      indonesia37,
+    ],
+  },
   [GalleryKeys.furniture]: {
     title: "Furniture",
     description: "Hand-made furniture",

@@ -2,6 +2,7 @@ import { css } from "../../styled-system/css";
 import FinJSGif from "../assets/thumbnails/finjs-halfspeed-thumbnail.gif";
 import FurnitureGalleryImage from "../assets/thumbnails/furniture-thumbnail.png";
 import GMGif from "../assets/thumbnails/gm-halfspeed-thumbnail.gif";
+import IndonesiaThumbnail from "../assets/thumbnails/indonesia-thumbnail.webp";
 import JavascriptTranspilersThumbnail from "../assets/thumbnails/javascript-transpilers-thumbnail.png";
 import MardiGrasThumbnail from "../assets/thumbnails/mardi-gras-thumbnail.png";
 import NotaThumbnail from "../assets/thumbnails/nota-thumbnail.png";
@@ -93,16 +94,6 @@ export default function HomeProjectsGallery() {
       </HomeProjectGalleryItem>
 
       <HomeProjectGalleryItem
-        href={`/${RouteSlugs.project}/${GalleryKeys.reflections}`}
-        image={ReflectionsThumbnail}
-        imageAltText="Extended Reflections Photographs"
-      >
-        <p className={galleryBannerText}>
-          Extended <strong>Reflections</strong>, 2011
-        </p>
-      </HomeProjectGalleryItem>
-
-      <HomeProjectGalleryItem
         href={`/${RouteSlugs.project}/${GalleryKeys["fin-js"]}`}
         image={FinJSGif}
         imageAltText="FinJS"
@@ -119,6 +110,26 @@ export default function HomeProjectsGallery() {
       >
         <p className={galleryBannerText}>
           <strong>Nota</strong>, An M&T Bank Product
+        </p>
+      </HomeProjectGalleryItem>
+
+      <HomeProjectGalleryItem
+        href={`/${RouteSlugs.project}/${GalleryKeys.indonesia}`}
+        image={IndonesiaThumbnail}
+        imageAltText="Yogyakarta Indonesia Photographs"
+      >
+        <p className={galleryBannerText}>
+          <strong>Yogyakarta</strong>, Indonesia, 2014
+        </p>
+      </HomeProjectGalleryItem>
+
+      <HomeProjectGalleryItem
+        href={`/${RouteSlugs.project}/${GalleryKeys.reflections}`}
+        image={ReflectionsThumbnail}
+        imageAltText="Extended Reflections Photographs"
+      >
+        <p className={galleryBannerText}>
+          Extended <strong>Reflections</strong>, 2011
         </p>
       </HomeProjectGalleryItem>
 
