@@ -1,5 +1,5 @@
 import { css } from "../../styled-system/css";
-import FinJSGif from "../assets/thumbnails/finjs-halfspeed-thumbnail.gif";
+import FinJSGif from "../assets/thumbnails/finjs-thumbnail.webp";
 import FurnitureGalleryImage from "../assets/thumbnails/furniture-thumbnail.png";
 import GMGif from "../assets/thumbnails/gm-halfspeed-thumbnail.gif";
 import IndonesiaThumbnail from "../assets/thumbnails/indonesia-thumbnail.webp";
