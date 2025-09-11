@@ -133,6 +133,7 @@ import GiantMachinesContent from "./GiantMachinesContent";
 import JavascriptTranspilersContent from "./JavascriptTranspilersContent";
 import MardiGrasContent from "./MardiGrasContent";
 import NotaContent from "./NotaContent";
+import OMWContent from "./OMWContent";
 import PeelersContent from "./PeelersContent";
 import ReflectionsContent from "./ReflectionsContent";
 import SaltAndPepperContent from "./SaltAndPepperContent";
@@ -330,7 +331,7 @@ export const GalleryPages: Record<GalleryKeys, GalleryPageDataType> = {
       onmywaySupervisorResponsive,
       onmywaySupervisorJobDetail,
     ],
-    content: "",
+    content: <OMWContent />,
   },
   [GalleryKeys.giantmachines]: {
     title: "Giant Machines",

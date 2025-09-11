@@ -21,6 +21,11 @@ export const contentBody = css({
   fontSize: "16px",
   marginBottom: "16px",
 });
+export const contentBodySmall = css({
+  fontStyle: "italic",
+  fontSize: "14px",
+  marginBottom: "14px",
+});
 
 export const contentLink = css({
   fontStyle: "italic",
