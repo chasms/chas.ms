@@ -1,6 +1,5 @@
 import { useSearchParams } from "react-router";
 import { css, cx } from "../../styled-system/css";
-import ReflectionsRed from "../assets/images/reflections/reflections-red.png";
 import HomeProjectsGallery from "../components/HomeProjectsGallery";
 import LogoOverlay from "../components/LogoOverlay";
 import Nav from "../components/Nav";
@@ -11,15 +10,6 @@ const contentArea = css({
   height: "100%",
   width: "100%",
   overflow: "scroll",
-});
-
-const background = css({
-  position: "fixed",
-  top: 0,
-  left: 0,
-  right: 0,
-  bottom: 0,
-  zIndex: "-100",
 });
 
 const revealWrapper = css({
@@ -47,15 +37,6 @@ export default function Home() {
   return (
     <>
       <LogoOverlay />
-
-      <div
-        className={background}
-        style={{
-          background: `url("${ReflectionsRed}") no-repeat bottom center`,
-          backgroundSize: "cover",
-          opacity: "0.4",
-        }}
-      ></div>
 
       <div
         className={

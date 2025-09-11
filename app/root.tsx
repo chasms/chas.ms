@@ -7,8 +7,11 @@ import {
   ScrollRestoration,
 } from "react-router";
 
+import { css } from "../styled-system/css";
 import type { Route } from "./+types/root";
 import stylesheet from "./app.css?url";
+
+import ReflectionsRed from "./assets/backgrounds/reflections-red.webp";
 
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -24,6 +27,15 @@ export const links: Route.LinksFunction = () => [
   { rel: "stylesheet", href: stylesheet },
 ];
 
+const background = css({
+  position: "fixed",
+  top: 0,
+  left: 0,
+  right: 0,
+  bottom: 0,
+  zIndex: "-100",
+});
+
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
@@ -34,6 +46,14 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Links />
       </head>
       <body>
+        <div
+          className={background}
+          style={{
+            background: `url("${ReflectionsRed}") no-repeat bottom center`,
+            backgroundSize: "cover",
+            opacity: "0.4",
+          }}
+        ></div>
         {children}
         <ScrollRestoration />
         <Scripts />
