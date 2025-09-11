@@ -145,8 +145,11 @@ import isomorphismIIIreverse from "../assets/images/printmaking/isomorphismIII-r
 import isomorphismIII from "../assets/images/printmaking/isomorphismIII.webp";
 import lineSpiralIV from "../assets/images/printmaking/line-spiral-IV.webp";
 import monotype from "../assets/images/printmaking/monotype1.webp";
+import origination from "../assets/images/printmaking/origination.webp";
+import planets from "../assets/images/printmaking/planets.webp";
 import precarious from "../assets/images/printmaking/precarious.webp";
 import pulsars from "../assets/images/printmaking/pulsars.webp";
+import redistribution from "../assets/images/printmaking/redistribution.webp";
 import ribbonNegative from "../assets/images/printmaking/ribbon-negative.webp";
 import ribbonPositive from "../assets/images/printmaking/ribbon-positive.webp";
 import ribbonReverse from "../assets/images/printmaking/ribbon-reverse.webp";
@@ -221,9 +224,12 @@ export const GalleryPages: Record<GalleryKeys, GalleryPageDataType> = {
       templeOfTransition,
       lineSpiralIV,
       pulsars,
+      planets,
       combedMonotype,
       monotype,
       theDeeps,
+      origination,
+      redistribution,
     ],
   },
   [GalleryKeys.indonesia]: {
