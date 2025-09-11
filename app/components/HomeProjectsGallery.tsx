@@ -11,6 +11,7 @@ import OMWThumbnail from "../assets/thumbnails/omw-thumbnail.png";
 import OriginTheoryThumbnail from "../assets/thumbnails/origin-theory-thumbnail.png";
 import P5SpaceGif from "../assets/thumbnails/p5-space-halfspeed-thumbnail.gif";
 import PeelerThumbnail from "../assets/thumbnails/peeler-thumbnail.png";
+import PrintmakingThumbnail from "../assets/thumbnails/printmaking-thumbnail.webp";
 import ReflectionsThumbnail from "../assets/thumbnails/reflections-thumbnail.png";
 import Roll2WriteThumbnail from "../assets/thumbnails/roll2write-thumbnail1.png";
 import ShakersThumbnail from "../assets/thumbnails/shakers-thumbnail.png";
@@ -120,6 +121,16 @@ export default function HomeProjectsGallery() {
       >
         <p className={galleryBannerText}>
           <strong>Yogyakarta</strong>, Indonesia, 2014
+        </p>
+      </HomeProjectGalleryItem>
+
+      <HomeProjectGalleryItem
+        href={`/${RouteSlugs.project}/${GalleryKeys.printmaking}`}
+        image={PrintmakingThumbnail}
+        imageAltText="Printmaking"
+      >
+        <p className={galleryBannerText}>
+          <strong>Printmaking</strong>
         </p>
       </HomeProjectGalleryItem>
 

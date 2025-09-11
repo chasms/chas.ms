@@ -151,6 +151,7 @@ export enum GalleryKeys {
   "js-transpilers" = "js-transpilers",
   reflections = "reflections",
   indonesia = "indonesia",
+  printmaking = "printmaking",
 }
 
 export interface GalleryPageDataType {
@@ -164,6 +165,11 @@ export interface GalleryPageDataType {
 }
 
 export const GalleryPages: Record<GalleryKeys, GalleryPageDataType> = {
+  [GalleryKeys.printmaking]: {
+    title: "Printmaking",
+    description: "Printmaking work in woodcut, etching, and lithography",
+    images: [],
+  },
   [GalleryKeys.indonesia]: {
     title: "Yogyakarta, Indonesia 2014",
     description:
