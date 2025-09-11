@@ -1,7 +1,7 @@
 import { css } from "../../styled-system/css";
 import FinJSGif from "../assets/thumbnails/finjs-thumbnail.webp";
 import FurnitureGalleryImage from "../assets/thumbnails/furniture-thumbnail.png";
-import GMGif from "../assets/thumbnails/gm-halfspeed-thumbnail.gif";
+import GMGif from "../assets/thumbnails/gm-thumbnail.webp";
 import IndonesiaThumbnail from "../assets/thumbnails/indonesia-thumbnail.webp";
 import JavascriptTranspilersThumbnail from "../assets/thumbnails/javascript-transpilers-thumbnail.png";
 import MardiGrasThumbnail from "../assets/thumbnails/mardi-gras-thumbnail.png";
@@ -9,7 +9,7 @@ import NotaThumbnail from "../assets/thumbnails/nota-thumbnail.png";
 import OlioThumbnail from "../assets/thumbnails/olio-thumbnail.png";
 import OMWThumbnail from "../assets/thumbnails/omw-thumbnail.png";
 import OriginTheoryThumbnail from "../assets/thumbnails/origin-theory-thumbnail.png";
-import P5SpaceGif from "../assets/thumbnails/p5-space-halfspeed-thumbnail.gif";
+import P5SpaceGif from "../assets/thumbnails/p5-space-thumbnail.webp";
 import PeelerThumbnail from "../assets/thumbnails/peeler-thumbnail.png";
 import PrintmakingThumbnail from "../assets/thumbnails/printmaking-thumbnail.webp";
 import ReflectionsThumbnail from "../assets/thumbnails/reflections-thumbnail.png";
