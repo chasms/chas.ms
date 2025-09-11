@@ -127,6 +127,37 @@ import indonesia7 from "../assets/images/indonesia/indonesia7.webp";
 import indonesia8 from "../assets/images/indonesia/indonesia8.webp";
 import indonesia9 from "../assets/images/indonesia/indonesia9.webp";
 
+import ascensionParagonBlack from "../assets/images/printmaking/ascension-paragon-black.webp";
+import ascensionParagonDrawing from "../assets/images/printmaking/ascension-paragon-drawing.webp";
+import ascensionParagonWhiteOnBlack from "../assets/images/printmaking/ascension-paragon-white-on-black.webp";
+import ascensionParagonBlock from "../assets/images/printmaking/ascension-paragon-woodblock.webp";
+import combedMonotype from "../assets/images/printmaking/combed-monotype.webp";
+import facetedSelf from "../assets/images/printmaking/faceted-self-full.webp";
+import gemini from "../assets/images/printmaking/gemini.webp";
+import isomorphismIBlock from "../assets/images/printmaking/isomorphismI-block-2.webp";
+import isomorphismICut from "../assets/images/printmaking/isomorphismI-cut.webp";
+import isomorphismIDrawing from "../assets/images/printmaking/isomorphismI-drawing.webp";
+import isomorphismIMonotype1 from "../assets/images/printmaking/isomorphismI-monotype-1.webp";
+import isomorphismIMonotype2 from "../assets/images/printmaking/isomorphismI-monotype-2.webp";
+import isomorphismIOriginal from "../assets/images/printmaking/isomorphismI-original.webp";
+import isomorphismIIILitho1 from "../assets/images/printmaking/isomorphismIII-litho-1.webp";
+import isomorphismIIIreverse from "../assets/images/printmaking/isomorphismIII-reverse.webp";
+import isomorphismIII from "../assets/images/printmaking/isomorphismIII.webp";
+import lineSpiralIV from "../assets/images/printmaking/line-spiral-IV.webp";
+import monotype from "../assets/images/printmaking/monotype1.webp";
+import origination from "../assets/images/printmaking/origination.webp";
+import planets from "../assets/images/printmaking/planets.webp";
+import precarious from "../assets/images/printmaking/precarious.webp";
+import pulsars from "../assets/images/printmaking/pulsars.webp";
+import redistribution from "../assets/images/printmaking/redistribution.webp";
+import ribbonNegative from "../assets/images/printmaking/ribbon-negative.webp";
+import ribbonPositive from "../assets/images/printmaking/ribbon-positive.webp";
+import ribbonReverse from "../assets/images/printmaking/ribbon-reverse.webp";
+import templeOfTransition from "../assets/images/printmaking/temple-of-transition.webp";
+import theDeeps from "../assets/images/printmaking/the-deeps-with-slab.webp";
+import totemI from "../assets/images/printmaking/totemI.webp";
+import totemII from "../assets/images/printmaking/totemII.webp";
+
 import FinJSContent from "./FinJSContent";
 import FurnitureContent from "./FurnitureContent";
 import GiantMachinesContent from "./GiantMachinesContent";
@@ -152,6 +183,7 @@ export enum GalleryKeys {
   "js-transpilers" = "js-transpilers",
   reflections = "reflections",
   indonesia = "indonesia",
+  printmaking = "printmaking",
 }
 
 export interface GalleryPageDataType {
@@ -165,6 +197,42 @@ export interface GalleryPageDataType {
 }
 
 export const GalleryPages: Record<GalleryKeys, GalleryPageDataType> = {
+  [GalleryKeys.printmaking]: {
+    title: "Printmaking",
+    description: "Printmaking work in woodcut, etching, and lithography",
+    images: [
+      ascensionParagonDrawing,
+      ascensionParagonBlock,
+      ascensionParagonBlack,
+      ascensionParagonWhiteOnBlack,
+      isomorphismIDrawing,
+      isomorphismIBlock,
+      isomorphismIOriginal,
+      isomorphismICut,
+      isomorphismIMonotype1,
+      isomorphismIMonotype2,
+      isomorphismIIILitho1,
+      isomorphismIII,
+      isomorphismIIIreverse,
+      precarious,
+      totemI,
+      totemII,
+      facetedSelf,
+      gemini,
+      ribbonPositive,
+      ribbonNegative,
+      ribbonReverse,
+      templeOfTransition,
+      lineSpiralIV,
+      pulsars,
+      planets,
+      combedMonotype,
+      monotype,
+      theDeeps,
+      origination,
+      redistribution,
+    ],
+  },
   [GalleryKeys.indonesia]: {
     title: "Yogyakarta, Indonesia 2014",
     description:
