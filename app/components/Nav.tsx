@@ -4,7 +4,7 @@ import emailIcon from "../assets/icons/email.png";
 import githubIcon from "../assets/icons/github.png";
 import linkedInIcon from "../assets/icons/linkedin.png";
 import mediumIcon from "../assets/icons/medium-icon-md.png";
-import avatar from "../assets/kundalini-avatar500x500.jpg";
+import avatar from "../assets/kundalini-avatar.webp";
 import Title from "./Headline";
 
 const linkStyles = {
@@ -32,31 +32,6 @@ const navWrapperStyles = css({
   display: "flex",
   borderBottom: "0.5px solid rgba(255, 255, 255, 0.1)",
 });
-
-// const navList = css({
-//   margin: 0,
-//   padding: 0,
-//   display: "inline",
-//   textDecoration: "none",
-//   backgroundColor: "transparent",
-//   color: "azure",
-//   fontFamily: "San Francisco, sans-serif",
-//   fontSize: "11px",
-//   fontWeight: 700,
-//   left: "300px",
-// });
-
-// const navListItem = css({
-//   ...listItemStyles,
-//   paddingTop: "17px",
-//   marginLeft: "50px",
-// });
-
-// const navLink = css({
-//   ...linkStyles,
-//   paddingRight: "30px",
-//   paddingLeft: "30px",
-// });
 
 const iconsList = css({
   position: "absolute",
@@ -150,7 +125,14 @@ interface NavProps {
 export default function Nav({ backButtonTo }: NavProps) {
   return (
     <nav className={navWrapperStyles}>
-      <img className={avatarStyles} src={avatar} />
+      <Link to="/">
+        <img
+          className={avatarStyles}
+          src={avatar}
+          alt="chas.ms"
+          loading="lazy"
+        />
+      </Link>
 
       {backButtonTo && (
         <Link className={cx("group", backButton)} to={backButtonTo}>
@@ -159,24 +141,6 @@ export default function Nav({ backButtonTo }: NavProps) {
       )}
 
       <Title />
-
-      {/* <ul className={navList}>
-        <li className={navListItem}>
-          <Link
-            className={navLink}
-            to="https://www.medium.com/@chasms"
-            target="_blank"
-            rel="noreferrer"
-          >
-            BLOG
-          </Link>
-        </li>
-        <li className={navListItem}>
-          <Link className={navLink} to="info.html">
-            ABOUT
-          </Link>
-        </li>
-      </ul> */}
 
       <ul className={iconsList}>
         <li className={icon}>
