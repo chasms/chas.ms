@@ -31,7 +31,7 @@ const aboveTheFold = css({
 });
 
 export default function LogoOverlay() {
-  const [searchParams, setSearchParams] = useSearchParams();
+  const [searchParams] = useSearchParams();
 
   const openingSequenceParam = searchParams.get(params.openingSequence);
   const openingSequenceComplete = openingSequenceParam === params.done;
