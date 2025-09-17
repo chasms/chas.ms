@@ -2,11 +2,11 @@ import {
   contentBodySmall,
   contentHeading,
   contentSubHeading,
-  contentWrapperPaddingRight,
+  contentWrapper,
 } from "./content.css";
 
 const OMWContent = () => (
-  <div className={contentWrapperPaddingRight}>
+  <div className={contentWrapper}>
     <h1 className={contentHeading}>On My Way</h1>
     <p className={contentSubHeading}>
       On My Way is a product developed for National Grid, launched in 2020.

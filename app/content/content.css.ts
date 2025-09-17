@@ -11,17 +11,6 @@ export const contentWrapper = css({
   margin: "auto",
 });
 
-export const contentWrapperPaddingRight = css({
-  fontFamily: "San Francisco, sans-serif",
-  padding: "25px 50px 25px 25px",
-  maxHeight: "100%",
-  width: "100%",
-  display: "flex",
-  flexDirection: "column",
-  userSelect: "none",
-  margin: "auto",
-});
-
 export const contentHeading = css({
   fontSize: "24px",
   marginBottom: "16px",

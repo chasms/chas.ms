@@ -21,6 +21,9 @@ const ConveneContent = () => (
       their event and meeting spaces to ad-hoc booking, as well as creating a
       new funnel to drive memberships.
     </p>
+    <p className={contentBodyXS}>
+      (Event and meeting space booking requires site membership)
+    </p>
   </div>
 );
 

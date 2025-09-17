@@ -9,7 +9,7 @@ import type { Route } from "./+types/gallery";
 const pageWrapper = css({
   width: "100%",
   margin: "0 auto",
-  md: {
+  lg: {
     padding: "50px 40px",
   },
   padding: "50px 20px",
@@ -23,12 +23,10 @@ const contentSectionWrapper = css({
   display: "none",
   xl: {
     width: "25%",
+    display: "flex",
   },
   lg: {
     width: "35%",
-  },
-  md: {
-    width: "45%",
     display: "flex",
   },
   height: "100%",
@@ -43,6 +41,7 @@ const carouselWrapper = cva({
     md: {
       height: "100%",
     },
+    padding: "0px 25px",
   },
   variants: {
     size: {
@@ -57,9 +56,6 @@ const carouselWrapper = cva({
         lg: {
           width: "70%",
         },
-        md: {
-          width: "60%",
-        },
       },
     },
   },
@@ -67,7 +63,7 @@ const carouselWrapper = cva({
 
 const iframe = css({
   height: "90%",
-  md: {
+  lg: {
     height: "100%",
     margin: "0 25px",
   },

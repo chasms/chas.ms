@@ -6,7 +6,7 @@ const transitionsWhenOpening =
 const transitionWhenClosing =
   "background-color 0.5s ease-in-out, bottom 0.5s ease-in-out, left 0.5s ease-in-out, height 0.5s ease-in-out, width 0.5s ease-in-out, border-radius 0.5s ease-in-out, backdrop-filter 0.5s ease-in-out";
 const smallWidthValue = "calc(100% - 150px)";
-const smallHeightValue = "20%";
+const smallHeightValue = "25%";
 
 const info = cva({
   base: {
@@ -48,7 +48,7 @@ const info = cva({
     },
     mobileOnly: {
       true: {
-        md: {
+        lg: {
           display: "none",
         },
       },
