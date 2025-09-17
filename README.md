@@ -1,8 +1,6 @@
 # ![image](./public/favicon-32x32.png) [chas.ms](chas.ms)
 
-Converting my old portfolio site that I built in 2014 before I became a software engineer using HTML and vanilla CSS and JS to a modern isomorphic JavaScript frontend!
-
-Using lean development to triage the incremental build - some parts of the site are still legacy! (see the [public folder](./public/))
+Converting my old portfolio site that I built in 2014 (before I became a software engineer) using vanilla HTML/CSS/JS -> to a modern isomorphic JavaScript frontend!
 
 Built using:
 
@@ -30,6 +28,24 @@ npm run dev
 ```
 
 Your application will be available at `http://localhost:5173`.
+
+Lint:
+
+```bash
+npm run lint
+```
+
+Check type safety
+
+```bash
+npm run typecheck
+```
+
+OR run it continuously watching changes with
+
+```bash
+npm run typewatch
+```
 
 ## Building for Production
 
