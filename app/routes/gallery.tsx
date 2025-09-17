@@ -9,7 +9,10 @@ import type { Route } from "./+types/gallery";
 const pageWrapper = css({
   width: "100%",
   margin: "0 auto",
-  padding: "50px 40px",
+  md: {
+    padding: "50px 40px",
+  },
+  padding: "50px 20px",
   display: "flex",
   flexDirection: "row",
   height: "100vh",
@@ -19,13 +22,13 @@ const pageWrapper = css({
 const contentSectionWrapper = css({
   display: "none",
   xl: {
-    width: "20%",
+    width: "25%",
   },
   lg: {
-    width: "30%",
+    width: "35%",
   },
   md: {
-    width: "40%",
+    width: "45%",
     display: "flex",
   },
   height: "100%",
@@ -63,13 +66,14 @@ const carouselWrapper = cva({
 });
 
 const iframe = css({
-  height: "80%",
+  height: "90%",
   md: {
     height: "100%",
+    margin: "0 25px",
   },
   width: "100%",
   borderRadius: "16px",
-  margin: "0 25px",
+  margin: "0 5px",
 });
 
 export default function GalleryPage({ params }: Route.LoaderArgs) {
@@ -123,6 +127,11 @@ export default function GalleryPage({ params }: Route.LoaderArgs) {
               allow={`${autoplay && "autoplay; "}accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share`}
               referrerPolicy="strict-origin-when-cross-origin"
               allowFullScreen
+              sandbox={
+                params.id === GalleryKeys.convene
+                  ? "allow-same-site-none-cookies allow-scripts allow-forms"
+                  : undefined
+              }
             ></iframe>
           )
         )}

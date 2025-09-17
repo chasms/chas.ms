@@ -1,4 +1,5 @@
 import { css } from "../../styled-system/css";
+import ConveneThumbnail from "../assets/thumbnails/convene-thumbnail.webp";
 import FinJSGif from "../assets/thumbnails/finjs-thumbnail.webp";
 import FurnitureGalleryImage from "../assets/thumbnails/furniture-thumbnail.webp";
 import GMGif from "../assets/thumbnails/gm-thumbnail.webp";
@@ -91,6 +92,16 @@ export default function HomeProjectsGallery() {
       >
         <p className={galleryBannerText}>
           p5 <strong>Space</strong>
+        </p>
+      </HomeProjectGalleryItem>
+
+      <HomeProjectGalleryItem
+        href={`/${RouteSlugs.project}/${GalleryKeys.convene}`}
+        image={ConveneThumbnail}
+        imageAltText="Convene"
+      >
+        <p className={galleryBannerText}>
+          <strong>Convene</strong> Bookings and Payments
         </p>
       </HomeProjectGalleryItem>
 
