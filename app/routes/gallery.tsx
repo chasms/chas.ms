@@ -9,7 +9,10 @@ import type { Route } from "./+types/gallery";
 const pageWrapper = css({
   width: "100%",
   margin: "0 auto",
-  padding: "50px 40px",
+  lg: {
+    padding: "50px 40px",
+  },
+  padding: "50px 20px",
   display: "flex",
   flexDirection: "row",
   height: "100vh",
@@ -19,13 +22,11 @@ const pageWrapper = css({
 const contentSectionWrapper = css({
   display: "none",
   xl: {
-    width: "20%",
+    width: "25%",
+    display: "flex",
   },
   lg: {
-    width: "30%",
-  },
-  md: {
-    width: "40%",
+    width: "35%",
     display: "flex",
   },
   height: "100%",
@@ -40,6 +41,7 @@ const carouselWrapper = cva({
     md: {
       height: "100%",
     },
+    padding: "0px 25px",
   },
   variants: {
     size: {
@@ -54,22 +56,20 @@ const carouselWrapper = cva({
         lg: {
           width: "70%",
         },
-        md: {
-          width: "60%",
-        },
       },
     },
   },
 });
 
 const iframe = css({
-  height: "80%",
-  md: {
+  height: "90%",
+  lg: {
     height: "100%",
+    margin: "0 25px",
   },
   width: "100%",
   borderRadius: "16px",
-  margin: "0 25px",
+  margin: "0 5px",
 });
 
 export default function GalleryPage({ params }: Route.LoaderArgs) {
@@ -123,6 +123,11 @@ export default function GalleryPage({ params }: Route.LoaderArgs) {
               allow={`${autoplay && "autoplay; "}accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share`}
               referrerPolicy="strict-origin-when-cross-origin"
               allowFullScreen
+              sandbox={
+                params.id === GalleryKeys.convene
+                  ? "allow-same-site-none-cookies allow-scripts allow-forms"
+                  : undefined
+              }
             ></iframe>
           )
         )}

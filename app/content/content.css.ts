@@ -2,7 +2,7 @@ import { css } from "../../styled-system/css";
 
 export const contentWrapper = css({
   fontFamily: "San Francisco, sans-serif",
-  padding: "25px 50px 25px 25px",
+  padding: "25px",
   maxHeight: "100%",
   width: "100%",
   display: "flex",
@@ -16,15 +16,32 @@ export const contentHeading = css({
   marginBottom: "16px",
 });
 
+export const contentHeadingSmall = css({
+  fontSize: "24px",
+  marginBottom: "16px",
+});
+
+export const contentSubHeading = css({
+  fontSize: "16px",
+  marginBottom: "16px",
+});
+
 export const contentBody = css({
   fontStyle: "italic",
   fontSize: "16px",
   marginBottom: "16px",
 });
+
 export const contentBodySmall = css({
   fontStyle: "italic",
   fontSize: "14px",
   marginBottom: "14px",
+});
+
+export const contentBodyXS = css({
+  fontStyle: "italic",
+  fontSize: "12px",
+  marginBottom: "12px",
 });
 
 export const contentLink = css({

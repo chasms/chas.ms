@@ -158,6 +158,7 @@ import theDeeps from "../assets/images/printmaking/the-deeps-with-slab.webp";
 import totemI from "../assets/images/printmaking/totemI.webp";
 import totemII from "../assets/images/printmaking/totemII.webp";
 
+import ConveneContent from "./ConveneContent";
 import FinJSContent from "./FinJSContent";
 import FurnitureContent from "./FurnitureContent";
 import GiantMachinesContent from "./GiantMachinesContent";
@@ -184,6 +185,7 @@ export enum GalleryKeys {
   reflections = "reflections",
   indonesia = "indonesia",
   printmaking = "printmaking",
+  convene = "convene",
 }
 
 export interface GalleryPageDataType {
@@ -409,6 +411,14 @@ export const GalleryPages: Record<GalleryKeys, GalleryPageDataType> = {
       "https://web.archive.org/web/20221129225342/https://www.giantmachines.com/",
     ],
     content: <GiantMachinesContent />,
+  },
+  [GalleryKeys.convene]: {
+    title: "Convene",
+    description: "Convene booking and payments systems",
+    images: [
+      "https://convene.com/locations/new-york-city/101-greenwich-street/meeting-rooms/101-greenwich-street-hub-2/",
+    ],
+    content: <ConveneContent />,
   },
   [GalleryKeys.nota]: {
     title: "Nota",

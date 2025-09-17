@@ -1,14 +1,13 @@
 import { useState } from "react";
 import { css, cva, cx } from "../../styled-system/css";
 
-const buttonHoverTransitions =
-  "backdrop-filter 0.5s ease-in-out, height 0.5s ease-in-out, width 0.5s ease-in-out";
-
 const transitionsWhenOpening =
-  "height 0.5s ease-in-out, width 0.5s ease-in-out, border-radius 0.1s ease-in-out, backdrop-filter 0.1s ease-in-out, background-color 0.5s ease-in-out";
-const transitionWhenClosing = `${buttonHoverTransitions}, border-radius 0.1s ease-in-out 0.5s, background-color 0.5s ease-in-out`;
+  "background-color 0.5s ease-in-out, bottom 0.5s ease-in-out, left 0.5s ease-in-out, height 0.5s ease-in-out, width 0.5s ease-in-out, border-radius 0.5s ease-in-out, backdrop-filter 0.1s ease-in-out";
+const transitionWhenClosing =
+  "background-color 0.5s ease-in-out, bottom 0.5s ease-in-out, left 0.5s ease-in-out, height 0.5s ease-in-out, width 0.5s ease-in-out, border-radius 0.5s ease-in-out, backdrop-filter 0.5s ease-in-out";
 const smallWidthValue = "calc(100% - 150px)";
-const smallHeightValue = "20%";
+const smallHeightValue = "25%";
+
 const info = cva({
   base: {
     position: "absolute",
@@ -34,7 +33,7 @@ const info = cva({
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        borderRadius: "50%",
+        borderRadius: "30px",
         backdropFilter: "invert(30%)",
         cursor: "pointer",
         transition: transitionWhenClosing,
@@ -43,12 +42,13 @@ const info = cva({
           backdropFilter: "invert(80%)",
           height: "80px",
           width: "80px",
+          borderRadius: "40px",
         },
       },
     },
     mobileOnly: {
       true: {
-        md: {
+        lg: {
           display: "none",
         },
       },
@@ -72,10 +72,13 @@ const info = cva({
       state: "open",
       size: "full",
       css: {
-        height: "calc(100% - 75px)",
-        width: "calc(100% - 50px)",
+        height: "calc(100% - 0px)",
+        width: "calc(100% - 0px)",
+        bottom: "0",
+        left: "0",
         backdropFilter: "invert(80%) blur(10px)",
         backgroundColor: "rgba(255, 255, 255, 0.4)",
+        zIndex: 999,
       },
     },
   ],
