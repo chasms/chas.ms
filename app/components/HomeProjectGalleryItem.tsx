@@ -57,7 +57,13 @@ export default function HomeProjectGalleryItem({
       target={newTab ? "_blank" : ""}
       reloadDocument={reloadDocument}
     >
-      <img alt={imageAltText} src={image} height={height} width={width} />
+      <img
+        alt={imageAltText}
+        src={image}
+        height={height}
+        width={width}
+        loading="lazy"
+      />
       <div className={galleryItemBanner}>{children}</div>
     </Link>
   );
