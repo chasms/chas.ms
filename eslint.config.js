@@ -53,6 +53,11 @@ export default defineConfig([
       "react/react-in-jsx-scope": "off",
     },
     settings: {
+      "import/resolver": {
+        typescript: {
+          alwaysTryTypes: true, // Always try to resolve types under `<root>@types` directory even if it doesn't contain any source code, like `@types/unist`
+        },
+      },
       react: {
         version: "detect", // React version. "detect" automatically picks the version you have installed.
         // You can also use `16.0`, `16.3`, etc, if you want to override the detected value.
