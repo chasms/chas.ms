@@ -4,6 +4,7 @@ import ConveneThumbnail from "../assets/thumbnails/convene-thumbnail.webp";
 import FinJSGif from "../assets/thumbnails/finjs-thumbnail.webp";
 import FurnitureGalleryImage from "../assets/thumbnails/furniture-thumbnail.webp";
 import GMGif from "../assets/thumbnails/gm-thumbnail.webp";
+import GrowGradeThumbnail from "../assets/thumbnails/growgrade-thumbnail.webp";
 import IndonesiaThumbnail from "../assets/thumbnails/indonesia-thumbnail.webp";
 import JavascriptTranspilersThumbnail from "../assets/thumbnails/javascript-transpilers-thumbnail.webp";
 import MardiGrasThumbnail from "../assets/thumbnails/mardi-gras-thumbnail.webp";
@@ -167,6 +168,17 @@ const HomeGalleryItems: Array<{
     filters: [Filters.engineering],
   },
   {
+    href: `/${RouteSlugs.project}/${GalleryKeys.growgrade}`,
+    image: GrowGradeThumbnail,
+    imageAltText: "GrowGrade",
+    bannerElement: (
+      <p className={galleryBannerText}>
+        <strong>GrowGrade</strong>, an M&T Bank Innovation Vertical
+      </p>
+    ),
+    filters: [Filters.engineering],
+  },
+  {
     href: `/${RouteSlugs.project}/${GalleryKeys.convene}`,
     image: ConveneThumbnail,
     imageAltText: "Convene",
@@ -194,7 +206,7 @@ const HomeGalleryItems: Array<{
     imageAltText: "Nota",
     bannerElement: (
       <p className={galleryBannerText}>
-        <strong>Nota</strong>, An M&T Bank Product
+        <strong>Nota</strong>, An M&T Bank Innovation Vertical
       </p>
     ),
     filters: [Filters.engineering],
