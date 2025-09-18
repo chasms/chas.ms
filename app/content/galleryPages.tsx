@@ -162,6 +162,7 @@ import ConveneContent from "./ConveneContent";
 import FinJSContent from "./FinJSContent";
 import FurnitureContent from "./FurnitureContent";
 import GiantMachinesContent from "./GiantMachinesContent";
+import GrowGradeContent from "./GrowGradeContent";
 import JavascriptTranspilersContent from "./JavascriptTranspilersContent";
 import MardiGrasContent from "./MardiGrasContent";
 import NotaContent from "./NotaContent";
@@ -186,6 +187,7 @@ export enum GalleryKeys {
   indonesia = "indonesia",
   printmaking = "printmaking",
   convene = "convene",
+  growgrade = "growgrade",
 }
 
 export interface GalleryPageDataType {
@@ -427,6 +429,15 @@ export const GalleryPages: Record<GalleryKeys, GalleryPageDataType> = {
       "https://hsmandt.s3.amazonaws.com/mandt/courses/nota-iolta-management/introduction-to-nota/video_introduction-to-nota.mp4",
     ],
     content: <NotaContent />,
+  },
+  [GalleryKeys.growgrade]: {
+    title: "GrowGrade",
+    description:
+      "M&T GrowGrade – business valuations for small business owners",
+    images: [
+      "https://web.archive.org/web/20220324233736/https://growgrade.com/",
+    ],
+    content: <GrowGradeContent />,
   },
   [GalleryKeys["fin-js"]]: {
     title: "FinJS",
