@@ -31,6 +31,7 @@ const navWrapperStyles = css({
   backdropFilter: "blur(4px)",
   display: "flex",
   borderBottom: "0.5px solid rgba(255, 255, 255, 0.1)",
+  minWidth: "400px",
 });
 
 const iconsList = css({

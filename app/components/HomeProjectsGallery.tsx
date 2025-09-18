@@ -1,3 +1,4 @@
+import { useState, type JSX, type ReactNode } from "react";
 import { css } from "../../styled-system/css";
 import ConveneThumbnail from "../assets/thumbnails/convene-thumbnail.webp";
 import FinJSGif from "../assets/thumbnails/finjs-thumbnail.webp";
@@ -20,14 +21,62 @@ import SkylandBanner from "../assets/thumbnails/skyland-thumbnail-banner.webp";
 import SkylandThumbnail from "../assets/thumbnails/skyland-thumbnail.webp";
 import { GalleryKeys } from "../content/galleryPages";
 import { RouteSlugs } from "../routes";
-import HomeProjectGalleryItem, {
-  galleryItemHorizontalSpacing,
-} from "./HomeProjectGalleryItem";
+import HomeProjectGalleryItem from "./HomeProjectGalleryItem";
+
+const pageWrapper = css({
+  marginTop: "50px",
+});
+
+const filterButtonsWrapper = css({
+  height: "25px",
+  width: "400px",
+  marginLeft: "90px",
+  padding: "5px 25px",
+  position: "fixed",
+  zIndex: "2",
+});
+
+const filterButtonSharedStyles = {
+  cursor: "pointer",
+  height: "25px",
+  borderRadius: "12.5px",
+  fontSize: "12px",
+  padding: "0 10px",
+  marginRight: "10px",
+  userSelect: "none",
+  transition: "all 0.2s ease-in-out",
+};
+
+const filterButtonInactive = css({
+  ...filterButtonSharedStyles,
+  outline: "1px solid rgba(240, 255, 255, 0.6)",
+  color: "rgba(240, 255, 255, 0.6)",
+  background: "rgba(0, 0, 0, 0.5)",
+  backdropFilter: "blur(2px)",
+
+  _hover: {
+    outline: "1px solid rgba(240, 255, 255, 0.8)",
+    color: "rgba(240, 255, 255, 0.8)",
+  },
+});
+
+const filterButtonActive = css({
+  ...filterButtonSharedStyles,
+  outline: "1px solid transparent",
+  color: "azure",
+  background: "rgba(255, 0, 0, 0.7)",
+  backdropFilter: "invert(100%) blur(2px)",
+  boxShadow: "3px 3px 0.2em red, -4px 0 0.2em olive",
+
+  _hover: {
+    outline: "1px solid white",
+    color: "white",
+  },
+});
 
 const gallery = css({
   width: "100%",
-  marginTop: "50px",
-  padding: `15px ${galleryItemHorizontalSpacing}`,
+  paddingTop: "25px",
   display: "flex",
   flexWrap: "wrap",
   justifyContent: "center",
@@ -51,7 +100,27 @@ const galleryBannerText = css({
   },
 });
 
-const HomeGalleryItems = [
+enum Filters {
+  engineering = "engineering",
+  artwork = "artwork",
+  design = "design",
+}
+
+type FilterState = Record<Filters, boolean>;
+const defaultFilterState = {
+  [Filters.engineering]: false,
+  [Filters.artwork]: false,
+  [Filters.design]: false,
+};
+
+const HomeGalleryItems: Array<{
+  href: string;
+  image: string;
+  imageAltText: string;
+  bannerElement: JSX.Element;
+  filters: Filters[];
+  newTab?: boolean;
+}> = [
   {
     href: `/${RouteSlugs.project}/${GalleryKeys.giantmachines}`,
     image: GMGif,
@@ -61,6 +130,7 @@ const HomeGalleryItems = [
         <strong>Giant Machines</strong> Acquired by Deloitte
       </p>
     ),
+    filters: [Filters.engineering],
   },
   {
     href: "https://roll2write.chas.ms",
@@ -72,6 +142,7 @@ const HomeGalleryItems = [
         <strong>Roll2Write</strong>, a songwriting oracle
       </p>
     ),
+    filters: [Filters.engineering],
   },
   {
     href: `/${RouteSlugs.project}/${GalleryKeys.onmyway}`,
@@ -82,6 +153,7 @@ const HomeGalleryItems = [
         <strong>On My Way</strong> National Grid
       </p>
     ),
+    filters: [Filters.engineering],
   },
   {
     href: `/${RouteSlugs["p5-space"]}`,
@@ -92,6 +164,7 @@ const HomeGalleryItems = [
         p5 <strong>Space</strong>
       </p>
     ),
+    filters: [Filters.engineering],
   },
   {
     href: `/${RouteSlugs.project}/${GalleryKeys.convene}`,
@@ -102,6 +175,7 @@ const HomeGalleryItems = [
         <strong>Convene</strong> Bookings and Payments
       </p>
     ),
+    filters: [Filters.engineering],
   },
   {
     href: `/${RouteSlugs.project}/${GalleryKeys["fin-js"]}`,
@@ -112,6 +186,7 @@ const HomeGalleryItems = [
         <strong>Desktop App Interoperability,</strong> FinJS 2019
       </p>
     ),
+    filters: [Filters.engineering],
   },
   {
     href: `/${RouteSlugs.project}/${GalleryKeys.nota}`,
@@ -122,6 +197,7 @@ const HomeGalleryItems = [
         <strong>Nota</strong>, An M&T Bank Product
       </p>
     ),
+    filters: [Filters.engineering],
   },
   {
     href: `/${RouteSlugs.project}/${GalleryKeys.indonesia}`,
@@ -132,6 +208,7 @@ const HomeGalleryItems = [
         <strong>Yogyakarta</strong>, Indonesia, 2014
       </p>
     ),
+    filters: [Filters.artwork],
   },
   {
     href: `/${RouteSlugs.project}/${GalleryKeys.printmaking}`,
@@ -142,6 +219,7 @@ const HomeGalleryItems = [
         <strong>Printmaking</strong>
       </p>
     ),
+    filters: [Filters.artwork],
   },
   {
     href: `/${RouteSlugs.project}/${GalleryKeys.reflections}`,
@@ -152,6 +230,7 @@ const HomeGalleryItems = [
         Extended <strong>Reflections</strong>, 2011
       </p>
     ),
+    filters: [Filters.artwork],
   },
   {
     href: RouteSlugs["origin-theory"],
@@ -162,6 +241,7 @@ const HomeGalleryItems = [
         <strong>Origin</strong> Theory, 2014
       </p>
     ),
+    filters: [Filters.design],
   },
   {
     href: `/${RouteSlugs.project}/${GalleryKeys["salt-and-pepper"]}`,
@@ -172,12 +252,14 @@ const HomeGalleryItems = [
         <strong>semantic</strong> shakers
       </p>
     ),
+    filters: [Filters.design],
   },
   {
     href: `/${RouteSlugs.project}/${GalleryKeys.skyland}`,
     image: SkylandThumbnail,
     imageAltText: "",
     bannerElement: <img alt="s" className="banner" src={SkylandBanner} />,
+    filters: [Filters.artwork],
   },
   {
     href: `/${RouteSlugs.project}/${GalleryKeys.peelers}`,
@@ -188,6 +270,7 @@ const HomeGalleryItems = [
         <strong>ergonomic</strong> peelers
       </p>
     ),
+    filters: [Filters.design],
   },
   {
     href: `/${RouteSlugs.project}/${GalleryKeys.furniture}`,
@@ -198,6 +281,7 @@ const HomeGalleryItems = [
         <strong>furniture</strong>
       </p>
     ),
+    filters: [Filters.design],
   },
   {
     href: `/${RouteSlugs.project}/${GalleryKeys["mardi-gras"]}`,
@@ -208,6 +292,7 @@ const HomeGalleryItems = [
         <strong>mardi gras</strong>, new orleans, 2014
       </p>
     ),
+    filters: [Filters.artwork],
   },
   {
     href: "https://olio.chas.ms",
@@ -219,6 +304,7 @@ const HomeGalleryItems = [
         <strong>olio app</strong>, a collection of things
       </p>
     ),
+    filters: [Filters.engineering],
   },
   {
     href: `/${RouteSlugs.project}/${GalleryKeys["js-transpilers"]}`,
@@ -229,23 +315,76 @@ const HomeGalleryItems = [
         <strong>Presentation on Transpilers</strong>, 2017
       </p>
     ),
+    filters: [Filters.engineering],
   },
 ];
 
 export default function HomeProjectsGallery() {
+  const [filters, setFilters] = useState<FilterState>(defaultFilterState);
+
+  const toggleFilter = (filter: Filters) => {
+    setFilters({
+      ...filters,
+      [filter]: !filters[filter],
+    });
+  };
+
+  const allFiltersOff = !Object.values(Filters).find(
+    (filter) => !!filters[filter],
+  );
   return (
-    <div className={gallery}>
-      {HomeGalleryItems.map((project) => (
-        <HomeProjectGalleryItem
-          key={project.href}
-          href={project.href}
-          newTab={project.newTab}
-          image={project.image}
-          imageAltText={project.imageAltText}
+    <div className={pageWrapper}>
+      <div className={filterButtonsWrapper}>
+        <button
+          className={
+            filters[Filters.engineering]
+              ? filterButtonActive
+              : filterButtonInactive
+          }
+          onClick={() => toggleFilter(Filters.engineering)}
         >
-          {project.bannerElement}
-        </HomeProjectGalleryItem>
-      ))}
+          Engineering
+        </button>
+        <button
+          className={
+            filters[Filters.artwork] ? filterButtonActive : filterButtonInactive
+          }
+          onClick={() => toggleFilter(Filters.artwork)}
+        >
+          Artwork
+        </button>
+        <button
+          className={
+            filters[Filters.design] ? filterButtonActive : filterButtonInactive
+          }
+          onClick={() => toggleFilter(Filters.design)}
+        >
+          Design
+        </button>
+      </div>
+      <div className={gallery}>
+        {HomeGalleryItems.reduce((accumulator: ReactNode[], project) => {
+          if (
+            allFiltersOff ||
+            project.filters.find((filter) => !!filters[filter])
+          ) {
+            const element = (
+              <HomeProjectGalleryItem
+                key={project.href}
+                href={project.href}
+                newTab={project.newTab}
+                image={project.image}
+                imageAltText={project.imageAltText}
+              >
+                {project.bannerElement}
+              </HomeProjectGalleryItem>
+            );
+            accumulator.push(element);
+          }
+
+          return accumulator;
+        }, [])}
+      </div>
     </div>
   );
 }
