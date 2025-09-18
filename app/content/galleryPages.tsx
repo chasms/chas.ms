@@ -383,6 +383,7 @@ export const GalleryPages: Record<GalleryKeys, GalleryPageDataType> = {
     description:
       "A multi-app field force operations solution custom built for National Grid",
     images: [
+      "https://www.youtube.com/embed/EwHm7dHBFO4?si=vJzq5oxWobtygQb1",
       omw,
       onmywayIntro,
       onmywayPlanRoadmap,

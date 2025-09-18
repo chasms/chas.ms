@@ -1,6 +1,6 @@
 import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import "slick-carousel/slick/slick.css";
 import { css, cx } from "../../styled-system/css";
 
 // @ts-expect-error Need to use default for SSR to prevent 500 server error: https://github.com/akiran/react-slick/issues/2206
@@ -60,22 +60,33 @@ const thumbnailImageStyle = css({
   maxHeight: `calc(${thumbnailsHeight} - 15px)`,
 });
 
+const iframe = css({
+  width: "100%",
+  minHeight: "100%",
+  objectFit: "contain",
+  height: `calc(100vh - ${thumbnailsHeight} - 100px)`,
+});
+
 interface CarouselProps {
   images: string[];
 }
 
 export default function Carousel({ images }: CarouselProps) {
   const settings = {
-    customPaging: (i: number) => {
-      return (
-        <div className={thumbnailWrapper}>
-          <img
-            src={images[i]}
-            alt={`thumbnail-${i}`}
-            className={thumbnailImageStyle}
-          />
-        </div>
-      );
+    customPaging: (index: number) => {
+      if (images[index].includes("https://www.youtube.com/embed/")) {
+        return <div className={thumbnailWrapper}></div>;
+      } else {
+        return (
+          <div className={thumbnailWrapper}>
+            <img
+              src={images[index]}
+              alt={`thumbnail-${index}`}
+              className={thumbnailImageStyle}
+            />
+          </div>
+        );
+      }
     },
     dots: true,
     dotsClass: cx("slick-dots", thumbnailsSection),
@@ -90,7 +101,18 @@ export default function Carousel({ images }: CarouselProps) {
       <SliderComponent {...settings}>
         {images.map((src, index) => (
           <div key={index}>
-            <img src={src} alt={`slide-${index}`} className={imageStyle} />
+            {src.includes("https://www.youtube.com/embed/") ? (
+              <iframe
+                className={iframe}
+                src={src}
+                frameBorder="0"
+                allow="autoplay; accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+              ></iframe>
+            ) : (
+              <img src={src} alt={`slide-${index}`} className={imageStyle} />
+            )}
           </div>
         ))}
       </SliderComponent>
