@@ -10,6 +10,7 @@ const contentArea = css({
   height: "100%",
   width: "100%",
   overflow: "scroll",
+  minWidth: "400px",
 });
 
 const revealWrapper = css({

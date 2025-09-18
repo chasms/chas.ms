@@ -7,7 +7,7 @@ import { toHomeWithOpeningSequenceComplete } from "../routes";
 const pageWrapper = css({
   width: "100%",
   margin: "0 auto",
-  padding: "50px 40px",
+  padding: "50px 25px",
   display: "flex",
   flexDirection: "row",
   height: "100vh",
@@ -18,12 +18,10 @@ const contentSectionWrapper = css({
   display: "none",
   xl: {
     width: "20%",
+    display: "flex",
   },
   lg: {
     width: "30%",
-  },
-  md: {
-    width: "40%",
     display: "flex",
   },
   height: "100%",
@@ -32,29 +30,25 @@ const contentSectionWrapper = css({
 });
 
 const pdfWrapper = css({
-  height: "80%",
-  display: "flex",
   width: "100%",
+  display: "flex",
+  height: "100%",
   xl: {
     width: "80%",
   },
   lg: {
     width: "70%",
   },
-  md: {
-    width: "60%",
-    height: "100%",
-  },
 });
 
 const pdfViewer = css({
-  height: "80%",
-  md: {
+  height: "90%",
+  lg: {
     height: "100%",
+    margin: "0 25px",
   },
   width: "100%",
   borderRadius: "16px",
-  margin: "0 25px",
   border: "none",
 });
 
