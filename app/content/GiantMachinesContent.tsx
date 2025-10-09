@@ -24,7 +24,8 @@ const GiantMachinesContent = () => (
     <p className={contentBodyXS}>
       Clients I served included: One World, Trumid, Allergan, BGC Group, Ontario
       Teachers&#39; Pension Plan, Amica Senior Living, Convene, Openfin, M&T
-      Bank, IEX Cloud, National Grid, BCG Digital Ventures,
+      Bank, IEX Cloud, Luma Financial Technologies, National Grid, BCG Digital
+      Ventures
     </p>
     <p className={contentBodyXS}>
       {"Page retrieved from the "}

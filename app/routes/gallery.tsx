@@ -1,9 +1,12 @@
+import { useEffect } from "react";
+import { useNavigate } from "react-router";
 import { css, cva } from "../../styled-system/css";
+import gmThumbnail from "../assets/thumbnails/gm-thumbnail.webp";
 import Carousel from "../components/Carousel";
 import ExpandingInfoButton from "../components/ExpandingInfoButton";
 import Nav from "../components/Nav";
 import { GalleryKeys, GalleryPages } from "../content/galleryPages";
-import { toHomeWithOpeningSequenceComplete } from "../routes";
+import { RouteParams, toHomeWithOpeningSequenceComplete } from "../routes";
 import type { Route } from "./+types/gallery";
 
 const pageWrapper = css({
@@ -73,6 +76,14 @@ const iframe = css({
 });
 
 export default function GalleryPage({ params }: Route.LoaderArgs) {
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (!(params.id in GalleryKeys)) {
+      navigate(`/?${RouteParams.openingSequence}=${RouteParams.done}`);
+    }
+  }, []);
+
   if (!(params.id in GalleryKeys)) {
     return;
   }
