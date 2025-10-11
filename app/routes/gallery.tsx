@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useNavigate } from "react-router";
 import { css, cva } from "../../styled-system/css";
-import gmThumbnail from "../assets/thumbnails/gm-thumbnail.webp";
+import loadingAnimation from "../assets/loading-animation.webp";
 import Carousel from "../components/Carousel";
 import ExpandingInfoButton from "../components/ExpandingInfoButton";
 import Nav from "../components/Nav";
@@ -128,6 +128,10 @@ export default function GalleryPage({ params }: Route.LoaderArgs) {
           images && (
             <iframe
               className={iframe}
+              style={{
+                background: `rgba(0,0,0,0.5) url(${loadingAnimation}) center center no-repeat`,
+                boxShadow: "1px 2px 5px -2px rgba(255, 0, 0, 0.5)",
+              }}
               src={images[0]}
               title={title}
               frameBorder="0"
