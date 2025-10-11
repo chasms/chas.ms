@@ -3,7 +3,7 @@ import { css, cx } from "../../styled-system/css";
 import HomeProjectsGallery from "../components/HomeProjectsGallery";
 import LogoOverlay from "../components/LogoOverlay";
 import Nav from "../components/Nav";
-import { params } from "../routes";
+import { RouteParams } from "../routes";
 
 const contentArea = css({
   position: "absolute",
@@ -32,8 +32,8 @@ export function meta() {
 export default function Home() {
   const [searchParams] = useSearchParams();
 
-  const openingSequenceParam = searchParams.get(params.openingSequence);
-  const openingSequenceComplete = openingSequenceParam === params.done;
+  const openingSequenceParam = searchParams.get(RouteParams.openingSequence);
+  const openingSequenceComplete = openingSequenceParam === RouteParams.done;
 
   return (
     <>

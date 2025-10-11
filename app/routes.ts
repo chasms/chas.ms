@@ -13,9 +13,9 @@ export default [
   route(`${RouteSlugs.project}/:id`, "routes/gallery.tsx"),
 ] satisfies RouteConfig;
 
-export enum params {
+export enum RouteParams {
   openingSequence = "opening-sequence",
   done = "done",
 }
 
-export const toHomeWithOpeningSequenceComplete = `/?${params.openingSequence}=${params.done}`;
+export const toHomeWithOpeningSequenceComplete = `/?${RouteParams.openingSequence}=${RouteParams.done}`;

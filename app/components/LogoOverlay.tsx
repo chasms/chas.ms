@@ -1,7 +1,7 @@
 import { Link, useSearchParams } from "react-router";
 import { css, cx } from "../../styled-system/css";
 import KundaliniWhiteLogo from "../assets/kundalini-white.png";
-import { params } from "../routes";
+import { RouteParams } from "../routes";
 
 const logoOverlay = css({
   height: "100%",
@@ -33,8 +33,8 @@ const aboveTheFold = css({
 export default function LogoOverlay() {
   const [searchParams] = useSearchParams();
 
-  const openingSequenceParam = searchParams.get(params.openingSequence);
-  const openingSequenceComplete = openingSequenceParam === params.done;
+  const openingSequenceParam = searchParams.get(RouteParams.openingSequence);
+  const openingSequenceComplete = openingSequenceParam === RouteParams.done;
 
   return (
     <div
@@ -43,7 +43,7 @@ export default function LogoOverlay() {
       }
     >
       <Link
-        to={`/?${params.openingSequence}=${params.done}`}
+        to={`/?${RouteParams.openingSequence}=${RouteParams.done}`}
         className={logoWrapper}
       >
         <img src={KundaliniWhiteLogo} alt="chasms"></img>
