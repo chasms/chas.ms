@@ -20,6 +20,7 @@ import Roll2WriteThumbnail from "../assets/thumbnails/roll2write-thumbnail1.webp
 import ShakersThumbnail from "../assets/thumbnails/shakers-thumbnail.webp";
 import SkylandBanner from "../assets/thumbnails/skyland-thumbnail-banner.webp";
 import SkylandThumbnail from "../assets/thumbnails/skyland-thumbnail.webp";
+import WebAudioSynthThumbnail from "../assets/thumbnails/web-audio-synth-thumbnail.webp";
 import { GalleryKeys } from "../content/galleryPages";
 import { RouteSlugs } from "../routes";
 import HomeProjectGalleryItem from "./HomeProjectGalleryItem";
@@ -122,6 +123,18 @@ const HomeGalleryItems: Array<{
   filters: Filters[];
   newTab?: boolean;
 }> = [
+  {
+    href: "https://web-audio-synth.chas.ms",
+    newTab: true,
+    image: WebAudioSynthThumbnail,
+    imageAltText: "Web Audio Synth",
+    bannerElement: (
+      <p className={galleryBannerText}>
+        <strong>Web Audio Synth</strong>, WIP virtual modular synth
+      </p>
+    ),
+    filters: [Filters.engineering],
+  },
   {
     href: `/${RouteSlugs.project}/${GalleryKeys.giantmachines}`,
     image: GMGif,
