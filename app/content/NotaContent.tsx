@@ -23,7 +23,7 @@ const NotaContent = () => (
     </p>
     <p className={contentBody}>
       <a
-        href="http://mtb.com/business/nota"
+        href="https://www.mtb.com/business/nota"
         target="_blank"
         rel="noreferrer"
         className={contentLink}
