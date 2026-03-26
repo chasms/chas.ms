@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router";
 import { css, cva } from "../../styled-system/css";
 import loadingAnimation from "../assets/loading-animation.webp";
@@ -20,21 +20,66 @@ const pageWrapper = css({
   flexDirection: "row",
   height: "100vh",
   overflow: "hidden",
+  position: "relative",
 });
 
-const contentSectionWrapper = css({
+const contentSectionWrapper = cva({
+  base: {
+    display: "none",
+    lg: {
+      display: "flex",
+    },
+    height: "100%",
+    color: "azure",
+    overflow: "hidden",
+    transition: "width 0.3s ease, opacity 0.3s ease, padding 0.3s ease",
+  },
+  variants: {
+    collapsed: {
+      false: {
+        xl: {
+          width: "25%",
+        },
+        lg: {
+          width: "35%",
+        },
+        opacity: 1,
+        overflowY: "scroll",
+      },
+      true: {
+        width: "0%",
+        opacity: 0,
+      },
+    },
+  },
+});
+
+const sidebarToggle = css({
   display: "none",
-  xl: {
-    width: "25%",
-    display: "flex",
-  },
   lg: {
-    width: "35%",
     display: "flex",
   },
-  height: "100%",
-  color: "azure",
-  overflow: "scroll",
+  position: "absolute",
+  left: "0",
+  top: "50%",
+  transform: "translateY(-50%)",
+  zIndex: 10,
+  alignItems: "center",
+  justifyContent: "center",
+  width: "24px",
+  height: "64px",
+  borderRadius: "0 8px 8px 0",
+  backgroundColor: "rgba(255, 255, 255, 0.1)",
+  backdropFilter: "invert(30%)",
+  cursor: "pointer",
+  transition: "backdrop-filter 0.2s ease, background-color 0.2s ease",
+  color: "white",
+  fontSize: "14px",
+  userSelect: "none",
+  _hover: {
+    backdropFilter: "invert(60%)",
+    backgroundColor: "rgba(255, 255, 255, 0.2)",
+  },
 });
 
 const carouselWrapper = cva({
@@ -45,6 +90,7 @@ const carouselWrapper = cva({
       height: "100%",
     },
     padding: "0px 25px",
+    transition: "width 0.3s ease",
   },
   variants: {
     size: {
@@ -59,6 +105,9 @@ const carouselWrapper = cva({
         lg: {
           width: "70%",
         },
+      },
+      withContentSideSectionCollapsed: {
+        width: "100%",
       },
     },
   },
@@ -77,6 +126,7 @@ const iframe = css({
 
 export default function GalleryPage({ params }: Route.LoaderArgs) {
   const navigate = useNavigate();
+  const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
 
   useEffect(() => {
     if (!(params.id in GalleryKeys)) {
@@ -99,6 +149,13 @@ export default function GalleryPage({ params }: Route.LoaderArgs) {
   } = GalleryPages[params.id as GalleryKeys];
 
   const isAGallery = images && images.length > 1;
+  const hasSidebar = content && !infoOverlayAllSizes;
+
+  const getCarouselSize = () => {
+    if (!hasSidebar) return "fullwidth" as const;
+    if (sidebarCollapsed) return "withContentSideSectionCollapsed" as const;
+    return "withContentSideSection" as const;
+  };
 
   return (
     <>
@@ -109,17 +166,26 @@ export default function GalleryPage({ params }: Route.LoaderArgs) {
       <Nav backButtonTo={toHomeWithOpeningSequenceComplete} />
 
       <div className={pageWrapper}>
-        {content && !infoOverlayAllSizes && (
-          <div className={contentSectionWrapper}>{content}</div>
+        {hasSidebar && (
+          <div className={contentSectionWrapper({ collapsed: sidebarCollapsed })}>
+            {content}
+          </div>
+        )}
+
+        {hasSidebar && (
+          <div
+            className={sidebarToggle}
+            onClick={() => setSidebarCollapsed((prev) => !prev)}
+            title={sidebarCollapsed ? "Show sidebar" : "Hide sidebar"}
+          >
+            {sidebarCollapsed ? "\u203A" : "\u2039"}
+          </div>
         )}
 
         {isAGallery ? (
           <div
             className={carouselWrapper({
-              size:
-                content && !infoOverlayAllSizes
-                  ? "withContentSideSection"
-                  : "fullwidth",
+              size: getCarouselSize(),
             })}
           >
             <Carousel images={images} />
