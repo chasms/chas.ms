@@ -32,7 +32,8 @@ const contentSectionWrapper = cva({
     height: "100%",
     color: "azure",
     overflow: "hidden",
-    transition: "width 0.3s ease, opacity 0.3s ease, padding 0.3s ease",
+    transition:
+      "width 0.3s ease, opacity 0.3s ease, padding 0.3s ease, visibility 0.3s ease",
   },
   variants: {
     collapsed: {
@@ -49,6 +50,8 @@ const contentSectionWrapper = cva({
       true: {
         width: "0%",
         opacity: 0,
+        pointerEvents: "none",
+        visibility: "hidden",
       },
     },
   },
@@ -59,6 +62,8 @@ const sidebarToggle = css({
   lg: {
     display: "flex",
   },
+  border: "none",
+  padding: "0",
   position: "absolute",
   left: "0",
   top: "50%",
@@ -77,6 +82,12 @@ const sidebarToggle = css({
   fontSize: "14px",
   userSelect: "none",
   _hover: {
+    backdropFilter: "invert(60%)",
+    backgroundColor: "rgba(255, 255, 255, 0.2)",
+  },
+  _focusVisible: {
+    outline: "2px solid white",
+    outlineOffset: "2px",
     backdropFilter: "invert(60%)",
     backgroundColor: "rgba(255, 255, 255, 0.2)",
   },
@@ -167,19 +178,26 @@ export default function GalleryPage({ params }: Route.LoaderArgs) {
 
       <div className={pageWrapper}>
         {hasSidebar && (
-          <div className={contentSectionWrapper({ collapsed: sidebarCollapsed })}>
+          <div
+            id="gallery-sidebar"
+            className={contentSectionWrapper({ collapsed: sidebarCollapsed })}
+          >
             {content}
           </div>
         )}
 
         {hasSidebar && (
-          <div
+          <button
+            type="button"
             className={sidebarToggle}
             onClick={() => setSidebarCollapsed((prev) => !prev)}
             title={sidebarCollapsed ? "Show sidebar" : "Hide sidebar"}
+            aria-label={sidebarCollapsed ? "Show sidebar" : "Hide sidebar"}
+            aria-expanded={!sidebarCollapsed}
+            aria-controls="gallery-sidebar"
           >
             {sidebarCollapsed ? "\u203A" : "\u2039"}
-          </div>
+          </button>
         )}
 
         {isAGallery ? (
